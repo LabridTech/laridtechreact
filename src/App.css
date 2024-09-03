@@ -52,7 +52,7 @@
 }
 
 .footer{
-  background-color: '#000';
+  background-color:  rgb(0, 0, 0);
   width: 100%;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -60,7 +60,6 @@
   align-items: flex-start;
   justify-content: space-evenly;
   align-content: space-around;
-  height: '600px';
 }
 
 

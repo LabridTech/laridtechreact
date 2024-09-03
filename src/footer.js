@@ -2,14 +2,13 @@ import './App.css'
 import { Grid2 , Stack } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import useWindowDimensions from './windowsize'
 import { isMobile } from './windowsize';
 
 export function Footer(){
-  
- 
+   
+    
     return (
-    <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' minHeight={600} >
+    <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{ height : isMobile() ? '650px' : '450px'}}>
          <Stack sx={{ marginLeft : 1 ,alignItems : 'flex-start' ,}}>
             <Typography gutterBottom variant="body1"  sx={{color : '#fff' , marginBottom : 2 , }}>
               Company
