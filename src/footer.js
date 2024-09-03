@@ -6,14 +6,10 @@ import useWindowDimensions from './windowsize'
 import { isMobile } from './windowsize';
 
 export function Footer(){
-  let { height, width } = useWindowDimensions();
-  let k = 2 ;
-  if (isMobile()) {
-       k = 11 ;
-     } 
+  
  
     return (
-    <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{ height : 50 + width * k/10}}>
+    <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' minHeight={600} >
          <Stack sx={{ marginLeft : 1 ,alignItems : 'flex-start' ,}}>
             <Typography gutterBottom variant="body1"  sx={{color : '#fff' , marginBottom : 2 , }}>
               Company
