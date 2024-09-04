@@ -96,15 +96,22 @@ export function Navbar({navItems}){
             <Button key={item} sx={{ color: '#fff' }} onClick={() => navigate('/about')} >
             {item}
             </Button>
-            :
+            : item === 'Service' ?
             <> 
-              <Button key={item} sx={{ color: '#fff' }} onClick={ item === 'Service' ?  handleClick1 : handleClick2 } >
+              <Button key={item} sx={{ color: '#fff' }} onClick={   handleClick1  } >
+                {item}
+              </Button>
+              {<Menuitem open={open1} anchorEl={catEl}  handleClose ={handleClose1} item={ catogery  } />  }
+              </>
+              :
+              <> 
+              <Button key={item} sx={{ color: '#fff' }} onClick={ handleClick2 } >
                 {item}
                 
               </Button>
-              {<Menuitem open={open1} anchorEl={catEl}  handleClose ={handleClose1} item={ catogery  } />  }
               {<Menuitem open={open2} anchorEl={cat1El}  handleClose ={handleClose2} item={  ['Testominal' , 'Blog' , 'Faq' ] } />  } 
-              </> 
+              </>
+
             
             ))}
           </Box>

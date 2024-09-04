@@ -1,15 +1,12 @@
 import Vector from './Vector.png'
 import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import { colors } from '@mui/material';
 import { isMobile } from './windowsize';
 
 export function Subbanner({item}){
     return(
         
-        <div style={{ background : `url(${Vector})` , paddingInline : '10%' ,  width : '80%' , backgroundColor : '#110F0F' , height : isMobile() ? '500px' : '400px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : 'cover' , placeItems : 'start' , alignItems : 'flex-start' , alignContent : 'center' }}> 
+        <div style={{ background : `url(${Vector})` , paddingInline : '10%' ,  width : '80%' , backgroundColor : '#110F0F' , height : isMobile() ? '500px' : '400px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : isMobile() ? 'fill' :  'cover' , placeItems : 'start' , alignItems : 'flex-start' , alignContent : 'center' }}> 
              {
               item.pagetitle !== ' ' ? <Typography variant="h5" sx={{color : '#FFA800' , marginBottom : 2}} gutterBottom>
                  {item.pagetitle }
