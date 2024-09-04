@@ -41,16 +41,28 @@ export function Navbar({navItems}){
   const open = Boolean(anchorEl);
   const handleClick = (event , item) => {
     setAnchorEl(event.currentTarget);
-    if(item === 'Service' ){
-      setCatEl(false)
-    }else{
-      setCatEl(true)
-    }
-   
   };
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const [cat1El, setCat1El] = React.useState(null);
+  const open2 = Boolean(anchorEl);
+  const handleClick2 = (event , item) => {
+    setCat1El(event.currentTarget);
+  };
+  const handleClose2 = () => {
+    setCat1El(null);
+  };
+
+ const open1 = Boolean(catEl);
+  const handleClick1 = (event , item) => {
+     setCatEl(event.currentTarget);
+  };
+  const handleClose1 = () => {
+     setCatEl(null);
+  };
+  
   
   
     return(
@@ -78,19 +90,21 @@ export function Navbar({navItems}){
              <IconButton onClick={handleClick} > <MenuIcon sx={{color : '#fff' , height : 50  ,width : 50}}    /> </IconButton> <Menuitem open={open} anchorEl={anchorEl}  handleClose ={handleClose} item={['About us' , 'Service' , 'Resourse' , 'Contact us']} /> </> :  
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              item === 'Contact us' ?  <Button key={item} sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , margin : 2}}>
+              item === 'Contact us' ?  <Button key={item} sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , margin : 2}} onClick={() => navigate('/quote')} >
               {item}
-            </Button> : item === 'Service' ?   <>
-              <Button key={item} sx={{ color: '#fff' }} onClick={handleClick} >
+            </Button> : item === 'About us' ?   
+            <Button key={item} sx={{ color: '#fff' }} onClick={() => navigate('/about')} >
+            {item}
+            </Button>
+            :
+            <> 
+              <Button key={item} sx={{ color: '#fff' }} onClick={ item === 'Service' ?  handleClick1 : handleClick2 } >
                 {item}
                 
               </Button>
-              {<Menuitem open={open} anchorEl={anchorEl}  handleClose ={handleClose} item={ catogery  } />  }
-               
-              </> : 
-            <Button key={item} sx={{ color: '#fff' }}  >
-            {item}
-            </Button>
+              {<Menuitem open={open1} anchorEl={catEl}  handleClose ={handleClose1} item={ catogery  } />  }
+              {<Menuitem open={open2} anchorEl={cat1El}  handleClose ={handleClose2} item={  ['Testominal' , 'Blog' , 'Faq' ] } />  } 
+              </> 
             
             ))}
           </Box>

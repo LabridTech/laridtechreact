@@ -4,11 +4,16 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { isMobile } from './windowsize';
 import useWindowDimensions from './windowsize';
+import { useNavigate } from "react-router-dom";
 
 
 export function SectionChoosing(){
+     const navigate = useNavigate();
      let { height, width } = useWindowDimensions();
      let k = 3;
+     if(width <1600){
+          k = 4 ;
+         }
      if(isMobile()){
           k = 15;
      }
@@ -29,7 +34,7 @@ export function SectionChoosing(){
                       Lizards are a widespread group of squamate reptiles, with over 6,000
                      species, ranging across all continents except Antarctica
                 </Typography>
-                <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , marginBlock : 2}}>
+                <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , marginBlock : 2}} onClick={() => navigate('/quote')}>
                 Let’s connect 
                  </Button>
                 </div>

@@ -7,11 +7,16 @@ import { Productcard } from './component/product-card';
 import useWindowDimensions from './windowsize'
 import { isMobile } from './windowsize';
 import { productinfo } from './info/product-info';
+import { useNavigate } from "react-router-dom";
 
 
 export function OurWork(){
+  const navigate = useNavigate();
       let { height, width } = useWindowDimensions();
      let k = 5 ;
+     if(width <1600){
+      k = 8 ;
+     }
      if (isMobile()) {
           k = 55 ;
         } 
@@ -31,7 +36,7 @@ export function OurWork(){
                   Lizards are a widespread group of squamate reptiles, with over 6,000
                  species, ranging across all continents except Antarctica
             </Typography>
-            <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , marginBlock : 2}}>
+            <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , marginBlock : 2}} onClick={() => navigate('/project')}>
              Show More 
              </Button>
             </div>

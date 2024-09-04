@@ -12,6 +12,9 @@ import { isMobile } from './windowsize';
 export function Testmonial(){
   let { height, width } = useWindowDimensions();
   let k = 2 ;
+  if(width <1600){
+    k = 5 ;
+   }
   if (isMobile()) {
        k = 25 ;
      } 
@@ -28,7 +31,9 @@ export function Testmonial(){
                 margin : 1,
                 border : 1 ,
                 borderRadius : '10px' ,
-                borderColor : '#FFA800'}}>
+                borderColor : '#FFA800'}}
+            
+                >
                     <ArrowBackIosIcon></ArrowBackIosIcon>
                 </IconButton>
                 <IconButton sx={{color : '#FFA800' ,

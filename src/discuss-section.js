@@ -16,7 +16,7 @@ export function DiscussSection(){
      } 
     return(
         
-      <div style={{ padding :  '10%' ,backgroundColor : '#000' }}>
+      <div style={{ padding :  '10%' ,backgroundColor : 'rgb(17, 15, 15)' }}>
         <div style={{   width : '100%' , backgroundColor : '#FFA800' , height : '1000px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : 'cover' , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px"}}> 
             <div>
              <Typography variant="h3" sx={{color : '#000' , textAlign : 'center' }} gutterBottom>

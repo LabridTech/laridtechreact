@@ -12,13 +12,16 @@ import { isMobile } from './windowsize';
 export function Mainservice(){
      let { height, width } = useWindowDimensions();
      let k = 3 ;
+     if(width <1600){
+      k = 6 ;
+     }
      if (isMobile()) {
           k = 53 ;
         } 
     
     
     return (
-        <div className='main-service' style={{ height :  200 + width * k/10 , flexDirection : isMobile() ? 'row' : 'column' , textAlign : isMobile() && 'center' , }}>
+        <div className='main-service' style={{ height :  200 + width * k/10 , flexDirection : isMobile() ? 'row' : 'column' , textAlign : isMobile() && 'center' , flexWrap : isMobile() ? 'wrap' : 'nowrap'   }}>
               <Typography variant="h3" sx={{color : '#FFFFFF' , marginBlock : 2}} gutterBottom>
                 We Offer
              </Typography>

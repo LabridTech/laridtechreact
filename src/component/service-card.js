@@ -2,10 +2,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 export function Servicecard({item}){
     return(
-        <Card sx={{ maxWidth: 345 , backgroundColor : 'transparent' , border : 1 , borderColor : '#A1AEBF'  , padding : 2}}>
+        <Link underline='none' to={`/niche/${item.title} ` } style={{textDecoration : 'none'}} >
+        <Card sx={{ maxWidth: 345 , backgroundColor : 'transparent' , border : 1 , borderColor : '#A1AEBF'  , padding : 2 , }}  >
                 <CardMedia
                     sx={{ height: 48 , width : 48 }}
                     image={item.logo}
@@ -21,5 +23,6 @@ export function Servicecard({item}){
                 </CardContent>
       
                 </Card>
+                </Link>      
     )
 }
