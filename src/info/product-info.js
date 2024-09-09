@@ -34,6 +34,7 @@ export const productinfo = [
     {
         title : 'Metrzon Landing page' ,
         catogery : catogery[2] , 
+        index : 1 ,
         pic1 : metrzon1,
         pic2 : metrzon,
         pic3 : metrzon2,
@@ -46,6 +47,7 @@ export const productinfo = [
     {
         title : 'Fitflex' ,
         catogery : catogery[1] , 
+        index : 2 ,
         pic1 : fitflex,
         pic2 : fitflex1,
         pic3 : fitflex2,
@@ -58,6 +60,7 @@ export const productinfo = [
     {
         title : 'E-comerance Mobile App' ,
         catogery : catogery[1] , 
+        index : 3 ,
         pic1 : ecommobile,
         pic2 : ecommobile1,
         pic3 : ecommobile2,
@@ -70,6 +73,7 @@ export const productinfo = [
     {
         title : 'Flower Mobile App' ,
         catogery : catogery[1] , 
+        index : 4 ,
         pic1 : flowermobile,
         pic2 : flowermobile1,
         pic3 : flowermobile2,
@@ -82,6 +86,7 @@ export const productinfo = [
     {
         title : 'Car Rental Mobile App' ,
         catogery : catogery[1] , 
+        index : 5 ,
         pic1 : carmobile,
         pic2 : carmobile1,
         pic3 : carmobile2,
@@ -94,6 +99,7 @@ export const productinfo = [
     {
         title : 'Cartoon Graphic' ,
         catogery : catogery[6] , 
+        index : 6 ,
         pic1 : cartoongraphic,
         pic2 : cartoongraphic1,
         pic3 : cartoongraphic2,
@@ -106,6 +112,7 @@ export const productinfo = [
     {
         title : 'Sketch Graphic' ,
         catogery : catogery[6] , 
+        index : 7 ,
         pic1 : graphicsketch,
         pic2 : null,
         pic3 : null,
@@ -118,6 +125,7 @@ export const productinfo = [
     {
         title : 'Shoes Banner Graphic' ,
         catogery : catogery[6] , 
+        index : 8 ,
         pic1 : graphicshoesbanner,
         pic2 : null,
         pic3 : null,
@@ -130,6 +138,7 @@ export const productinfo = [
     {
         title : 'E-comerance UI/UX' ,
         catogery : catogery[8] , 
+        index : 9 ,
         pic1 : ecomuiux,
         pic2 : null,
         pic3 : null,
@@ -142,6 +151,7 @@ export const productinfo = [
     {
         title : 'Flower Shop Mobile UI/UX' ,
         catogery : catogery[8] , 
+        index : 10 ,
         pic1 : floweruiux,
         pic2 : null,
         pic3 : null,
@@ -154,6 +164,7 @@ export const productinfo = [
     {
         title : 'Gaming Web app' ,
         catogery : catogery[2] , 
+        index : 12 ,
         pic1 : gameweb,
         pic2 : gameweb1,
         pic3 : gameweb2,

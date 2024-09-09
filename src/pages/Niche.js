@@ -1,21 +1,20 @@
-import './App.css';
-import { Footer } from './footer';
-import { Navbar } from './nav';
-import { Subbanner } from './subbanner';
+import '../style/App.css';
+import { Footer } from '../section/footer';
+import { Navbar } from '../section/nav';
+import { Subbanner } from '../section/subbanner';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Productcard } from './component/product-card';
-import { Servicecard } from './component/service-card';
-import { serviceinfo } from './info/service-info';
+import { Productcard } from '../component/product-card';
+import { Servicecard } from '../component/service-card';
+import { serviceinfo } from '../info/service-info';
 import { Grid2 } from '@mui/material';
-import { productinfo } from './info/product-info';
-import useWindowDimensions from './windowsize'
-import { isMobile } from './windowsize';
+import { productinfo } from '../info/product-info';
+import useWindowDimensions from '../windowsize'
+import { isMobile } from '../windowsize';
 import {useParams} from 'react-router-dom';
 
 function Niche() {
   const { title } =  useParams();
-  let { height, width } = useWindowDimensions();
   let count = 0 ;
   let k =  productinfo.filter((item)=> { return item.catogery === title ? item : null }).length / 5 ;
   if (isMobile()) {
@@ -26,14 +25,15 @@ function Niche() {
     <div className="App">
       
      
-      <Navbar navItems={['About us' , 'Service' , 'Resourse' , 'Contact us']}></Navbar>
+      <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
       <Subbanner item={{pagetitle : 'Branding' , title : 'Find your niche' , text : 'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros ' , button : 'Build My Solution'}} ></Subbanner>
       <div style={{ width : '80%' , height :  isMobile() ? 500 : 100  , backgroundColor : 'rgb(17, 15, 15)' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             Process
             </Typography>
+            
             <Typography variant="subtitle1" sx={{color : '#ffffff82' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
-            Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit.Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit. Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit. Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit.  
+            {serviceinfo.filter((item)=> { return item.title === title ? item : null }).map((item)=> item.process) }  
             </Typography>
       </div>
 

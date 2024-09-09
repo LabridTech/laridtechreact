@@ -1,12 +1,11 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid2';
-import Brandlogo from './img/Brandlogo.png';
-import './App.css';
-import { Servicecard } from './component/service-card';
-import {serviceinfo} from './info/service-info'
-import useWindowDimensions from './windowsize'
-import { isMobile } from './windowsize';
+import '../style/App.css';
+import { Servicecard } from '../component/service-card';
+import {serviceinfo} from '../info/service-info'
+import useWindowDimensions from '../windowsize'
+import { isMobile } from '../windowsize';
 
 
 export function Mainservice(){

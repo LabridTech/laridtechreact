@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './style/index.css';
+import App from './pages/App';
 import reportWebVitals from './reportWebVitals'
-import {  Routes, Route , BrowserRouter } from "react-router-dom";import Aboutus from './Aboutus';
-import Quote from './Quote';
-import Niche from './Niche';
-import Project from './projects';
-import ProjectDetail from './projectdetail';
+import {  Routes, Route , BrowserRouter } from "react-router-dom";
+import Aboutus from './pages/Aboutus';
+import Quote from './pages/Quote';
+import Niche from './pages/Niche';
+import Project from './pages/projects';
+import ProjectDetail from './pages/projectdetail';
+import Comingsoon from './pages/Comingsoon';
 ;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +23,7 @@ root.render(
         <Route path="/niche/:title" element={<Niche/>}></Route>
         <Route path="/project" element={<Project/>}></Route>
         <Route path="/prjdetail/:title" element={<ProjectDetail/>}></Route>
+        <Route path="/comingsoon" element={<Comingsoon/>}></Route>
       </Routes>
       </BrowserRouter>
   </React.StrictMode>

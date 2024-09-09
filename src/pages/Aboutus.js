@@ -1,11 +1,11 @@
-import './App.css';
-import { Footer } from './footer';
-import { Navbar } from './nav';
-import { Subbanner } from './subbanner';
+import '../style/App.css';
+import { Footer } from '../section/footer';
+import { Navbar } from '../section/nav';
+import { Subbanner } from '../section/subbanner';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { isMobile } from './windowsize';
-import useWindowDimensions from './windowsize';
+import { isMobile } from '../windowsize';
+import useWindowDimensions from '../windowsize';
 
 function Aboutus() {
   let k = 0;
@@ -17,7 +17,7 @@ function Aboutus() {
     <div className="App">
       
      
-      <Navbar navItems={['About us' , 'Service' , 'Resourse' , 'Contact us']}></Navbar>
+      <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
       <Subbanner item={{pagetitle : 'About us' , title : 'LabridTech' , button : 'Contact'}} ></Subbanner>
       <div style={{ width : '80%' , height : 300 + width * k/10 , backgroundColor : 'rgb(17, 15, 15)' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>

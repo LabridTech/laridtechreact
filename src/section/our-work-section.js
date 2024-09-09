@@ -1,12 +1,11 @@
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid2';
-import Pic1 from './img/rect.png'
-import './App.css';
-import { Productcard } from './component/product-card';
-import useWindowDimensions from './windowsize'
-import { isMobile } from './windowsize';
-import { productinfo } from './info/product-info';
+import '../style/App.css';
+import { Productcard } from '../component/product-card';
+import useWindowDimensions from '../windowsize'
+import { isMobile } from '../windowsize';
+import { productinfo } from '../info/product-info';
 import { useNavigate } from "react-router-dom";
 
 

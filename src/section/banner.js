@@ -1,9 +1,9 @@
-import Vector from './Vector.png'
+import Vector from '../img/Vector.png'
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import useWindowDimensions from './windowsize'
-import { isMobile } from './windowsize';
+import useWindowDimensions from '../windowsize'
+import { isMobile } from '../windowsize';
 
 
 export function Banner(){

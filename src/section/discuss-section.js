@@ -1,11 +1,8 @@
-import Vector from './Vector.png'
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import { colors } from '@mui/material';
-import useWindowDimensions from './windowsize'
-import { isMobile } from './windowsize';
+import useWindowDimensions from '../windowsize'
+import { isMobile } from '../windowsize';
 
 
 export function DiscussSection(){

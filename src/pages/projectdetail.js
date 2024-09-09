@@ -1,14 +1,12 @@
-import './App.css';
-import { Footer } from './footer';
-import { Navbar } from './nav';
-import { Subbanner } from './subbanner';
+import '../style/App.css';
+import { Footer } from '../section/footer';
+import { Navbar } from '../section/nav';
+import { Subbanner } from '../section/subbanner';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import rect from './img/rect.png'
 import { Grid2 } from '@mui/material';
 import {useParams} from 'react-router-dom';
-import { productinfo } from './info/product-info';
-import { isMobile } from './windowsize';
+import { productinfo } from '../info/product-info';
+import { isMobile } from '../windowsize';
 
 function ProjectDetail() {
   const { title } =  useParams();
@@ -16,7 +14,7 @@ function ProjectDetail() {
     <div className="App">
       
      
-      <Navbar navItems={['About us' , 'Service' , 'Resourse' , 'Contact us']}></Navbar>
+      <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
       <Subbanner item={{pagetitle : 'About us' , title : 'LabridTech' , button : 'Contact'}} ></Subbanner>
 
       {

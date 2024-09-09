@@ -1,9 +1,9 @@
-import './App.css';
-import Vector from './img/Vector1.png'
+import '../style/App.css';
+import Vector from '../img/Vector1.png'
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { isMobile } from './windowsize';
-import useWindowDimensions from './windowsize';
+import { isMobile } from '../windowsize';
+import useWindowDimensions from '../windowsize';
 import { useNavigate } from "react-router-dom";
 
 

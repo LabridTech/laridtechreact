@@ -1,19 +1,18 @@
 import * as React from 'react';
-import './App.css';
+import '../style/App.css';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
-import { isMobile } from './windowsize';
-import TemporaryDrawer from './drawer';
+import { isMobile } from '../windowsize';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { catogery } from './info/catogery-info';
+import { catogery } from '../info/catogery-info';
 
 function Menuitem({item , open , anchorEl , handleClose}){
- 
+  const navigate = useNavigate();
 
   return (
     <Menu
@@ -26,8 +25,32 @@ function Menuitem({item , open , anchorEl , handleClose}){
         }}
         disableScrollLock={ true }
       >
-        {item.map((value) => <MenuItem onClick={handleClose}>{value}</MenuItem> )}
+        {item.map((value) => <MenuItem onClick={() => navigate(`/niche/${value}`)}>{value}</MenuItem> )}
         
+        
+      </Menu>
+  )
+}
+
+function Menuitemconst({ open , anchorEl , handleClose , handleClick1 , open1 , catEl , handleClose1}){
+  const navigate = useNavigate();
+
+  return (
+    <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+        disableScrollLock={ true }
+      >
+       <MenuItem onClick={() => navigate('/about')}>About us</MenuItem> 
+       <MenuItem onClick={handleClick1}>Service</MenuItem>
+       {<Menuitem open={open1} anchorEl={catEl}  handleClose ={handleClose1} item={ catogery  } />  } 
+       <MenuItem onClick={() => navigate('/project')}>Case Study</MenuItem>
+       <MenuItem onClick={() => navigate('/quote')}>Contact us</MenuItem>
         
       </Menu>
   )
@@ -46,14 +69,7 @@ export function Navbar({navItems}){
     setAnchorEl(null);
   };
 
-  const [cat1El, setCat1El] = React.useState(null);
-  const open2 = Boolean(anchorEl);
-  const handleClick2 = (event , item) => {
-    setCat1El(event.currentTarget);
-  };
-  const handleClose2 = () => {
-    setCat1El(null);
-  };
+  
 
  const open1 = Boolean(catEl);
   const handleClick1 = (event , item) => {
@@ -87,7 +103,7 @@ export function Navbar({navItems}){
           </IconButton>
           
           {isMobile() ? <>
-             <IconButton onClick={handleClick} > <MenuIcon sx={{color : '#fff' , height : 50  ,width : 50}}    /> </IconButton> <Menuitem open={open} anchorEl={anchorEl}  handleClose ={handleClose} item={['About us' , 'Service' , 'Resourse' , 'Contact us']} /> </> :  
+             <IconButton onClick={handleClick} > <MenuIcon sx={{color : '#fff' , height : 50  ,width : 50}}    /> </IconButton> <Menuitemconst open={open} anchorEl={anchorEl}  handleClose ={handleClose} handleClick1={handleClick1} handleClose1={handleClose1} open1={open1} catEl={catEl} /> </> :  
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               item === 'Contact us' ?  <Button key={item} sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , margin : 2}} onClick={() => navigate('/quote')} >
@@ -105,11 +121,11 @@ export function Navbar({navItems}){
               </>
               :
               <> 
-              <Button key={item} sx={{ color: '#fff' }} onClick={ handleClick2 } >
+              <Button key={item} sx={{ color: '#fff' }} onClick={ () => navigate('/project') } >
                 {item}
                 
               </Button>
-              {<Menuitem open={open2} anchorEl={cat1El}  handleClose ={handleClose2} item={  ['Testominal' , 'Blog' , 'Faq' ] } />  } 
+      
               </>
 
             
