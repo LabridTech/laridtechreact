@@ -16,11 +16,9 @@ export function OurWork(){
      if(width <1600){
       k = 8 ;
      }
-     if (isMobile()) {
-          k = 55 ;
-        } 
+     
     return (
-       <div className='ourwork-section' style={{ height :  50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
+       <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 230  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
         <div style={{
             marginInline : '10%' , 
             display : 'flex',

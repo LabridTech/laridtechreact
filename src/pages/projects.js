@@ -47,12 +47,12 @@ function Project() {
       <Subbanner item={{  title : 'Our Portfolio' , text : 'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros ' , button : 'Build My Solution'}} ></Subbanner>
        
       <div style={{   width : '90%' ,
-                backgroundColor : '#000' , paddingInline : '5%'}}> 
+                backgroundColor : '#14111e' , paddingInline : '5%'}}> 
       <div style={{
                 justifyContent : 'flex-end' ,
                 display : 'flex' ,
                 width : '100%' ,
-                backgroundColor : '#000' ,
+                backgroundColor : '#14111e' ,
                 marginBlock : 5
             }}>
               
@@ -79,7 +79,7 @@ function Project() {
             </div>
             </div>    
       
-      <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} sx={{backgroundColor : '#000' ,paddingInline : '5%' , justifyContent : 'center' , marginBlock : 10}} >
+      <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} sx={{backgroundColor : '#14111e' ,paddingInline : '5%' , justifyContent : 'center' , marginBlock : 10}} >
         {
           isMobile() ?  productinfo.filter((value) => value.index === showindex || value.index === showindex +1 || value.index === showindex + 2   ? value : null).map((item) =>  <Productcard item={{pic : item.pic1 , catogery : item.catogery , title : item.title}} style={{display : 'none'}} ></Productcard>) :
           productinfo.filter((value) => value.index === showindex || value.index === showindex +1 || value.index === showindex + 2 || value.index === showindex + 3 || value.index === showindex +4 || value.index === showindex + 5  ? value : null).map((item) =>  <Productcard item={{pic : item.pic1 , catogery : item.catogery , title : item.title}} style={{display : 'none'}} ></Productcard>)
@@ -88,7 +88,7 @@ function Project() {
       </Grid2>
       
 
-      <div style={{ padding : isMobile() ? '5%' : '10%' ,backgroundColor : '#000' }}>
+      <div style={{ padding : isMobile() ? '5%' : '10%' ,backgroundColor : '#14111e' }}>
         <div style={{ maxWidth : '1400px' ,  width : '100%' , background : `url(${Calltoaction})` , height : isMobile() ? '409px' : '209px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : 'cover' , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px"}}> 
             <div style={{ display : 'flex' , justifyContent : 'center' , flexDirection : 'column' , alignItems : 'center'}}>
              <Typography variant="h3" sx={{color : '#000' , textAlign : 'center'}} gutterBottom>

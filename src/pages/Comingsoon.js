@@ -11,7 +11,7 @@ function Comingsoon() {
       
      
       <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
-      <Typography variant="h1" sx={{color : '#FFFFFF' , marginBottom : 2 , textAlign : 'center'}} gutterBottom>
+      <Typography variant="h1" sx={{color : '#FFFFFF' , margin : 5 , textAlign : 'center'}} gutterBottom>
             Coming Soon
       </Typography>
 

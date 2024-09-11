@@ -1,9 +1,9 @@
-import Vector from '../img/Vector.png'
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import useWindowDimensions from '../windowsize'
 import { isMobile } from '../windowsize';
+import Vector from '../img/backgroundimg.jpeg'
 
 
 export function Banner(){
@@ -15,13 +15,13 @@ export function Banner(){
     
     return(
         
-        <div style={{ textAlign : 'center' , paddingInline : isMobile() && '0.5%' ,background : `url(${Vector})` , width : '100%' , backgroundColor : '#110F0F' , height : 100 + width * k/10 , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : isMobile() ? 'fill' :  'cover' , placeItems : 'center' }}> 
+        <div style={{ textAlign : 'center' , paddingInline : isMobile() && '0.5%' ,background : `url(${Vector})` , width : '100%' , backgroundColor : '#110F0F' , height : 100 + width * k/10 , backgroundAttachment: 'fixed' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : isMobile() ? 'fill' :  'cover' , placeItems : 'center' }}> 
             <div>
              <Typography variant="h3" sx={{color : '#FFFFFF'}} gutterBottom>
                  Transforming Ideas into Innovative Solutions
                  Where Vision Meets Technology
              </Typography>
-             <Typography variant="subtitle1" sx={{color : '#ffffff82'}} gutterBottom>
+             <Typography variant="subtitle1" sx={{color : '#ffffffd9'}} gutterBottom>
                Welcome to Labrid Tech, 
                where we craft digital excellence for a smarter tomorrow
              </Typography>

@@ -21,7 +21,7 @@ function ProjectDetail() {
         productinfo.filter((item) => item.title === title ? item : null ).map((item) =>{
           return(
         <>
-          <div style={{ padding :  '10%' ,backgroundColor : '#000' }}>
+          <div style={{ padding :  '10%' ,backgroundColor : '#14111e' }}>
         <div style={{   width : '100%' , background : `url(${item.pic1})` , height : '1000px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid'  , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px", backgroundSize : item.catogery === 'Mobile Development' ? 'contain' : 'cover'}}> 
             
              
@@ -31,7 +31,7 @@ function ProjectDetail() {
         
         </div>  
 
-      <div style={{ width : '80%' , height : '400px' , backgroundColor : 'rgb(17, 15, 15)' , paddingInline : '10%' , paddingTop : "100px"}}>
+      <div style={{ width : '80%' , height : '400px' , backgroundColor : '#14111e' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             01. The Challenge
             </Typography>
@@ -40,7 +40,7 @@ function ProjectDetail() {
             </Typography>
       </div>
 
-      <div style={{ width : '80%' , height : '400px' , backgroundColor :  'rgb(17, 15, 15)' , paddingInline : '10%'}}>
+      <div style={{ width : '80%' , height : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
           02. The Solution 
             </Typography>
@@ -49,7 +49,7 @@ function ProjectDetail() {
             </Typography>
       </div>
 
-      <div style={{ width : '80%' , height : '400px' , backgroundColor :  'rgb(17, 15, 15)' , paddingInline : '10%'}}>
+      <div style={{ width : '80%' , height : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
           03. The Result
             </Typography>
@@ -57,10 +57,10 @@ function ProjectDetail() {
             {item.result}
             </Typography>
       </div>
-      {console.log(item.pic2)}
+    
        { item.pic2 == null && item.pic3 == null && item.pic4 == null ? null :
-      <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{height : isMobile() ? '1900px' : '1000px'}}>
-        {item.pic2 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }} src={item.pic2} alt='second pic' />  : null}
+      <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{height : isMobile() ? '1900px' : '1200px'}}>
+        {item.pic2 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'cover' }} src={item.pic2} alt='second pic' />  : null}
         {item.pic3 !== null ? <img style={{width : isMobile() ? '90%' :'550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }} src={item.pic3} alt='Third pic' />  : null}
         {item.pic4 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }} src={item.pic4} alt='fourth pic' />  : null}
         

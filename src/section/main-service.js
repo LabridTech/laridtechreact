@@ -20,7 +20,7 @@ export function Mainservice(){
     
     
     return (
-        <div className='main-service' style={{ height :  200 + width * k/10 , flexDirection : isMobile() ? 'row' : 'column' , textAlign : isMobile() && 'center' , flexWrap : isMobile() ? 'wrap' : 'nowrap'   }}>
+        <div className='main-service' style={{ height : isMobile() ? serviceinfo.length * 250 + 200 :  200 + width * k/10 , flexDirection : isMobile() ? 'row' : 'column' , textAlign : isMobile() && 'center' , flexWrap : isMobile() ? 'wrap' : 'nowrap'   }}>
               <Typography variant="h3" sx={{color : '#FFFFFF' , marginBlock : 2}} gutterBottom>
                 We Offer
              </Typography>

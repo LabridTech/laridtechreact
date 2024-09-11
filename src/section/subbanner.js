@@ -1,12 +1,12 @@
-import Vector from '../img/Vector.png'
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { isMobile } from '../windowsize';
+import Vector from '../img/backgroundimg.jpeg'
 
 export function Subbanner({item}){
     return(
         
-        <div style={{ background : `url(${Vector})` , paddingInline : '10%' ,  width : '80%' , backgroundColor : '#110F0F' , height : isMobile() ? '500px' : '400px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : isMobile() ? 'fill' :  'cover' , placeItems : 'start' , alignItems : 'flex-start' , alignContent : 'center' }}> 
+        <div style={{ background : `url(${Vector})` , backgroundAttachment: 'fixed' , paddingInline : '10%' ,  width : '80%' , backgroundColor : '#110F0F' , height : isMobile() ? '500px' : '400px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : isMobile() ? 'fill' :  'cover' , placeItems : 'start' , alignItems : 'flex-start' , alignContent : 'center' }}> 
              {
               item.pagetitle !== ' ' ? <Typography variant="h5" sx={{color : '#FFA800' , marginBottom : 2}} gutterBottom>
                  {item.pagetitle }
@@ -19,7 +19,7 @@ export function Subbanner({item}){
              }
              
              {
-              item.text !== null ? <Typography variant="subtitle1" sx={{color : '#ffffff82' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
+              item.text !== null ? <Typography variant="subtitle1" sx={{color : '#ffffffd9' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
                  {item.text}
               </Typography> :  null
              }

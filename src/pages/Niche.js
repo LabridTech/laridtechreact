@@ -27,7 +27,7 @@ function Niche() {
      
       <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
       <Subbanner item={{pagetitle : 'Branding' , title : 'Find your niche' , text : 'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros ' , button : 'Build My Solution'}} ></Subbanner>
-      <div style={{ width : '80%' , height :  isMobile() ? 500 : 100  , backgroundColor : 'rgb(17, 15, 15)' , paddingInline : '10%' , paddingTop : "100px"}}>
+      <div style={{ width : '80%' , height :  isMobile() ? 500 : 100  , backgroundColor : '#14111e' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             Process
             </Typography>
@@ -37,7 +37,7 @@ function Niche() {
             </Typography>
       </div>
 
-      <div style={{ width : '80%' , height : isMobile() ? 100 + k * 600  :  550 + k * 800 , backgroundColor : 'rgb(17, 15, 15)' , display : 'flex' , justifyContent : 'center' , flexDirection : 'column' , alignItems : 'start' , paddingInline : '10%' , paddingTop : "100px"}}>
+      <div style={{ width : '80%' , height : isMobile() ? 100 + k * 600  :  550 + k * 800 , backgroundColor : '#14111e' , display : 'flex' , justifyContent : 'center' , flexDirection : 'column' , alignItems : 'start' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             Similar Works
             </Typography>
@@ -52,7 +52,7 @@ function Niche() {
             
       </div>
 
-      <div style={{ width : '80%' , height : isMobile() ? 900 : 400   , backgroundColor : 'rgb(17, 15, 15)' , paddingInline : '10%' , paddingTop : "100px" ,display : 'flex' , justifyContent : 'center' , flexDirection : 'column' , alignItems : 'start' ,}}>
+      <div style={{ width : '80%' , height : isMobile() ? 900 : 500   , backgroundColor : '#14111e' , paddingInline : '10%' , paddingTop : "100px" ,display : 'flex' , justifyContent : 'center' , flexDirection : 'column' , alignItems : 'start' , marginBlock : isMobile() ? 10 :  30 ,}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             Some other services
             </Typography>
@@ -64,7 +64,7 @@ function Niche() {
             </Grid2>
       </div>
 
-      <div style={{ width : '80%' , height : '200px' , backgroundColor :  'rgb(17, 15, 15)' , paddingInline : '10%'}}>
+      <div style={{ width : '80%' , height : '200px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
       <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , margin : 0}}>
               Go to Home
             </Button>

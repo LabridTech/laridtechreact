@@ -19,7 +19,7 @@ function Aboutus() {
      
       <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
       <Subbanner item={{pagetitle : 'About us' , title : 'LabridTech' , button : 'Contact'}} ></Subbanner>
-      <div style={{ width : '80%' , height : 300 + width * k/10 , backgroundColor : 'rgb(17, 15, 15)' , paddingInline : '10%' , paddingTop : "100px"}}>
+      <div style={{ width : '80%' , height : 300 + width * k/10 , backgroundColor : '#14111e' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             Company
             </Typography>
@@ -28,7 +28,7 @@ function Aboutus() {
             </Typography>
       </div>
 
-      <div style={{ width : '80%' , height : 250 + width * k/10  , backgroundColor :  'rgb(17, 15, 15)' , paddingInline : '10%'}}>
+      <div style={{ width : '80%' , height : 250 + width * k/10  , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             Team
             </Typography>
@@ -36,7 +36,7 @@ function Aboutus() {
             Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit.Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit. Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit. Commodo diam vulputate dui proin quis enim nibh. Non integer ac libero facilisis hendrerit a at. Nisi sem ut sed sed faucibus at eu elit. Morbi aliquam porttitor mattis consequat neque, tellus blandit.  
             </Typography>
       </div>
-      <div style={{ width : '80%' , height : '200px' , backgroundColor :  'rgb(17, 15, 15)' , paddingInline : '10%'}}>
+      <div style={{ width : '80%' , height : '200px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
       <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , margin : 2}}>
               Go to Home
             </Button>

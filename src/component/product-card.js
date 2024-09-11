@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { IconButton } from '@mui/material';
 import ArrowCircleRightSharpIcon from '@mui/icons-material/ArrowCircleRightSharp';
 import { useNavigate } from "react-router-dom";
-
+import '../style/App.css'
 
 export function Productcard({item}){
     const navigate = useNavigate();
@@ -16,6 +16,7 @@ export function Productcard({item}){
             sx={{ height : '250px' ,  width : '100%' , borderRadius : '20px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }}
             image={item.pic}
             title="green iguana"
+            className='image-hover'
          />
         <CardContent sx={{display : 'flex' , flexDirection : 'column' , alignItems : 'flex-start' , padding : 0 , paddingBlock : 2}}>
         <Typography variant="body2" sx={{ color: '#1A365D' , margin : 0 , textAlign : 'start' , backgroundColor : '#FFA800' , marginBottom : 2 , padding : 1 , borderRadius : 2 }}>
