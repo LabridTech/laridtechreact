@@ -31,25 +31,52 @@ export function SectionChoosing(){
                        Why choose us
                  </Typography>
                  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-                     Why Choose LabridTech?
+                    
 
 At LabridTech, we pride ourselves on being more than just a service provider. We are a trusted partner committed to helping businesses of all sizes—especially startups and small businesses—thrive in the digital world. As an international software services and brand management company, we understand that every business has unique needs, and we tailor our solutions to meet those requirements.
-
+ </Typography>
+      <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 What Sets Us Apart?
+      </Typography>
 
+
+  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Budget-Friendly Solutions
+ </Typography>
+
+  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 We believe that going digital shouldn’t come with an overwhelming price tag. That’s why we offer competitive and transparent pricing, making high-quality software services and brand management accessible to businesses with any budget. Whether you’re launching your startup or looking to expand, our affordable packages ensure that your investment yields the best results.
 
+      
+  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Perfect for Startups and Small Businesses
+   </Typography>
+
+  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Starting out can be tough, and having the right support can make all the difference. LabridTech specializes in helping small businesses and startups build a strong online presence. From website development to digital branding, we provide tailored solutions designed to drive growth, increase visibility, and enhance customer engagement.
 
+     
+  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Comprehensive Services
+   </Typography>
+
+  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 We offer a wide range of services, from cutting-edge software solutions to strategic brand management. Whether you need a sleek website, digital marketing, or a comprehensive brand overhaul, our team of experts has the skills and experience to bring your vision to life.
-
+ </Typography>
+     
+  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Focused on Digital Transformation
-In today’s fast-paced world, businesses must adapt quickly to stay ahead. LabridTech is here to help you navigate the digital transformation process smoothly. We leverage the latest technologies to provide scalable, efficient solutions that optimize your operations and drive your business forward.
+   </Typography>
 
+  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
+In today’s fast-paced world, businesses must adapt quickly to stay ahead. LabridTech is here to help you navigate the digital transformation process smoothly. We leverage the latest technologies to provide scalable, efficient solutions that optimize your operations and drive your business forward.
+ </Typography>
+     
+  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Customer-Centric Approach
+   </Typography>
+
+  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Your success is our top priority. At LabridTech, we work closely with you to understand your specific goals and challenges, ensuring that our solutions not only meet your needs but exceed your expectations. Our customer-first approach is what makes us a trusted partner in helping businesses succeed.
 
 
