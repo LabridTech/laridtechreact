@@ -30,8 +30,7 @@ export function OurWork(){
               Some pieces of our work
              </Typography>
              <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start' ,width : '50%'}}>
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                 species, ranging across all continents except Antarctica
+                 At LabridTech, we take pride in delivering top-tier software solutions and brand management services that drive real results. Our portfolio showcases a diverse range of projects that reflect our commitment to innovation, quality, and customer satisfaction. From empowering startups with tailored digital solutions to helping established businesses achieve digital transformation, each project represents our passion for turning ideas into success stories. Explore our work and see how we can bring your vision to life.
             </Typography>
             <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , marginBlock : 2}} onClick={() => navigate('/project')}>
              Show More 
