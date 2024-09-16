@@ -14,11 +14,11 @@ export function OurWork(){
       let { height, width } = useWindowDimensions();
      let k = 5 ;
      if(width <1600){
-      k = 8 ;
+      k = 15 ;
      }
      
     return (
-       <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 230  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
+       <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 250  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
         <div style={{
             marginInline : '10%' , 
             display : 'flex',

@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { isMobile } from '../windowsize';
-import Vector from '../img/backgroundimg.jpeg'
+import Vector from '../img/backgroundimg.jpg'
 
 export function Subbanner({item}){
     return(

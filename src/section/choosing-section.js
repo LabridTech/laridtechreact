@@ -12,13 +12,13 @@ export function SectionChoosing(){
      let { height, width } = useWindowDimensions();
      let k = 3;
      if(width <1600){
-          k = 4 ;
+          k = 8 ;
          }
      if(isMobile()){
           k = 15;
      }
     return(
-        <div className="choose-section" style={{ flexDirection : isMobile() ?  'column' : 'row', height : 50 + width * k/10 , justifyContent  : isMobile() ? 'center' : 'space-between' , }}>
+        <div className="choose-section" style={{ flexDirection : isMobile() ?  'column' : 'row', height : 100 + width * k/10 , justifyContent  : isMobile() ? 'center' : 'space-between' , }}>
            <img alt='vector' src={Vector} style={{ width : isMobile() ? '100%' : '50%'  , height : '400px', display : 'flex'}} />
              <div style={{
                 marginInline : '10%' , 
@@ -46,7 +46,7 @@ Budget-Friendly Solutions
 
   <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 We believe that going digital shouldn’t come with an overwhelming price tag. That’s why we offer competitive and transparent pricing, making high-quality software services and brand management accessible to businesses with any budget. Whether you’re launching your startup or looking to expand, our affordable packages ensure that your investment yields the best results.
-
+</Typography>
       
   <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Perfect for Startups and Small Businesses
@@ -54,7 +54,7 @@ Perfect for Startups and Small Businesses
 
   <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Starting out can be tough, and having the right support can make all the difference. LabridTech specializes in helping small businesses and startups build a strong online presence. From website development to digital branding, we provide tailored solutions designed to drive growth, increase visibility, and enhance customer engagement.
-
+</Typography>
      
   <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
 Comprehensive Services

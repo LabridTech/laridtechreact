@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import useWindowDimensions from '../windowsize'
 import { isMobile } from '../windowsize';
-import Vector from '../img/backgroundimg.jpeg'
+import Vector from '../img/backgroundimg.jpg'
 
 
 export function Banner(){
