@@ -3,13 +3,12 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import useWindowDimensions from '../windowsize'
 import { isMobile } from '../windowsize';
-import back from '../img/back3.mp4'
+import back from '../img/back3cut.mp4'
 import * as React from 'react';
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
-
-
+import back2 from '../img/back4cut.mp4'
 
 export function Banner2(){
   let { height, windowwidth } = useWindowDimensions();
@@ -22,11 +21,19 @@ export function Banner2(){
             muted
            
           >
+            {isMobile() ?  
+        <source
+        src={back2}
+        type="video/mp4"
+        
+      /> :
             <source
               src={back}
               type="video/mp4"
             />
+}
           </video>
+           
         </CardCover>
         <CardContent sx={{ border : 0 , justifyContent : 'center' , alignContent : 'center' , alignItems : 'center'}}>
         <div >

@@ -28,7 +28,14 @@ import carmobile1 from '../img/project img/carmobile1.jpg'
 import carmobile2 from '../img/project img/carrmobile2.jpg'
 import graphicsketch from '../img/project img/bannersketch.jpg'
 import graphicshoesbanner from '../img/project img/bannershoes.jpeg'
-
+import mluq from '../img/project img/mluq.png'
+import mluq2 from '../img/project img/mluq3.png'
+import mluq3 from '../img/project img/mluq4.png'
+import mluq4 from '../img/project img/mluq5.png'
+import bookf from '../img/project img/bookf.png'
+import bookf1 from '../img/project img/bookf1.png'
+import bookf2 from '../img/project img/bookf2.png'
+import bookf3 from '../img/project img/bookf3.png'
 
 export const productinfo = [
     {
@@ -164,11 +171,37 @@ export const productinfo = [
     {
         title : 'Gaming Web app' ,
         catogery : catogery[2] , 
-        index : 12 ,
+        index : 11 ,
         pic1 : gameweb,
         pic2 : gameweb1,
         pic3 : gameweb2,
         pic4 : gameweb3,
+        main : false,
+        challenge : 'When our power of choice is untrammeled and when nothing prevents us from being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.' ,
+        solution : 'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.' ,
+        result : 'Because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"  ' ,
+    },
+    {
+        title : 'Mluqman Attar' ,
+        catogery : catogery[1] , 
+        index : 12 ,
+        pic1 : mluq,
+        pic2 : mluq4,
+        pic3 : mluq2,
+        pic4 : mluq3,
+        main : true,
+        challenge : 'When our power of choice is untrammeled and when nothing prevents us from being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.' ,
+        solution : 'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.' ,
+        result : 'Because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"  ' ,
+    },
+    {
+        title : 'Bookfiy app' ,
+        catogery : catogery[2] , 
+        index : 13 ,
+        pic1 : bookf,
+        pic2 : bookf1,
+        pic3 : bookf2,
+        pic4 : bookf3,
         main : false,
         challenge : 'When our power of choice is untrammeled and when nothing prevents us from being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.' ,
         solution : 'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.' ,

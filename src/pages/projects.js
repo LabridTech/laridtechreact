@@ -20,12 +20,12 @@ function Project() {
   const [showindex, setshowindex] = React.useState(1);
   const handleplusshow = ()=>{
     if(isMobile()){
-      if(showindex + 3  < productinfo.length){
+      if(showindex + 3  < productinfo.length + 1){
         setshowindex(showindex + 1);
       }
     }
     else{
-      if(showindex + 6 < productinfo.length){
+      if(showindex + 6 < productinfo.length + 1){
         setshowindex(showindex + 1);
       }
     }

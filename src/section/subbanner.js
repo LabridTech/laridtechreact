@@ -5,8 +5,8 @@ import Vector from '../img/backgroundimg.jpg'
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
-import back from '../img/back3.mp4'
-import back2 from '../img/back4.mp4'
+import back from '../img/back3cut.mp4'
+import back2 from '../img/back4cut.mp4'
 import useWindowDimensions from '../windowsize';
 
 export function Subbanner({item}){

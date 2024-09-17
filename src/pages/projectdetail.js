@@ -7,6 +7,7 @@ import { Grid2 } from '@mui/material';
 import {useParams} from 'react-router-dom';
 import { productinfo } from '../info/product-info';
 import { isMobile } from '../windowsize';
+import { AspectRatio } from '@mui/icons-material';
 
 function ProjectDetail() {
   const { title } =  useParams();
@@ -60,7 +61,7 @@ function ProjectDetail() {
     
        { item.pic2 == null && item.pic3 == null && item.pic4 == null ? null :
       <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{height : isMobile() ? '1900px' : '1200px'}}>
-        {item.pic2 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'cover' }} src={item.pic2} alt='second pic' />  : null}
+        {item.pic2 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain'  }} src={item.pic2} alt='second pic' />  : null}
         {item.pic3 !== null ? <img style={{width : isMobile() ? '90%' :'550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }} src={item.pic3} alt='Third pic' />  : null}
         {item.pic4 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }} src={item.pic4} alt='fourth pic' />  : null}
         

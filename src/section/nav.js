@@ -91,14 +91,14 @@ export function Navbar({navItems}){
             onClick={() => navigate('/')}
             sx={{ mr: 2 }}
           >
-            <img alt='logo' src='/logo.png' style={{marginRight : 2}}/>
+            <img alt='logo' src='/logo.png' style={{marginRight : 2, height : isMobile() ? '50px' : '80px' , width : isMobile() ? '50px' : '80px'}}/>
             
             <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow : 1  , color : 'white' }}
           >
-            LABRIDTEACH
+            LABRIDTECH
           </Typography>
           </IconButton>
           
