@@ -183,7 +183,7 @@ export const productinfo = [
     },
     {
         title : 'Mluqman Attar' ,
-        catogery : catogery[1] , 
+        catogery : catogery[0] , 
         index : 12 ,
         pic1 : mluq,
         pic2 : mluq4,

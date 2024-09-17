@@ -3,6 +3,7 @@ import { Grid2 , Stack } from "@mui/material";
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { isMobile } from '../windowsize';
+import { catogery } from '../info/catogery-info';
 
 export function Footer(){
    
@@ -22,15 +23,9 @@ export function Footer(){
             <Typography gutterBottom variant="body1"  sx={{color : '#fff' , marginBottom : 2 , }}>
               Service
             </Typography>
-            <a href='/niche/Branding' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> Branding </a>
-            <a href='/niche/Web Development' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> Web development </a>
-            <a href='/niche/Digital Marketing' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> Digital marketing </a>
-            <a href='/niche/Mobile Development' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> Mobile app </a>
-            <a href='/niche/Seo' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> SEO </a>
-            <a href='/niche/' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> User testing </a>
-            <a href='/niche/Graphic Designing' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> Graphic Designing </a>
-            <a href='/niche/Video Editing' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> Video Editing </a>      
-            <a href='/niche/UIUX' style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> UI/UX </a>     
+            {catogery.map(value=><a href={`/niche/${value}`} style={{color : '#ffffff82' , textDecoration : 'none' , marginBottom : 10 ,}}> {value} </a>)}
+            
+          
           </Stack> 
 
           <Stack sx={{ marginLeft : 1 , alignItems : 'flex-start'}}>

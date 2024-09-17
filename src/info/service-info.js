@@ -44,26 +44,20 @@ export const serviceinfo = [
         process: 'Our digital marketing approach is data-driven. We design custom campaigns for social media, search engines, and email marketing, focusing on increasing conversions and building long-lasting customer relationships.'
     },
     {
-        logo: Usertestlogo,
-        title: catogery[5],
-        description: 'Enhance your product’s user experience with our thorough user testing services. We ensure your product is intuitive, functional, and optimized for real-world use.',
-        process: 'Our user testing involves rigorous research, prototype testing, and usability feedback sessions. We ensure your product is user-centered and ready to succeed in the market.'
-    },
-    {
         logo: Graphicdesigning,
-        title: catogery[6],
+        title: catogery[5],
         description: 'Unleash creativity with our professional graphic design services. Whether it’s for marketing materials or a complete rebranding, we make your visuals as powerful as your message.',
         process: 'Our graphic design process begins with an in-depth consultation to capture your aesthetic and branding needs. We then create impactful designs that connect with your audience and elevate your brand.'
     },
     {
         logo: Videoediting,
-        title: catogery[7],
+        title: catogery[6],
         description: 'Captivate your audience with expertly edited videos. Our video editing services turn raw footage into compelling stories that resonate with viewers and leave a lasting impression.',
         process: 'We offer end-to-end video editing services, starting from storyboarding to final edits. Our focus is on creating visually stunning videos that effectively communicate your message and engage your audience.'
     },
     {
         logo: uiux,
-        title: catogery[8],
+        title: catogery[7],
         description: 'Create seamless and delightful digital experiences with our UI/UX design services. We focus on functionality and aesthetics to ensure your product is both beautiful and easy to use.',
         process: 'We employ user research, wireframes, and prototyping in our UI/UX design process. Our designs are built to offer intuitive navigation, user-centric interfaces, and a smooth digital experience.'
     },
