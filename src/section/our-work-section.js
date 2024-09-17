@@ -14,17 +14,18 @@ export function OurWork(){
       let { height, width } = useWindowDimensions();
      let k = 5 ;
      if(width <1600){
-      k = 15 ;
+      k = 10 ;
      }
      
     return (
-       <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 250  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
+       <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 260  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
         <div style={{
-            marginInline : '10%' , 
+            marginLeft : '5%' , 
             display : 'flex',
             flexDirection : 'column' ,
             alignItems : 'flex-start',
-            flexWrap : 'wrap'
+            flexWrap : 'wrap' ,
+            width : isMobile() ? '90%' : '50%'
          }} >
               <Typography gutterBottom variant="h5" component="div" sx={{color : '#fff'}}>
               Some pieces of our work

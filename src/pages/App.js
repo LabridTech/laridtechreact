@@ -1,5 +1,5 @@
 import '../style/App.css';
-import { Banner } from '../section/banner';
+import { Banner, Banner2 } from '../section/banner';
 import { SectionChoosing } from '../section/choosing-section';
 import { Mainservice } from '../section/main-service';
 import { Navbar } from '../section/nav';
@@ -14,7 +14,7 @@ function App() {
       
      
       <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
-      <Banner></Banner>
+      <Banner2></Banner2>
       <Mainservice></Mainservice>
       <SectionChoosing></SectionChoosing>
       <OurWork></OurWork>

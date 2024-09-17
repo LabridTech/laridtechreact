@@ -10,16 +10,16 @@ import { useNavigate } from "react-router-dom";
 export function SectionChoosing(){
      const navigate = useNavigate();
      let { height, width } = useWindowDimensions();
-     let k = 3;
+     let k = 2;
      if(width <1600){
-          k = 8 ;
+          k = 3 ;
          }
      if(isMobile()){
           k = 15;
      }
     return(
-        <div className="choose-section" style={{ flexDirection : isMobile() ?  'column' : 'row', height : 100 + width * k/10 , justifyContent  : isMobile() ? 'center' : 'space-between' , }}>
-           <img alt='vector' src={Vector} style={{ width : isMobile() ? '100%' : '50%'  , height : '400px', display : 'flex'}} />
+        <div className="choose-section" style={{ flexDirection : isMobile() ?  'column' : 'row', height : 150 + width * k/5 , justifyContent  : isMobile() ? 'center' : 'space-between' , }}>
+           <img alt='vector' src={Vector} style={{ width : isMobile() ? '100%' : '45%'  , height : '400px', display : 'flex'}} />
              <div style={{
                 marginInline : '10%' , 
                 display : 'flex',
@@ -30,14 +30,7 @@ export function SectionChoosing(){
                   <Typography gutterBottom variant="h5" component="div" sx={{color : '#fff'}}>
                        Why choose us
                  </Typography>
-                 <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-                    
-
-At LabridTech, we pride ourselves on being more than just a service provider. We are a trusted partner committed to helping businesses of all sizes—especially startups and small businesses—thrive in the digital world. As an international software services and brand management company, we understand that every business has unique needs, and we tailor our solutions to meet those requirements.
- </Typography>
-      <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-What Sets Us Apart?
-      </Typography>
+    
 
 
   <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>

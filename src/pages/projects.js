@@ -88,7 +88,7 @@ function Project() {
       </Grid2>
       
 
-      <div style={{ padding : isMobile() ? '5%' : '10%' ,backgroundColor : '#14111e' }}>
+      <div style={{ padding : isMobile() ? '5%' : '10%' ,backgroundColor : '#14111e' , display : 'flex' , justifyContent : 'center'  }}>
         <div style={{ maxWidth : '1400px' ,  width : '100%' , background : `url(${Calltoaction})` , height : isMobile() ? '409px' : '209px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : 'cover' , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px"}}> 
             <div style={{ display : 'flex' , justifyContent : 'center' , flexDirection : 'column' , alignItems : 'center'}}>
              <Typography variant="h3" sx={{color : '#000' , textAlign : 'center'}} gutterBottom>
