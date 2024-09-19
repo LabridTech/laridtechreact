@@ -17,6 +17,9 @@ export function Mainservice(){
      if(width <1300){
       k = 5 ;
      }
+     if(width < 1100){
+      k =7
+    }
      if (isMobile()) {
           k = 53 ;
         } 

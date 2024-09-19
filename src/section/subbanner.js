@@ -8,9 +8,12 @@ import CardContent from '@mui/joy/CardContent';
 import back from '../img/back3cut.mp4'
 import back2 from '../img/back4cut.mp4'
 import useWindowDimensions from '../windowsize';
+import { useNavigate } from "react-router-dom";
 
 export function Subbanner({item}){
   let { height, windowwidth } = useWindowDimensions();
+  const navigate = useNavigate();
+
   return(
     <Card component="div" sx={{ width: windowwidth , flexGrow: 1  , height : 600 , border : 0 , marginBottom : 10}}>
     <CardCover sx={{ height : 700 , border : 0  , width : windowwidth}}> 
@@ -54,7 +57,7 @@ export function Subbanner({item}){
              }
              
               {
-                item.button !== null ?  <Button variant="contained" sx={{  backgroundColor : '#FFA800' , color : '#000' , fontWeight : 'bold'  , fontSize : '12px' ,  borderRadius : '30px' , paddingInline : 2 }}> {item.button} </Button> : <span></span>
+                item.button !== null ?  <Button onClick={()=>navigate('/quote')} variant="contained" sx={{  backgroundColor : '#FFA800' , color : '#000' , fontWeight : 'bold'  , fontSize : '12px' ,  borderRadius : '30px' , paddingInline : 2 }}> {item.button} </Button> : <span></span>
               }
 
     </CardContent>

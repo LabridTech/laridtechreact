@@ -32,30 +32,48 @@ function ProjectDetail() {
         
         </div>  
 
-      <div style={{ width : '80%' , height : '400px' , backgroundColor : '#14111e' , paddingInline : '10%' , paddingTop : "100px"}}>
+      <div style={{ width : '80%' , height : isMobile() ? '550px' :  '400px' , backgroundColor : '#14111e' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
-            01. The Challenge
+            01. Description
             </Typography>
             <Typography variant="subtitle1" sx={{color : '#ffffff82' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
-            {item.challenge}  
+            {item.text}  
             </Typography>
       </div>
 
-      <div style={{ width : '80%' , height : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
+      <div style={{ width : '80%' , height : isMobile() ? '700px' : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
-          02. The Solution 
+          02. Features
             </Typography>
             <Typography variant="subtitle1" sx={{color : '#ffffff82' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
-             {item.solution}  
+             {item.feat}  
             </Typography>
       </div>
 
-      <div style={{ width : '80%' , height : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
+      <div style={{ width : '80%' , height : isMobile() ? '650px' : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
-          03. The Result
+          03. How It Works
             </Typography>
             <Typography variant="subtitle1" sx={{color : '#ffffff82' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
-            {item.result}
+            {item.work}
+            </Typography>
+      </div>
+
+      <div style={{ width : '80%' , height : isMobile() ? '650px' : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
+          <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
+          04. Use Cases
+            </Typography>
+            <Typography variant="subtitle1" sx={{color : '#ffffff82' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
+            {item.use}
+            </Typography>
+      </div>
+
+      <div style={{ width : '80%' , height : isMobile() ? '650px' : '400px' , backgroundColor :  '#14111e' , paddingInline : '10%'}}>
+          <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
+          05. Technologies Used
+            </Typography>
+            <Typography variant="subtitle1" sx={{color : '#ffffff82' , textAlign : 'start' , marginBottom : 2}} gutterBottom>
+            {item.tech}
             </Typography>
       </div>
     

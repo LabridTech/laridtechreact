@@ -4,9 +4,10 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { isMobile } from '../windowsize';
 import { catogery } from '../info/catogery-info';
+import { useNavigate } from "react-router-dom";
 
 export function Footer(){
-   
+  const navigate = useNavigate();
     
     return (
     <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{ height : isMobile() ? '650px' : '450px'}}>
@@ -55,7 +56,7 @@ export function Footer(){
             color="inherit"
             aria-label="open drawer"
             edge="start"
-            
+            onClick={()=>{navigate('/')}}
             sx={{ mr: 2 }}
           >
             <img alt='logo' src='/logo.png'/>

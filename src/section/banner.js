@@ -8,10 +8,13 @@ import * as React from 'react';
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
-import back2 from '../img/back4cut.mp4'
+import back2 from '../img/back4cut.mp4';
+import { useNavigate } from "react-router-dom";
 
 export function Banner2(){
   let { height, windowwidth } = useWindowDimensions();
+  const navigate = useNavigate();
+
   return(
     <Card component="div" sx={{ width: windowwidth , flexGrow: 1  , height : 600 , border : 0 , marginBottom : 10}}>
         <CardCover sx={{ height : 700 , border : 0 }}> 
@@ -72,7 +75,7 @@ export function Banner2(){
           fontWeight: "bold",
         },
       }} />
-                <Button variant="contained" sx={{ marginInline : 2 , backgroundColor : '#FFA800' , color : '#000' , fontWeight : 'bold'  , fontSize : '12px' ,  borderRadius : '30px' , paddingInline : 2 , marginTop : 2 }}>Attract</Button>
+                <Button onClick={()=>navigate('/quote')} variant="contained" sx={{ marginInline : 2 , backgroundColor : '#FFA800' , color : '#000' , fontWeight : 'bold'  , fontSize : '12px' ,  borderRadius : '30px' , paddingInline : 2 , marginTop : isMobile() ?  2  : 0}}>Attract</Button>
              </div>
             </div>
            

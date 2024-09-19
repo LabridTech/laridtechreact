@@ -14,6 +14,9 @@ export function SectionChoosing(){
      if(width <1600){
           k = 3 ;
          }
+     if(width < 1100){
+          k =6
+        }    
      if(isMobile()){
           k = 15;
      }

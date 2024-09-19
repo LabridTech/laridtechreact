@@ -8,6 +8,7 @@ import { isMobile } from '../windowsize';
 export function DiscussSection(){
   let { height, width } = useWindowDimensions();
   let k = 5 ;
+
   if (isMobile()) {
        k = 35 ;
      } 

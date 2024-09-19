@@ -26,7 +26,7 @@ function Niche() {
       
      
       <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
-      <Subbanner item={{pagetitle : 'Branding' , title : 'Find your niche' , text : 'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros ' , button : 'Build My Solution'}} ></Subbanner>
+      <Subbanner item={{pagetitle : 'Branding' , title : 'Find your niche' , text : 'Discover your perfect market fit with tailored insights to help you define and thrive in your niche. ' , button : 'Build My Solution'}} ></Subbanner>
       <div style={{ width : '80%' , height :  isMobile() ? 500 : 100  , backgroundColor : '#14111e' , paddingInline : '10%' , paddingTop : "100px"}}>
           <Typography variant="h4" sx={{color : '#FFFFFF' , marginBottom : 2}} gutterBottom>
             Process

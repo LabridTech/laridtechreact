@@ -16,6 +16,9 @@ export function OurWork(){
      if(width <1600){
       k = 10 ;
      }
+     if(width < 1100){
+      k =30
+    }
      
     return (
        <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 260  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 

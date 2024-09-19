@@ -34,7 +34,7 @@ export function Testmonial(){
   }
  
     return(
-        <div className="testmonial-section"  style={{ height :  '400px' , flexDirection :'column' }} >
+        <div className="testmonial-section"  style={{ height :  '450px' , flexDirection :'column' }} >
             <div style={{
                 justifyContent : 'flex-end' ,
                 display : 'flex' ,

@@ -44,7 +44,7 @@ function Project() {
       
      
       <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
-      <Subbanner item={{  title : 'Our Portfolio' , text : 'Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros ' , button : 'Build My Solution'}} ></Subbanner>
+      <Subbanner item={{  title : 'Our Portfolio' , text : 'Showcasing our expertise in website development, mobile apps, SEO, and digital marketing to power your business growth.' , button : 'Build My Solution'}} ></Subbanner>
        
       <div style={{   width : '90%' ,
                 backgroundColor : '#14111e' , paddingInline : '5%'}}> 
