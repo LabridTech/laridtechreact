@@ -35,8 +35,23 @@ export function Testmonial(){
  
     return(
         <div className="testmonial-section"  style={{ height :  '450px' , flexDirection :'column' }} >
+          
+            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{
+                justifyContent : 'center',
+                
+              }}>
+                
+               {
+                isMobile() ?   
+                testmonialinfo.filter((value) => value.index === showindex  ? value : null).map( (value) => <TestmonialCard item={value} ></TestmonialCard> )  :
+                testmonialinfo.filter((value) => value.index === showindex || value.index === showindex +1 || value.index === showindex + 2 ? value : null).map( (value) => <TestmonialCard item={value} ></TestmonialCard> )
+               }
+                
+                
+            </Grid>
+
             <div style={{
-                justifyContent : 'flex-end' ,
+                justifyContent : 'center' ,
                 display : 'flex' ,
                 width : '90%' ,
                 
@@ -64,22 +79,6 @@ export function Testmonial(){
                     <ArrowForwardIosIcon ></ArrowForwardIosIcon>
                 </IconButton>
             </div>
-            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{
-                justifyContent : 'center',
-                
-              }}>
-                
-               {
-                isMobile() ?   
-                testmonialinfo.filter((value) => value.index === showindex  ? value : null).map( (value) => <TestmonialCard item={value} ></TestmonialCard> )  :
-                testmonialinfo.filter((value) => value.index === showindex || value.index === showindex +1 || value.index === showindex + 2 ? value : null).map( (value) => <TestmonialCard item={value} ></TestmonialCard> )
-               }
-                
-                
-                
-             
-                
-            </Grid>
         </div>
     )
 }

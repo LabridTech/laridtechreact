@@ -21,7 +21,7 @@ export function OurWork(){
     }
      
     return (
-       <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 260  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
+       <div className='ourwork-section' style={{ height : isMobile() ? productinfo.length * 220  : 50 + width * k/10 , flexDirection : isMobile() ? 'column' :  'row' }} > 
         <div style={{
             marginLeft : '5%' , 
             display : 'flex',

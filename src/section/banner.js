@@ -10,6 +10,8 @@ import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
 import back2 from '../img/back4cut.mp4';
 import { useNavigate } from "react-router-dom";
+import webposter from '../img/webposter.png';
+import mobileposter from '../img/mobileposter.png';
 
 export function Banner2(){
   let { height, windowwidth } = useWindowDimensions();
@@ -22,7 +24,9 @@ export function Banner2(){
             autoPlay
             loop
             muted
-           
+            playsinline
+            style={{width : windowwidth , }}
+            poster= {isMobile() ? mobileposter : webposter}
           >
             {isMobile() ?  
         <source

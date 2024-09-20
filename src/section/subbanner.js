@@ -9,6 +9,8 @@ import back from '../img/back3cut.mp4'
 import back2 from '../img/back4cut.mp4'
 import useWindowDimensions from '../windowsize';
 import { useNavigate } from "react-router-dom";
+import webposter from '../img/webposter.png';
+import mobileposter from '../img/mobileposter.png';
 
 export function Subbanner({item}){
   let { height, windowwidth } = useWindowDimensions();
@@ -21,7 +23,9 @@ export function Subbanner({item}){
         autoPlay
         loop
         muted
+        playsinline
         style={{width : windowwidth , }}
+        poster= {isMobile() ? mobileposter : webposter}
       >
         {isMobile() ?  
         <source

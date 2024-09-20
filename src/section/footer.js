@@ -66,7 +66,7 @@ export function Footer(){
             component="div"
             sx={{ flexGrow : 1  , color : 'white' }}
           >
-            LABRIDTEACH
+            LABRIDTECH
           </Typography>
           </IconButton>
 
