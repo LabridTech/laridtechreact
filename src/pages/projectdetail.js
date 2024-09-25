@@ -7,10 +7,14 @@ import { Grid2 } from '@mui/material';
 import {useParams} from 'react-router-dom';
 import { productinfo } from '../info/product-info';
 import { isMobile } from '../windowsize';
-import { AspectRatio } from '@mui/icons-material';
+import useWindowDimensions from '../windowsize';
+
 
 function ProjectDetail() {
   const { title } =  useParams();
+  let { height, width } = useWindowDimensions();
+  let imgsheight = 0;
+
   return (
     <div className="App">
       
@@ -22,8 +26,8 @@ function ProjectDetail() {
         productinfo.filter((item) => item.title === title ? item : null ).map((item) =>{
           return(
         <>
-          <div style={{ padding :  '10%' ,backgroundColor : '#14111e' }}>
-        <div style={{   width : '100%' , background : `url(${item.pic1})` , height : '1000px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid'  , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px", backgroundSize : item.catogery === 'Mobile Development' ? 'contain' : 'cover'}}> 
+          <div style={{ padding :  '5%' ,backgroundColor : '#14111e' }}>
+        <div style={{   width : width * 9/10 , background : `url(${item.pic1})` , height  : isMobile() ? item.catogery ===  'Mobile Development' ? height * 9/10 : height * 2/10 :  height * 13/10  , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid'  , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px",}}> 
             
              
             
@@ -76,12 +80,13 @@ function ProjectDetail() {
             {item.tech}
             </Typography>
       </div>
+
     
        { item.pic2 == null && item.pic3 == null && item.pic4 == null ? null :
-      <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{height : isMobile() ? '1900px' : '1200px'}}>
-        {item.pic2 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain'  }} src={item.pic2} alt='second pic' />  : null}
-        {item.pic3 !== null ? <img style={{width : isMobile() ? '90%' :'550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }} src={item.pic3} alt='Third pic' />  : null}
-        {item.pic4 !== null ? <img style={{width : isMobile() ? '90%' : '550px' , height : '550px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }} src={item.pic4} alt='fourth pic' />  : null}
+      <Grid2 container spacing={{ xs: 1, md: 3 }} columns={{ xs: 2, sm: 4, md: 5 }} className='footer' sx={{marginBlock : 10}} >
+        {item.pic2 !== null ? <img style={{width : isMobile() ? width * 9/10 :   width * 4/10 , height : item.catogery ===  'Mobile Development' ? height * 9/10 : isMobile() ?  height * 2/10 :   height * 4/10 , marginBlock : 5 ,   }} src={item.pic2} alt='second pic' />  : null}
+        {item.pic3 !== null ? <img style={{width : isMobile() ? width * 9/10  : width * 4/10 , height : item.catogery ===  'Mobile Development' ? height * 9/10 : isMobile() ? height * 2/10 :  height * 4/10 , marginBlock : 5 ,  }} src={item.pic3} alt='Third pic' />  : null}
+        {item.pic4 !== null ? <img style={{width : isMobile() ? width * 9/10  : width * 4/10 , height : item.catogery ===  'Mobile Development' ? height * 9/10 : isMobile() ? height * 2/10 :  height * 4/10 , marginBlock : 5 ,  }} src={item.pic4} alt='fourth pic' />  : null}
         
       </Grid2>
 

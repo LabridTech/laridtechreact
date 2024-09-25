@@ -44,7 +44,7 @@ export function Banner2(){
         </CardCover>
         <CardContent sx={{ border : 0 , justifyContent : 'center' , alignContent : 'center' , alignItems : 'center'}}>
         <div >
-             <Typography variant="h3" sx={{color : '#FFFFFF'}} gutterBottom>
+             <Typography variant="h3" sx={{color : '#FFFFFF' , textAlign : 'center'}} gutterBottom>
                  Transforming Ideas into Innovative Solutions
                  Where Vision Meets Technology
              </Typography>

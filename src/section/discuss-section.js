@@ -14,15 +14,13 @@ export function DiscussSection(){
      } 
     return(
         
-      <div style={{ padding :  '10%' ,backgroundColor : '#14111e' }}>
-        <div style={{   width : '100%' , backgroundColor : '#FFA800' , height : '1000px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : 'cover' , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px"}}> 
+      <div style={{ paddingInline :  '10%' ,backgroundColor : '#14111e' }}>
+        <div style={{   width : '100%' , backgroundColor : '#FFA800' , height : isMobile() ?  '500px' : '400px' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : 'cover' , placeItems : 'center' , borderColor : "#A1AEBF", border: 1 , borderRadius : "10px"}}> 
             <div>
              <Typography variant="h3" sx={{color : '#000' , textAlign : 'center' }} gutterBottom>
              Let’s discuss the idea
              </Typography>
-             <Typography variant="subtitle1" sx={{color : '#00000082' , textAlign : 'center'}} gutterBottom>
-             Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. 
-             </Typography>
+             
              <div style={{
                 alignItems : 'center',
                 alignContent : 'center' ,
