@@ -46,7 +46,10 @@ export function OurWork(){
               }}>
                 {
                   productinfo.filter((item)=> { return item.main ? item : null }).map((item)=>
+                    
                     <Productcard item={{pic : item.pic1 , catogery : item.catogery , title : item.title}} ></Productcard>
+                  
+                    
                   )
                 }
                

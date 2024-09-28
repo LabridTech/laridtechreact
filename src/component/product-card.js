@@ -11,7 +11,7 @@ export function Productcard({item}){
     const navigate = useNavigate();
 
     return(
-        <Card sx={{ maxWidth: 345 , minWidth : 300 , backgroundColor : 'transparent' , border : 1 , borderColor : '#A1AEBF'  , padding : 2}}>
+        <Card onClick={()=> navigate(`/prjdetail/${item.title}`) } sx={{ maxWidth: 345 , minWidth : 300 , backgroundColor : 'transparent' , border : 1 , borderColor : '#A1AEBF'  , padding : 2}}>
         <CardMedia
             sx={{ height : '250px' ,  width : '100%' , borderRadius : '20px' , backgroundSize : item.catogery === 'Mobile Development' && 'contain' }}
             image={item.pic}
@@ -25,7 +25,7 @@ export function Productcard({item}){
           <Typography gutterBottom variant="h5" component="div" sx={{color : '#fff' , marginBottom : 2 }}>
                {item.title}
          </Typography>
-          <IconButton sx={{padding : 0}} onClick={()=> navigate(`/prjdetail/${item.title}`) } >
+          <IconButton sx={{padding : 0}}  >
           <Typography variant="body2" sx={{ color: '#728095' , margin : 0 , textAlign : 'start' , marginRight : 1   }}>
              Read more
         </Typography>

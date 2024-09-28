@@ -91,7 +91,7 @@ export function Navbar({navItems}){
             onClick={() => navigate('/')}
             sx={{ mr: 2 }}
           >
-            <img alt='logo' src='/logo.png' style={{marginRight : 2, height : isMobile() ? '50px' : '80px' , width : isMobile() ? '50px' : '80px'}}/>
+            <img alt='logo' src='/logo.png' style={{marginRight : 5, height : isMobile() ? '50px' : '80px' , width : isMobile() ? '50px' : '80px'}}/>
             
             <Typography
             variant="h6"

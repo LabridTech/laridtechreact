@@ -7,9 +7,10 @@ export function TestmonialCard ({item}){
     return (
         <Card sx={{ maxWidth: 345 , backgroundColor : 'transparent' , border : 1 , borderColor : '#A1AEBF'  , padding : 2 , }}>
                 
+                {console.log(item)}
                 <CardContent sx={{display : 'flex' , flexDirection : 'column' , alignItems : 'flex-start' , paddingBlock : 1 , paddingInline : 0}}>
                    <div style={{marginBottom : 2 , display : 'flex'}}>
-                    <Avatar ></Avatar>
+                    <Avatar src={item.img} ></Avatar>
                     <Stack sx={{ marginLeft : 1}}>
                     <Typography gutterBottom variant="body1"  sx={{color : '#fff' , marginBottom : 0 , }}>
                        {item.title}
