@@ -2,6 +2,7 @@ import { catogery } from "./catogery-info";
 import metrzon from "../img/project img/mertzon.png";
 import metrzon1 from "../img/project img/mertzon1.png";
 import metrzon2 from "../img/project img/mertzon2.png";
+import metrzon3 from "../img/project img/metrzon3.png"
 import fitflex from "../img/project img/fitmobile.png";
 import fitflex1 from "../img/project img/fitmobile1.png";
 import fitflex2 from "../img/project img/fitmobile2.png";
@@ -29,9 +30,9 @@ import carmobile2 from "../img/project img/carrmobile2.jpg";
 import graphicsketch from "../img/project img/bannersketch.jpg";
 import graphicshoesbanner from "../img/project img/bannershoes.jpeg";
 import mluq from "../img/project img/mluq.png";
-import mluq2 from "../img/project img/mluq3.png";
-import mluq3 from "../img/project img/mluq4.png";
-import mluq4 from "../img/project img/mluq2.png";
+import mluq2 from "../img/project img/mluq2.png";
+import mluq3 from "../img/project img/mluq3.png";
+import mluq4 from "../img/project img/mluq4.png";
 import bookf from "../img/project img/bookf.png";
 import bookf1 from "../img/project img/bookf1.png";
 import bookf2 from "../img/project img/bookf2.png";
@@ -43,6 +44,18 @@ import wheel3 from "../img/project img/wheel3.png";
 import webnode from "../img/project img/webnode.png";
 import webnode1 from "../img/project img/webnode1.png";
 import webnode2 from "../img/project img/webnode2.png";
+import animal from '../img/project img/animal.png'
+import zerosix from '../img/project img/zerosix.png'
+import animal1 from "../img/project img/animal2.png"
+import animal2 from "../img/project img/animal3.png"
+import animal3 from "../img/project img/animal4.png"
+import zerosix1 from "../img/project img/zerosix1.png"
+import zerosix2 from "../img/project img/zerosix2.png"
+import zerosix3 from "../img/project img/zerosix3.png"
+import toak1 from "../img/project img/toak1.png"
+import toak from "../img/project img/Toakvisual.png"
+import toak2 from "../img/project img/toak2.png"
+import toak3 from "../img/project img/toak3.png"
 
 export const productinfo = [
   {
@@ -52,8 +65,8 @@ export const productinfo = [
     pic1: metrzon1,
     pic2: metrzon,
     pic3: metrzon2,
-    pic4: null,
-    main: true,
+    pic4: metrzon3,
+    main: false,
     challange: [
       "Creating a platform that effectively lists a construction company’s diverse services in an organized and user-friendly manner.",
       "Integrating Google Maps to accurately display the company’s various locations and ongoing projects.",
@@ -71,9 +84,84 @@ export const productinfo = [
     ],
   },
   {
+    title: "Zero six",
+    catogery: catogery[2],
+    index: 2,
+    pic1: zerosix,
+    pic2: zerosix1,
+    pic3: zerosix2,
+    pic4: zerosix3,
+    main: true,
+    challange: [
+      "Creating a professional and visually engaging website that effectively showcases Zero, Six's construction expertise.",
+      "Organizing multiple pages (home, about, education, contact, expertise) in a user-friendly layout that provides clear navigation.",
+      "Ensuring that the website is responsive and performs well across various devices and screen sizes.",
+    ],
+    solution: [
+      "Designed the website with a clean and modern aesthetic, highlighting the company’s construction projects and expertise.",
+      "Developed an intuitive navigation system, allowing users to seamlessly move between pages like home, about, education, and expertise.",
+      "Implemented a fully responsive design to ensure optimal performance on desktop and mobile devices.",
+    ],
+    results: [
+      "Increased user engagement and brand credibility due to the professional design and clear presentation of expertise.",
+      "Improved website usability, making it easy for visitors to access company information and contact details.",
+      "Positive client feedback on the website’s design, functionality, and mobile responsiveness, leading to enhanced online presence.",
+    ],
+  },
+  {
+    title: "Animal Clinc",
+    catogery: catogery[2],
+    index: 3,
+    pic1: animal,
+    pic2: animal1,
+    pic3: animal2,
+    pic4: animal3,
+    main: false,
+    challange: [
+      "Designing a user-friendly website that effectively conveys Animal Clinic's veterinary services and includes an online pharmacy feature.",
+      "Organizing multiple pages (home, about, online pharmacy, contact) for easy navigation while ensuring the online pharmacy integrates seamlessly with the rest of the site.",
+      "Making sure the website is responsive and accessible across various devices, ensuring a smooth experience for pet owners.",
+    ],
+    solution: [
+      "Created a visually appealing, professional website with clear navigation, showcasing the clinic’s services and making the online pharmacy easily accessible.",
+      "Developed the online pharmacy page with a simple yet secure interface, allowing users to browse and purchase pet medications effortlessly.",
+      "Implemented a responsive design to ensure the website performs well on mobile devices, tablets, and desktops.",
+    ],
+    results: [
+      "Increased user engagement and trust, with pet owners easily accessing clinic information and purchasing medications online.",
+      "Enhanced client satisfaction with seamless integration of the online pharmacy, leading to increased online sales.",
+      "Positive feedback on the website’s design and functionality, particularly regarding the ease of use and mobile responsiveness.",
+    ],
+  },
+  {
+    title: "Toak Visual",
+    catogery: catogery[2],
+    index: 4,
+    pic1: toak,
+    pic2: toak1,
+    pic3: toak2,
+    pic4: toak3,
+    main: false,
+    challange: [
+      "Creating a visually striking website that reflects Toak Visual's media expertise while showcasing their packages, blog, and FAQs effectively.",
+      "Organizing multiple pages (home, about, contact, space, packages, blog, FAQ) for smooth navigation, ensuring the content is easy to find and engaging for users.",
+      "Ensuring the website design maintains high performance and responsiveness across different devices and screen sizes.",
+    ],
+    solution: [
+      "Developed a visually captivating website that aligns with the brand's media-focused identity, emphasizing high-quality visuals and easy-to-navigate layouts.",
+      "Structured the website content efficiently, providing clear sections for services, packages, and blog posts, and included an informative FAQ to enhance user experience.",
+      "Implemented responsive design techniques, ensuring optimal website performance and accessibility across mobile, tablet, and desktop devices.",
+    ],
+    results: [
+      "Increased visitor engagement and credibility due to the visually appealing and organized layout of Toak Visual’s services and offerings.",
+      "Enhanced user satisfaction with seamless navigation and clear presentation of the company’s packages, services, and blog content.",
+      "Positive feedback from clients regarding the professional look, functionality, and mobile responsiveness, leading to improved online inquiries and conversions.",
+    ],
+  },
+  {
     title: "Fitflex",
     catogery: catogery[1],
-    index: 2,
+    index: 5,
     pic1: fitflex,
     pic2: fitflex1,
     pic3: fitflex2,
@@ -98,7 +186,7 @@ export const productinfo = [
   {
     title: "E-comerance Mobile App",
     catogery: catogery[1],
-    index: 3,
+    index: 6,
     pic1: ecommobile,
     pic2: ecommobile1,
     pic3: ecommobile2,
@@ -123,7 +211,7 @@ export const productinfo = [
   {
     title: "Flower Mobile App",
     catogery: catogery[1],
-    index: 4,
+    index: 7,
     pic1: flowermobile,
     pic2: flowermobile1,
     pic3: flowermobile2,
@@ -148,7 +236,7 @@ export const productinfo = [
   {
     title: "Car Rental Mobile App",
     catogery: catogery[1],
-    index: 5,
+    index: 8,
     pic1: carmobile,
     pic2: carmobile1,
     pic3: carmobile2,
@@ -173,82 +261,57 @@ export const productinfo = [
   {
     title: "Cartoon Graphic",
     catogery: catogery[5],
-    index: 6,
+    index: 9,
     pic1: cartoongraphic,
     pic2: cartoongraphic1,
     pic3: cartoongraphic2,
     pic4: cartoongraphic3,
     main: true,
     challange: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
+      "Designing visually appealing and engaging cartoon graphics that resonate with a young audience while maintaining simplicity.",
+      "Ensuring the characters and scenes are colorful, playful, and convey appropriate emotions to keep children entertained.",
+      "Creating adaptable designs that work well across various formats like books, websites, and animations.",
     ],
     solution: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
+      "Developed vibrant and playful cartoon graphics with child-friendly themes, focusing on bold colors, clear shapes, and expressive characters.",
+      "Incorporated feedback from target audiences (children) to refine the designs, ensuring they were visually appealing and relatable for the intended age group.",
+      "Designed scalable and versatile graphics that can be easily adapted for use in print, digital media, and animations.",
     ],
     results: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-    ],
-  },
-  {
-    title: "Sketch Graphic",
-    catogery: catogery[5],
-    index: 7,
-    pic1: graphicsketch,
-    pic2: null,
-    pic3: null,
-    pic4: null,
-    main: false,
-    challange: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-    ],
-    solution: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-    ],
-    results: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
+      "Positive feedback from both children and parents, with the graphics effectively capturing young viewers' attention and imagination.",
+      "Increased demand for the cartoon graphics across different media platforms, including books and educational content.",
+      "Enhanced brand visibility and engagement due to the appealing and adaptable nature of the cartoon designs.",
     ],
   },
   {
     title: "Shoes Banner Graphic",
     catogery: catogery[5],
-    index: 8,
+    index: 10,
     pic1: graphicshoesbanner,
-    pic2: null,
+    pic2: graphicsketch,
     pic3: null,
     pic4: null,
     main: false,
     challange: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
+      "Designing an eye-catching banner that effectively showcases the shoes while incorporating the company logo and contact information without clutter.",
+      "Balancing the visual appeal of the shoes with brand visibility and ensuring the banner works across both digital and print formats.",
+      "Ensuring the banner design adheres to the brand’s style guidelines while standing out in a competitive advertising space.",
     ],
     solution: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
+      "Created a clean and modern banner design, highlighting the shoes as the central focus while seamlessly integrating the company logo and contact information.",
+      "Used bold typography and contrasting colors to make the banner visually striking while maintaining clarity for the contact details.",
+      "Designed a versatile banner that can be used in both online ads and printed posters, ensuring consistency across formats.",
     ],
     results: [
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
-      "When our power of choice is untrammeled and when nothing prevents",
+      "Increased brand visibility and customer engagement due to the visually appealing and professional banner design.",
+      "Improved sales inquiries, with customers easily accessing the contact information displayed on the banner.",
+      "Positive feedback from the company on the banner’s effectiveness in both digital and print marketing campaigns.",
     ],
   },
   {
     title: "E-comerance UI/UX",
     catogery: catogery[7],
-    index: 9,
+    index: 11,
     pic1: ecomuiux,
     pic2: null,
     pic3: null,
@@ -273,7 +336,7 @@ export const productinfo = [
   {
     title: "Flower Shop Mobile UI/UX",
     catogery: catogery[7],
-    index: 10,
+    index: 12,
     pic1: floweruiux,
     pic2: null,
     pic3: null,
@@ -298,7 +361,7 @@ export const productinfo = [
   {
     title: "Gaming Web app",
     catogery: catogery[2],
-    index: 11,
+    index: 13,
     pic1: gameweb,
     pic2: gameweb1,
     pic3: gameweb2,
@@ -323,7 +386,7 @@ export const productinfo = [
   {
     title: "Mluqman Attar",
     catogery: catogery[0],
-    index: 12,
+    index: 14,
     pic1: mluq,
     pic2: mluq4,
     pic3: mluq2,
@@ -348,7 +411,7 @@ export const productinfo = [
   {
     title: "Bookfiy app",
     catogery: catogery[2],
-    index: 13,
+    index: 15,
     pic1: bookf,
     pic2: bookf1,
     pic3: bookf2,
@@ -373,7 +436,7 @@ export const productinfo = [
   {
     title: "Wheels & Deals",
     catogery: catogery[2],
-    index: 14,
+    index: 16,
     pic1: wheel,
     pic2: wheel1,
     pic3: wheel2,
@@ -398,7 +461,7 @@ export const productinfo = [
   {
     title: "KrayanaNearme",
     catogery: catogery[2],
-    index: 15,
+    index: 17,
     pic1: webnode,
     pic2: webnode1,
     pic3: webnode2,
