@@ -7,6 +7,7 @@ import { OurWork } from "../section/our-work-section";
 import { Testmonial } from "../section/testmonial";
 import { DiscussSection } from "../section/discuss-section";
 import { Footer } from "../section/footer";
+import { Stats } from "../section/stats";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Banner2></Banner2>
       <Mainservice></Mainservice>
       <SectionChoosing></SectionChoosing>
+      <Stats></Stats>
       <OurWork></OurWork>
       <Testmonial></Testmonial>
       <DiscussSection></DiscussSection>
