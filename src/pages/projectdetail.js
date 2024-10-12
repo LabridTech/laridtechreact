@@ -2,7 +2,6 @@ import "../style/App.css";
 import { Footer } from "../section/footer";
 import { Navbar } from "../section/nav";
 import { Subbanner } from "../section/subbanner";
-import Typography from "@mui/material/Typography";
 import { Grid2 } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { productinfo } from "../info/product-info";
@@ -14,7 +13,6 @@ import PrjdataMobile from "../component/prjdataMobile";
 function ProjectDetail() {
   const { title } = useParams();
   let { height, width } = useWindowDimensions();
-  let imgsheight = 0;
 
   return (
     <div className="App">
@@ -63,7 +61,7 @@ function ProjectDetail() {
                 ) : (
                   <PrjdataWeb
                     item={item.challange}
-                    heading={"01. The Challange"}
+                    heading={"02. The Solution"}
                   />
                 )}
                 {item.pic2 !== null ? (

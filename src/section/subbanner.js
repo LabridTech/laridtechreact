@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { isMobile } from '../windowsize';
-import Vector from '../img/backgroundimg.jpg'
+import Vector from '../img/background.png'
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
@@ -13,7 +13,7 @@ import webposter from '../img/webposter.png';
 import mobileposter from '../img/mobileposter.png';
 
 export function Subbanner({item}){
-  let { height, windowwidth } = useWindowDimensions();
+  let {  windowwidth } = useWindowDimensions();
   const navigate = useNavigate();
 
   return(

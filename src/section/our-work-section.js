@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 
 export function OurWork() {
   const navigate = useNavigate();
-  let { height, width } = useWindowDimensions();
+  let {  width } = useWindowDimensions();
   let k = 5;
   if (width < 1600) {
     k = 10;
@@ -23,8 +23,9 @@ export function OurWork() {
     <div
       className="ourwork-section"
       style={{
-        height: isMobile() ? productinfo.length * 220 : 50 + (width * k) / 10,
+        height: isMobile() ? productinfo.length * 200 : 50 + (width * k) / 9,
         flexDirection: isMobile() ? "column" : "row",
+        marginBottom : isMobile() ? 0 : 10
       }}
     >
       <div

@@ -1,87 +1,160 @@
-import '../style/App.css';
-import Vector from '../img/Vector1.png'
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { isMobile } from '../windowsize';
-import useWindowDimensions from '../windowsize';
+import "../style/App.css";
+import Vector from "../img/Vector1.png";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import { isMobile } from "../windowsize";
+import useWindowDimensions from "../windowsize";
 import { useNavigate } from "react-router-dom";
+import { Container , Box } from "@mui/material";
 
+export function SectionChoosing() {
+  const navigate = useNavigate();
+  let {  width } = useWindowDimensions();
+  let k = 2;
+  if (width < 1600) {
+    k = 3;
+  }
+  if (width < 1100) {
+    k = 6;
+  }
+  if (isMobile()) {
+    k = 15;
+  }
+  return (
+    <div
+      className="choose-section"
+      style={{
+        flexDirection: isMobile() ? "column" : "row",
+        height: 150 + (width * k) / 7,
+        justifyContent: isMobile() ? "center" : "space-between",
+      }}
+    >
+      <Box style={{
+            width: isMobile() ? "100%" : "45%",
+            height: "400px",
+            display : 'flex',
+            flexDirection : 'column',
+            alignItems : 'center'
+          }} >
+        <img
+          alt="vector"
+          src={Vector}
+          width= '100%'
+        />
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          sx={{ color: "#fff" }}
+        >
+          Why choose us ?
+        </Typography>
+      </Box>
 
-export function SectionChoosing(){
-     const navigate = useNavigate();
-     let { height, width } = useWindowDimensions();
-     let k = 2;
-     if(width <1600){
-          k = 3 ;
-         }
-     if(width < 1100){
-          k =6
-        }    
-     if(isMobile()){
-          k = 15;
-     }
-    return(
-        <div className="choose-section" style={{ flexDirection : isMobile() ?  'column' : 'row', height : 150 + width * k/5 , justifyContent  : isMobile() ? 'center' : 'space-between' , }}>
-           <img alt='vector' src={Vector} style={{ width : isMobile() ? '100%' : '45%'  , height : '400px', display : 'flex'}} />
-             <div style={{
-                marginInline : '10%' , 
-                display : 'flex',
-                flexDirection : 'column' ,
-                alignItems : 'flex-start',
-                flexWrap : 'wrap'
-             }} >
-                  <Typography gutterBottom variant="h5" component="div" sx={{color : '#fff'}}>
-                       Why choose us
-                 </Typography>
-    
+      <div
+        style={{
+          marginInline: isMobile() ? "10%" : '5%',
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          flexWrap: "wrap",
+          width: isMobile() ? "100%" : "45%",
+        }}
+      >
+        <Container style={{ padding: 0, paddingBlock: 5 }}>
+          <Typography
+            variant="h5"
+            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
+          >
+            Affordable Excellence
+          </Typography>
 
+          <Typography
+            variant="body2"
+            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
+          >
+            Top-tier digital solutions without breaking the bank. We offer
+            transparent, budget-friendly pricing to fit any business size.
+          </Typography>
+        </Container>
+        <Container style={{ padding: 0, paddingBlock: 5 }}>
+          <Typography
+            variant="h5"
+            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
+          >
+            Startup Specialists
+          </Typography>
 
-  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-Budget-Friendly Solutions
- </Typography>
+          <Typography
+            variant="body2"
+            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
+          >
+            From web development to branding, we help startups and small
+            businesses grow, engage customers, and build a lasting online
+            presence.
+          </Typography>
+        </Container>
+        <Container style={{ padding: 0, paddingBlock: 5 }}>
+          <Typography
+            variant="h5"
+            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
+          >
+            End-to-End Services
+          </Typography>
 
-  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-We believe that going digital shouldn’t come with an overwhelming price tag. That’s why we offer competitive and transparent pricing, making high-quality software services and brand management accessible to businesses with any budget. Whether you’re launching your startup or looking to expand, our affordable packages ensure that your investment yields the best results.
-</Typography>
-      
-  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-Perfect for Startups and Small Businesses
-   </Typography>
+          <Typography
+            variant="body2"
+            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
+          >
+            Need a website, marketing, or a brand revamp? We've got you covered
+            with expert solutions that bring your vision to life.
+          </Typography>
+        </Container>
+        <Container style={{ padding: 0, paddingBlock: 5 }}>
+          <Typography
+            variant="h5"
+            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
+          >
+            Digital Transformation Experts
+          </Typography>
 
-  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-Starting out can be tough, and having the right support can make all the difference. LabridTech specializes in helping small businesses and startups build a strong online presence. From website development to digital branding, we provide tailored solutions designed to drive growth, increase visibility, and enhance customer engagement.
-</Typography>
-     
-  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-Comprehensive Services
-   </Typography>
+          <Typography
+            variant="body2"
+            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
+          >
+            Stay ahead with scalable, tech-driven strategies that streamline
+            your operations and fuel growth.
+          </Typography>
+        </Container>
+        <Container style={{ padding: 0, paddingBlock: 5 }}>
+          <Typography
+            variant="h5"
+            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
+          >
+            Customer-First Focus
+          </Typography>
 
-  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-We offer a wide range of services, from cutting-edge software solutions to strategic brand management. Whether you need a sleek website, digital marketing, or a comprehensive brand overhaul, our team of experts has the skills and experience to bring your vision to life.
- </Typography>
-     
-  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-Focused on Digital Transformation
-   </Typography>
-
-  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-In today’s fast-paced world, businesses must adapt quickly to stay ahead. LabridTech is here to help you navigate the digital transformation process smoothly. We leverage the latest technologies to provide scalable, efficient solutions that optimize your operations and drive your business forward.
- </Typography>
-     
-  <Typography variant="h7" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-Customer-Centric Approach
-   </Typography>
-
-  <Typography variant="body2" sx={{ color: '#ffffff82' , margin : 0  , textAlign : 'start'}}>
-Your success is our top priority. At LabridTech, we work closely with you to understand your specific goals and challenges, ensuring that our solutions not only meet your needs but exceed your expectations. Our customer-first approach is what makes us a trusted partner in helping businesses succeed.
-
-
-                </Typography>
-                <Button  sx={{ color: '#FFA800'  ,  borderRadius : '20px' , borderColor : '#FFA800'  , border : 1 , marginBlock : 2}} onClick={() => navigate('/quote')}>
-                Let’s connect 
-                 </Button>
-                </div>
-           </div>
-        
-    )
+          <Typography
+            variant="body2"
+            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
+          >
+            Your success is our mission. We craft tailored solutions to exceed
+            your goals and keep you ahead of the gam
+          </Typography>
+        </Container>
+        <Button
+          sx={{
+            color: "#FFA800",
+            borderRadius: "20px",
+            borderColor: "#FFA800",
+            border: 1,
+            marginBlock: 2,
+          }}
+          onClick={() => navigate("/quote")}
+        >
+          Let’s connect
+        </Button>
+      </div>
+    </div>
+  );
 }

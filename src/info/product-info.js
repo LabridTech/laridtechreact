@@ -1,5 +1,4 @@
 import { catogery } from "./catogery-info";
-import metrzon from "../img/project img/mertzon.png";
 import metrzon1 from "../img/project img/mertzon1.png";
 import metrzon2 from "../img/project img/mertzon2.png";
 import metrzon3 from "../img/project img/metrzon3.png"
@@ -56,14 +55,19 @@ import toak1 from "../img/project img/toak1.png"
 import toak from "../img/project img/Toakvisual.png"
 import toak2 from "../img/project img/toak2.png"
 import toak3 from "../img/project img/toak3.png"
+import alpha from '../img/project img/alpha.jpeg'
+import alpha1 from '../img/project img/alpha1.png'
+import alpha2 from '../img/project img/alpha2.png'
+import alpha3 from '../img/project img/alpha3.png'
+import metrzon from '../img/project img/mertzon.jpeg'
 
 export const productinfo = [
   {
     title: "Metrzon Landing page",
     catogery: catogery[2],
     index: 1,
-    pic1: metrzon1,
-    pic2: metrzon,
+    pic1: metrzon,
+    pic2: metrzon1,
     pic3: metrzon2,
     pic4: metrzon3,
     main: false,
@@ -84,9 +88,34 @@ export const productinfo = [
     ],
   },
   {
-    title: "Zero six",
+    title: "Alpha Builder",
     catogery: catogery[2],
     index: 2,
+    pic1: alpha,
+    pic2: alpha1,
+    pic3: alpha2,
+    pic4: alpha3,
+    main: false,
+    challange: [
+      "Creating a professional and visually engaging website that effectively showcases Zero, Six's construction expertise.",
+      "Organizing multiple pages (home, about, education, contact, expertise) in a user-friendly layout that provides clear navigation.",
+      "Ensuring that the website is responsive and performs well across various devices and screen sizes.",
+    ],
+    solution: [
+      "Designed the website with a clean and modern aesthetic, highlighting the company’s construction projects and expertise.",
+      "Developed an intuitive navigation system, allowing users to seamlessly move between pages like home, about, education, and expertise.",
+      "Implemented a fully responsive design to ensure optimal performance on desktop and mobile devices.",
+    ],
+    results: [
+      "Increased user engagement and brand credibility due to the professional design and clear presentation of expertise.",
+      "Improved website usability, making it easy for visitors to access company information and contact details.",
+      "Positive client feedback on the website’s design, functionality, and mobile responsiveness, leading to enhanced online presence.",
+    ],
+  },
+  {
+    title: "Zero six",
+    catogery: catogery[2],
+    index: 3,
     pic1: zerosix,
     pic2: zerosix1,
     pic3: zerosix2,
@@ -111,7 +140,7 @@ export const productinfo = [
   {
     title: "Animal Clinc",
     catogery: catogery[2],
-    index: 3,
+    index: 4,
     pic1: animal,
     pic2: animal1,
     pic3: animal2,
@@ -136,7 +165,7 @@ export const productinfo = [
   {
     title: "Toak Visual",
     catogery: catogery[2],
-    index: 4,
+    index: 5,
     pic1: toak,
     pic2: toak1,
     pic3: toak2,
@@ -161,7 +190,7 @@ export const productinfo = [
   {
     title: "Fitflex",
     catogery: catogery[1],
-    index: 5,
+    index: 6,
     pic1: fitflex,
     pic2: fitflex1,
     pic3: fitflex2,
@@ -186,7 +215,7 @@ export const productinfo = [
   {
     title: "E-comerance Mobile App",
     catogery: catogery[1],
-    index: 6,
+    index: 7,
     pic1: ecommobile,
     pic2: ecommobile1,
     pic3: ecommobile2,
@@ -211,7 +240,7 @@ export const productinfo = [
   {
     title: "Flower Mobile App",
     catogery: catogery[1],
-    index: 7,
+    index: 8,
     pic1: flowermobile,
     pic2: flowermobile1,
     pic3: flowermobile2,
@@ -236,7 +265,7 @@ export const productinfo = [
   {
     title: "Car Rental Mobile App",
     catogery: catogery[1],
-    index: 8,
+    index: 9,
     pic1: carmobile,
     pic2: carmobile1,
     pic3: carmobile2,
@@ -261,7 +290,7 @@ export const productinfo = [
   {
     title: "Cartoon Graphic",
     catogery: catogery[5],
-    index: 9,
+    index: 10,
     pic1: cartoongraphic,
     pic2: cartoongraphic1,
     pic3: cartoongraphic2,
@@ -286,7 +315,7 @@ export const productinfo = [
   {
     title: "Shoes Banner Graphic",
     catogery: catogery[5],
-    index: 10,
+    index: 11,
     pic1: graphicshoesbanner,
     pic2: graphicsketch,
     pic3: null,
@@ -311,7 +340,7 @@ export const productinfo = [
   {
     title: "E-comerance UI/UX",
     catogery: catogery[7],
-    index: 11,
+    index: 12,
     pic1: ecomuiux,
     pic2: null,
     pic3: null,
@@ -336,7 +365,7 @@ export const productinfo = [
   {
     title: "Flower Shop Mobile UI/UX",
     catogery: catogery[7],
-    index: 12,
+    index: 13,
     pic1: floweruiux,
     pic2: null,
     pic3: null,
@@ -361,7 +390,7 @@ export const productinfo = [
   {
     title: "Gaming Web app",
     catogery: catogery[2],
-    index: 13,
+    index: 14,
     pic1: gameweb,
     pic2: gameweb1,
     pic3: gameweb2,
@@ -386,7 +415,7 @@ export const productinfo = [
   {
     title: "Mluqman Attar",
     catogery: catogery[0],
-    index: 14,
+    index: 15,
     pic1: mluq,
     pic2: mluq4,
     pic3: mluq2,
@@ -411,7 +440,7 @@ export const productinfo = [
   {
     title: "Bookfiy app",
     catogery: catogery[2],
-    index: 15,
+    index: 16,
     pic1: bookf,
     pic2: bookf1,
     pic3: bookf2,
@@ -436,7 +465,7 @@ export const productinfo = [
   {
     title: "Wheels & Deals",
     catogery: catogery[2],
-    index: 16,
+    index: 17,
     pic1: wheel,
     pic2: wheel1,
     pic3: wheel2,
@@ -461,7 +490,7 @@ export const productinfo = [
   {
     title: "KrayanaNearme",
     catogery: catogery[2],
-    index: 17,
+    index: 18,
     pic1: webnode,
     pic2: webnode1,
     pic3: webnode2,

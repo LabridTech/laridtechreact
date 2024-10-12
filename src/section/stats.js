@@ -3,8 +3,8 @@ import Typography from "@mui/material/Typography";
 import user from "../img/ic-glass-users.svg";
 import buy from "../img/ic-glass-buy.svg";
 import time from "../img/time.png";
-import back from "../img/backgroundimg.jpg"
-import backver from "../img/backgroundimgver.jpg"
+import back from '../img/background.png'
+import backver from '../img/backgroundv.png'
 import { isMobile } from '../windowsize';
 
 export function Stats() {
@@ -18,7 +18,7 @@ export function Stats() {
         alignItems: "center",
         justifyContent: "space-evenly",
         height: isMobile() ? 600 : 400,
-        marginBlock: 20,
+        marginBlock: 10,
         width : '100%' ,
         backgroundImage : isMobile() ? `url(${backver})` : `url(${back})`,
         backgroundSize :  'cover' ,
@@ -50,7 +50,7 @@ export function Stats() {
           }}
         />
         <Typography variant="h5" style={{ color: "#676668", padding: 1 }}>
-          50
+          47
         </Typography>
         <Typography variant="subtitle1" color="white" sx>
           Completed <br/> Projects
@@ -80,7 +80,7 @@ export function Stats() {
           }}
         />
         <Typography variant="h5" style={{ color: "#676668", padding: 1 }}>
-          20
+          43
         </Typography>
         <Typography variant="subtitle1" color="white">
           Happy <br/> client
@@ -111,7 +111,7 @@ export function Stats() {
           }}
         />
         <Typography variant="h5" style={{ color: "#676668", padding: 1 }}>
-          150
+          550
         </Typography>
         <Typography variant="subtitle1" color="white">
           Hour of <br/> Work

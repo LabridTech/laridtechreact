@@ -33,8 +33,8 @@ export function Footer() {
             marginBottom: 10,
           }}
         >
-          {" "}
-          About us{" "}
+          
+          About us
         </a>
         <a
           href="/quote "
@@ -44,8 +44,8 @@ export function Footer() {
             marginBottom: 10,
           }}
         >
-          {" "}
-          Schedule Meeting{" "}
+          
+          Schedule Meeting
         </a>
       </Stack>
 
@@ -66,8 +66,8 @@ export function Footer() {
               marginBottom: 10,
             }}
           >
-            {" "}
-            {value}{" "}
+            
+            {value}
           </a>
         ))}
       </Stack>
@@ -88,8 +88,8 @@ export function Footer() {
             marginBottom: 10,
           }}
         >
-          {" "}
-          Blogs{" "}
+          
+          Blogs
         </a>
         <a
           href="/project"
@@ -99,8 +99,8 @@ export function Footer() {
             marginBottom: 10,
           }}
         >
-          {" "}
-          Case Study{" "}
+          
+          Case Study
         </a>
         <a
           href="/comingsoon"
@@ -110,8 +110,8 @@ export function Footer() {
             marginBottom: 10,
           }}
         >
-          {" "}
-          Testimonials{" "}
+          
+          Testimonials
         </a>
       </Stack>
 
@@ -124,37 +124,37 @@ export function Footer() {
           Follow us
         </Typography>
         <a
-          href=" "
+          href="https://www.instagram.com/labridtech?igsh=MWJybXZ4YTFuaW02ag%3D%3D&utm_source=qr"
           style={{
             color: "#ffffff82",
             textDecoration: "none",
             marginBottom: 10,
           }}
         >
-          {" "}
-          Instagram{" "}
+          
+          Instagram
         </a>
         <a
-          href=" "
+          href="https://www.linkedin.com/company/100905377/admin/dashboard/"
           style={{
             color: "#ffffff82",
             textDecoration: "none",
             marginBottom: 10,
           }}
         >
-          {" "}
-          Linkdin{" "}
+          
+          Linkdin
         </a>
         <a
-          href=" "
+          href="https://www.facebook.com/profile.php?id=61552150005718"
           style={{
             color: "#ffffff82",
             textDecoration: "none",
             marginBottom: 10,
           }}
         >
-          {" "}
-          Facebook{" "}
+          
+          Facebook
         </a>
       </Stack>
 
