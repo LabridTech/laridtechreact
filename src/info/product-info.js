@@ -60,6 +60,10 @@ import alpha1 from '../img/project img/alpha1.png'
 import alpha2 from '../img/project img/alpha2.png'
 import alpha3 from '../img/project img/alpha3.png'
 import metrzon from '../img/project img/mertzon.jpeg'
+import rickydry from '../img/project img/rickeydry.jpeg'
+import rickydry1 from '../img/project img/rickydry1.png'
+import rickydry2 from '../img/project img/rickdry2.png'
+import rickydry3 from '../img/project img/rickdry3.png'
 
 export const productinfo = [
   {
@@ -188,9 +192,34 @@ export const productinfo = [
     ],
   },
   {
+    title: "Ricky Dry Cleaners",
+    catogery: catogery[2],
+    index: 6,
+    pic1: rickydry,
+    pic2: rickydry1,
+    pic3: rickydry2,
+    pic4: rickydry3,
+    main: false,
+    challange: [
+      "Creating a visually striking website that reflects Toak Visual's media expertise while showcasing their packages, blog, and FAQs effectively.",
+      "Organizing multiple pages (home, about, contact, space, packages, blog, FAQ) for smooth navigation, ensuring the content is easy to find and engaging for users.",
+      "Ensuring the website design maintains high performance and responsiveness across different devices and screen sizes.",
+    ],
+    solution: [
+      "Developed a visually captivating website that aligns with the brand's media-focused identity, emphasizing high-quality visuals and easy-to-navigate layouts.",
+      "Structured the website content efficiently, providing clear sections for services, packages, and blog posts, and included an informative FAQ to enhance user experience.",
+      "Implemented responsive design techniques, ensuring optimal website performance and accessibility across mobile, tablet, and desktop devices.",
+    ],
+    results: [
+      "Increased visitor engagement and credibility due to the visually appealing and organized layout of Toak Visual’s services and offerings.",
+      "Enhanced user satisfaction with seamless navigation and clear presentation of the company’s packages, services, and blog content.",
+      "Positive feedback from clients regarding the professional look, functionality, and mobile responsiveness, leading to improved online inquiries and conversions.",
+    ],
+  },
+  {
     title: "Fitflex",
     catogery: catogery[1],
-    index: 6,
+    index: 7,
     pic1: fitflex,
     pic2: fitflex1,
     pic3: fitflex2,
@@ -215,7 +244,7 @@ export const productinfo = [
   {
     title: "E-comerance Mobile App",
     catogery: catogery[1],
-    index: 7,
+    index: 8,
     pic1: ecommobile,
     pic2: ecommobile1,
     pic3: ecommobile2,
@@ -240,7 +269,7 @@ export const productinfo = [
   {
     title: "Flower Mobile App",
     catogery: catogery[1],
-    index: 8,
+    index: 9,
     pic1: flowermobile,
     pic2: flowermobile1,
     pic3: flowermobile2,
@@ -265,7 +294,7 @@ export const productinfo = [
   {
     title: "Car Rental Mobile App",
     catogery: catogery[1],
-    index: 9,
+    index: 10,
     pic1: carmobile,
     pic2: carmobile1,
     pic3: carmobile2,
@@ -290,7 +319,7 @@ export const productinfo = [
   {
     title: "Cartoon Graphic",
     catogery: catogery[5],
-    index: 10,
+    index: 11,
     pic1: cartoongraphic,
     pic2: cartoongraphic1,
     pic3: cartoongraphic2,
@@ -315,7 +344,7 @@ export const productinfo = [
   {
     title: "Shoes Banner Graphic",
     catogery: catogery[5],
-    index: 11,
+    index: 12,
     pic1: graphicshoesbanner,
     pic2: graphicsketch,
     pic3: null,
@@ -340,7 +369,7 @@ export const productinfo = [
   {
     title: "E-comerance UI/UX",
     catogery: catogery[7],
-    index: 12,
+    index: 13,
     pic1: ecomuiux,
     pic2: null,
     pic3: null,
@@ -365,7 +394,7 @@ export const productinfo = [
   {
     title: "Flower Shop Mobile UI/UX",
     catogery: catogery[7],
-    index: 13,
+    index: 14,
     pic1: floweruiux,
     pic2: null,
     pic3: null,
@@ -390,7 +419,7 @@ export const productinfo = [
   {
     title: "Gaming Web app",
     catogery: catogery[2],
-    index: 14,
+    index: 15,
     pic1: gameweb,
     pic2: gameweb1,
     pic3: gameweb2,
@@ -415,7 +444,7 @@ export const productinfo = [
   {
     title: "Mluqman Attar",
     catogery: catogery[0],
-    index: 15,
+    index: 16,
     pic1: mluq,
     pic2: mluq4,
     pic3: mluq2,
@@ -440,7 +469,7 @@ export const productinfo = [
   {
     title: "Bookfiy app",
     catogery: catogery[2],
-    index: 16,
+    index: 17,
     pic1: bookf,
     pic2: bookf1,
     pic3: bookf2,
@@ -465,7 +494,7 @@ export const productinfo = [
   {
     title: "Wheels & Deals",
     catogery: catogery[2],
-    index: 17,
+    index: 18,
     pic1: wheel,
     pic2: wheel1,
     pic3: wheel2,
@@ -490,7 +519,7 @@ export const productinfo = [
   {
     title: "KrayanaNearme",
     catogery: catogery[2],
-    index: 18,
+    index: 19,
     pic1: webnode,
     pic2: webnode1,
     pic3: webnode2,
