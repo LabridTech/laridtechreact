@@ -23,7 +23,7 @@ export function OurWork() {
     <div
       className="ourwork-section"
       style={{
-        height: isMobile() ? productinfo.length * 200 : 50 + (width * k) / 9,
+        height: isMobile() ? productinfo.length * 150 : 50 + (width * k) / 9,
         flexDirection: isMobile() ? "column" : "row",
         marginBottom : isMobile() ? 0 : 10
       }}

@@ -1,146 +1,214 @@
-import Typography from '@mui/material/Typography';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import useWindowDimensions from '../windowsize'
-import { isMobile } from '../windowsize';
-import back from '../img/back3cut.mp4'
-import * as React from 'react';
-import Card from '@mui/joy/Card';
-import CardCover from '@mui/joy/CardCover';
-import CardContent from '@mui/joy/CardContent';
-import back2 from '../img/back4cut.mp4';
+import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import useWindowDimensions from "../windowsize";
+import { isMobile } from "../windowsize";
+import back from "../img/back3cut.mp4";
+import * as React from "react";
+import Card from "@mui/joy/Card";
+import CardCover from "@mui/joy/CardCover";
+import CardContent from "@mui/joy/CardContent";
+import back2 from "../img/back4cut.mp4";
 import { useNavigate } from "react-router-dom";
-import webposter from '../img/webposter.png';
-import mobileposter from '../img/mobileposter.png';
+import webposter from "../img/webposter.png";
+import mobileposter from "../img/mobileposter.png";
 
-export function Banner2(){
-  let { height, windowwidth } = useWindowDimensions();
+export function Banner2() {
+  let {  windowwidth } = useWindowDimensions();
   const navigate = useNavigate();
 
-  return(
-    <Card component="div" sx={{ width: windowwidth , flexGrow: 1  , height : 600 , border : 0 , marginBottom : 10}}>
-        <CardCover sx={{ height : 700 , border : 0 }}> 
-          <video
-            autoPlay
-            loop
-            muted
-            playsinline
-            style={{width : windowwidth , }}
-            poster= {isMobile() ? mobileposter : webposter}
+  return (
+    <Card
+      component="div"
+      sx={{
+        flexGrow: 1,
+        height: 600,
+        border: 0,
+        marginBottom: 10,
+      }}
+    >
+      <CardCover sx={{ height: 700, border: 0 }}>
+        <video
+          autoPlay
+          loop
+          muted
+          playsinline
+          poster={isMobile() ? mobileposter : webposter}
+        >
+          {isMobile() ? (
+            <source src={back2} type="video/mp4" />
+          ) : (
+            <source src={back} type="video/mp4" />
+          )}
+        </video>
+      </CardCover>
+      <CardContent
+        sx={{
+          border: 0,
+          justifyContent: "center",
+          alignContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div>
+          <Typography
+            variant="h3"
+            sx={{ color: "#FFFFFF", textAlign: "center" }}
+            gutterBottom
           >
-            {isMobile() ?  
-        <source
-        src={back2}
-        type="video/mp4"
-        
-      /> :
-            <source
-              src={back}
-              type="video/mp4"
+            Transforming Ideas into Innovative Solutions Where Vision Meets
+            Technology
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            sx={{ color: "#ffffffd9", textAlign: "center" }}
+            gutterBottom
+          >
+            Welcome to Labrid Tech, where we craft digital excellence for a
+            smarter tomorrow
+          </Typography>
+          <div
+            style={{
+              alignItems: "center",
+              alignContent: "center",
+              justifyItems: "center",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+          >
+            <TextField
+              placeholder="Please enter text"
+              label="Email"
+              sx={{
+                // Root class for the input field
+                "& .MuiOutlinedInput-root": {
+                  color: "#ffffff82",
+                  fontFamily: "Arial",
+                  fontWeight: "bold",
+                  // Class for the border around the input field
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "#2e2e2e",
+                    borderWidth: "2px",
+                    borderRadius: "20px",
+                  },
+                },
+                // Class for the label of the input field
+                "& .MuiInputLabel-outlined": {
+                  color: "#ffffff82",
+                  fontWeight: "bold",
+                },
+              }}
             />
-}
-          </video>
-           
-        </CardCover>
-        <CardContent sx={{ border : 0 , justifyContent : 'center' , alignContent : 'center' , alignItems : 'center'}}>
-        <div >
-             <Typography variant="h3" sx={{color : '#FFFFFF' , textAlign : 'center'}} gutterBottom>
-                 Transforming Ideas into Innovative Solutions
-                 Where Vision Meets Technology
-             </Typography>
-             <Typography variant="subtitle1" sx={{color : '#ffffffd9' , textAlign : 'center'}} gutterBottom>
-               Welcome to Labrid Tech, 
-               where we craft digital excellence for a smarter tomorrow
-             </Typography>
-             <div style={{
-                alignItems : 'center',
-                alignContent : 'center' ,
-                justifyItems : 'center' , 
-                display : 'flex' ,
-                flexWrap : 'wrap' ,
-                justifyContent : 'center'
-             }}>
-                <TextField placeholder="Please enter text" label="Email"  sx={{
-        // Root class for the input field
-        "& .MuiOutlinedInput-root": {
-          color: "#ffffff82",
-          fontFamily: "Arial",
-          fontWeight: "bold",
-          // Class for the border around the input field
-          "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#2e2e2e",
-            borderWidth: "2px",
-            borderRadius : "20px"
-          },
-        },
-        // Class for the label of the input field
-        "& .MuiInputLabel-outlined": {
-          color: "#ffffff82",
-          fontWeight: "bold",
-        },
-      }} />
-                <Button onClick={()=>navigate('/quote')} variant="contained" sx={{ marginInline : 2 , backgroundColor : '#FFA800' , color : '#000' , fontWeight : 'bold'  , fontSize : '12px' ,  borderRadius : '30px' , paddingInline : 2 , marginTop : isMobile() ?  2  : 0}}>Attract</Button>
-             </div>
-            </div>
-           
-        
-        </CardContent>
-      </Card>
-  )
-}
-
-
-export function Banner(){
-  let { height, width } = useWindowDimensions();
-     let k = 3 ;
-     if (isMobile()) {
-      k = 20 ;
-    } 
-    
-    return(
-       
-        <div style={{ textAlign : 'center' , paddingInline : isMobile() && '0.5%' ,background : `url(${back})` , width : '100%' , backgroundColor : '#110F0F' , height : 100 + width * k/10 , backgroundAttachment: 'fixed' , backgroundRepeat : 'no-repeat' , backgroundPosition : 'center' , display : 'grid' , backgroundSize  : isMobile() ? 'fill' :  'cover' , placeItems : 'center' }}> 
-         
-            <div>
-             <Typography variant="h3" sx={{color : '#FFFFFF'}} gutterBottom>
-                 Transforming Ideas into Innovative Solutions
-                 Where Vision Meets Technology
-             </Typography>
-             <Typography variant="subtitle1" sx={{color : '#ffffffd9'}} gutterBottom>
-               Welcome to Labrid Tech, 
-               where we craft digital excellence for a smarter tomorrow
-             </Typography>
-             <div style={{
-                alignItems : 'center',
-                alignContent : 'center' ,
-                justifyItems : 'center' , 
-                display : 'flex' ,
-                flexWrap : 'wrap' ,
-                justifyContent : 'center'
-             }}>
-                <TextField placeholder="Please enter text" label="Email"  sx={{
-        // Root class for the input field
-        "& .MuiOutlinedInput-root": {
-          color: "#ffffff82",
-          fontFamily: "Arial",
-          fontWeight: "bold",
-          // Class for the border around the input field
-          "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#2e2e2e",
-            borderWidth: "2px",
-            borderRadius : "20px"
-          },
-        },
-        // Class for the label of the input field
-        "& .MuiInputLabel-outlined": {
-          color: "#ffffff82",
-          fontWeight: "bold",
-        },
-      }} />
-                <Button variant="contained" sx={{ marginInline : 2 , backgroundColor : '#FFA800' , color : '#000' , fontWeight : 'bold'  , fontSize : '12px' ,  borderRadius : '30px' , paddingInline : 2 }}>Attract</Button>
-             </div>
-            </div>
-           
+            <Button
+              onClick={() => navigate("/quote")}
+              variant="contained"
+              sx={{
+                marginInline: 2,
+                backgroundColor: "#FFA800",
+                color: "#000",
+                fontWeight: "bold",
+                fontSize: "12px",
+                borderRadius: "30px",
+                paddingInline: 2,
+                marginTop: isMobile() ? 2 : 0,
+              }}
+            >
+              Attract
+            </Button>
+          </div>
         </div>
-    )
+      </CardContent>
+    </Card>
+  );
+}
+
+export function Banner() {
+  let {  width } = useWindowDimensions();
+  let k = 3;
+  if (isMobile()) {
+    k = 20;
+  }
+
+  return (
+    <div
+      style={{
+        textAlign: "center",
+        paddingInline: isMobile() && "0.5%",
+        background: `url(${back})`,
+        width: "100%",
+        backgroundColor: "#110F0F",
+        height: 100 + (width * k) / 10,
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        display: "grid",
+        backgroundSize: isMobile() ? "fill" : "cover",
+        placeItems: "center",
+      }}
+    >
+      <div>
+        <Typography variant="h3" sx={{ color: "#FFFFFF" }} gutterBottom>
+          Transforming Ideas into Innovative Solutions Where Vision Meets
+          Technology
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          sx={{ color: "#ffffffd9" }}
+          gutterBottom
+        >
+          Welcome to Labrid Tech, where we craft digital excellence for a
+          smarter tomorrow
+        </Typography>
+        <div
+          style={{
+            alignItems: "center",
+            alignContent: "center",
+            justifyItems: "center",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
+        >
+          <TextField
+            placeholder="Please enter text"
+            label="Email"
+            sx={{
+              // Root class for the input field
+              "& .MuiOutlinedInput-root": {
+                color: "#ffffff82",
+                fontFamily: "Arial",
+                fontWeight: "bold",
+                // Class for the border around the input field
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#2e2e2e",
+                  borderWidth: "2px",
+                  borderRadius: "20px",
+                },
+              },
+              // Class for the label of the input field
+              "& .MuiInputLabel-outlined": {
+                color: "#ffffff82",
+                fontWeight: "bold",
+              },
+            }}
+          />
+          <Button
+            variant="contained"
+            sx={{
+              marginInline: 2,
+              backgroundColor: "#FFA800",
+              color: "#000",
+              fontWeight: "bold",
+              fontSize: "12px",
+              borderRadius: "30px",
+              paddingInline: 2,
+            }}
+          >
+            Attract
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
 }

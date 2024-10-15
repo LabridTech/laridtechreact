@@ -14,11 +14,11 @@ export function Stats() {
       spacing={3}
       component="div"
       sx={{
-        display: "flex",
         alignItems: "center",
         justifyContent: "space-evenly",
         height: isMobile() ? 600 : 400,
         marginBlock: 10,
+        imageRendering : '-webkit-optimize-contrast',
         width : '100%' ,
         backgroundImage : isMobile() ? `url(${backver})` : `url(${back})`,
         backgroundSize :  'cover' ,

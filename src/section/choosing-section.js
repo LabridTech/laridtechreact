@@ -18,7 +18,7 @@ export function SectionChoosing() {
     k = 6;
   }
   if (isMobile()) {
-    k = 15;
+    k = 16;
   }
   return (
     <div
@@ -53,12 +53,12 @@ export function SectionChoosing() {
 
       <div
         style={{
-          marginInline: isMobile() ? "10%" : '5%',
+          paddingInline: isMobile() ? "10%" : '5%',
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: isMobile() ? "center"  : "flex-start" ,
           flexWrap: "wrap",
-          width: isMobile() ? "100%" : "45%",
+          width: isMobile() ? "80%" : "45%",
         }}
       >
         <Container style={{ padding: 0, paddingBlock: 5 }}>
@@ -149,6 +149,8 @@ export function SectionChoosing() {
             borderColor: "#FFA800",
             border: 1,
             marginBlock: 2,
+            paddingBlock : 1,
+            paddingInline : 2
           }}
           onClick={() => navigate("/quote")}
         >
