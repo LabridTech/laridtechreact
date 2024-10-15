@@ -21,9 +21,9 @@ export function Stats() {
         imageRendering : '-webkit-optimize-contrast',
         width : '100%' ,
         backgroundImage : isMobile() ? `url(${backver})` : `url(${back})`,
-        backgroundSize :  'cover' ,
+        backgroundSize :  isMobile() ?  'fill' :  'cover' ,
         backgroundRepeat : 'no-repeat',
-        backgroundAttachment : 'fixed'
+        backgroundAttachment :  'fixed'
       }}
     >
       <Grid2
