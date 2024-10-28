@@ -12,10 +12,10 @@ import * as React from "react";
 
 function Project() {
   return (
-    <Box className='space-y-4' >  
+    <Box>  
       <Navbar
-        navItems={["About us", "Service", "Case Study", "Contact us"]}
       ></Navbar>
+      <Box className='space-y-4' >
       <Subbanner
      
         item={{
@@ -170,8 +170,8 @@ function Project() {
           <Button className="w-3/5 md:w-1/5 bg-gradient-to-r from-blue-700 hover:to-blue-700 to-blue-300 !rounded-3xl" variant="contained">Get in Touch</Button>
         </Box>
       </Box>
-
       <Footer></Footer>
+      </Box>
     </Box>
   );
 }

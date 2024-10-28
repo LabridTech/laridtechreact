@@ -70,7 +70,7 @@ function Menuitemconst({
   );
 }
 
-export default function Navbar({ navItems }) {
+export default function Navbar() {
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [catEl, setCatEl] = React.useState(null);
@@ -93,7 +93,7 @@ export default function Navbar({ navItems }) {
   return (
     <Box
       component="nav"
-      className="flex justify-around items-center bg-black/40 rounded-b-3xl  h-24"
+      className="flex justify-around items-center bg-black/70  h-24"
       minheight="64"
     >
       <IconButton
@@ -101,10 +101,14 @@ export default function Navbar({ navItems }) {
         aria-label="open drawer"
         edge="start"
         onClick={() => navigate("/")}
-        sx={{  padding : 0}}
+        sx={{ padding: 0 }}
         className="flex justify-end"
       >
-        <img alt="logo" src="/logo.png" className="w-14 mr-2 sm:w-20 fill-black " />
+        <img
+          alt="logo"
+          src="/logo.png"
+          className="w-14 mr-2 sm:w-20 fill-black "
+        />
 
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           LABRIDTECH
@@ -129,54 +133,41 @@ export default function Navbar({ navItems }) {
         </>
       ) : (
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
-          {navItems.map((item) =>
-            item === "Contact us" ? (
-              <Button
-                variant="contained"
-                className="!rounded-3xl  bg-gradient-to-r from-blue-700 hover:to-blue-700 to-blue-300 "
-                key={item}
-                onClick={() => navigate("/quote/1")}
-              >
-                {item}
-              </Button>
-            ) : item === "About us" ? (
-              <Button
-                key={item}
-                className="!text-slate-900 !font-semibold !font-sans !text-base"
-                onClick={() => navigate("/about")}
-              >
-                {item}
-              </Button>
-            ) : item === "Service" ? (
-              <>
-                <Button
-                  key={item}
-                 className="!text-slate-900 !font-semibold !font-sans !text-base"
-                  onClick={handleClick1}
-                >
-                  {item}
-                </Button>
-                {
-                  <Menuitem
-                    open={open1}
-                    anchorEl={catEl}
-                    handleClose={handleClose1}
-                    item={catogery}
-                  />
-                }
-              </>
-            ) : (
-              <>
-                <Button
-                  key={item}
-                 className="!text-slate-900 !font-semibold !font-sans !text-base"
-                  onClick={() => navigate("/project")}
-                >
-                  {item}
-                </Button>
-              </>
-            )
-          )}
+          <Button
+            className="!text-slate-900 !font-semibold !font-sans !text-base"
+            onClick={() => navigate("/about")}
+          >
+            About us
+          </Button>
+
+          <Button
+            className="!text-slate-900 !font-semibold !font-sans !text-base"
+            onClick={handleClick1}
+          >
+            Service
+          </Button>
+          {
+            <Menuitem
+              open={open1}
+              anchorEl={catEl}
+              handleClose={handleClose1}
+              item={catogery}
+            />
+          }
+
+          <Button
+            className="!text-slate-900 !font-semibold !font-sans !text-base"
+            onClick={() => navigate("/project")}
+          >
+            Case Study
+          </Button>
+          <Button
+            variant="contained"
+            className="!rounded-3xl  bg-gradient-to-r from-blue-700 hover:to-blue-700 to-blue-300 "
+            onClick={() => navigate("/quote/1")}
+          >
+            Contact us
+          </Button>
         </Box>
       )}
     </Box>

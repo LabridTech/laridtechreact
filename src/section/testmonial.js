@@ -71,7 +71,7 @@ export default function Testmonial() {
               })}
       </Grid>
 
-      <Box className="flex justify-center w-1/4 !bg-slate-200 rounded-full space-x-1 p-2">
+      <Box className="flex justify-center w-1/4 md:w-24 !bg-slate-200 rounded-full space-x-1 p-2">
         {testmonialinfo.map((item, index) => {
           return (
             <span

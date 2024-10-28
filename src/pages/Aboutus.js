@@ -12,10 +12,10 @@ import  Stats  from "../section/stats";
 
 function Aboutus() {
   return (
-    <Box className="flex flex-col space-y-10">
+    <Box className="flex flex-col">
       <Navbar
-        navItems={["About us", "Service", "Case Study", "Contact us"]}
       ></Navbar>
+       <Box className="flex flex-col space-y-10">
       <Subbanner
         item={{ pagetitle: "About us", title: "LabridTech", button: "Contact" }}
       ></Subbanner>
@@ -25,11 +25,8 @@ function Aboutus() {
       <SectionCare></SectionCare>
       <Stats></Stats>
       <DiscussSection></DiscussSection>
-      
-
-     
-
       <Footer></Footer>
+      </Box>
     </Box>
   );
 }

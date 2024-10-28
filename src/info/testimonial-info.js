@@ -9,7 +9,7 @@ export const testmonialinfo = [
         title: 'M Luqman',
         index: 1,
         second: 'Ali Haider',
-        text: 'We had a major contract of digitalization of our complete buisiness and so far LabridTech has been instrumental in streamlining our operations. Their attention to detail and innovative solutions have significantly boosted our business efficiency.',
+        text: 'We had a major contract of digitalization of our buisiness and their attention to detail and innovative solutions have significantly boosted our business efficiency.',
     },
     {
         img : suf ,
