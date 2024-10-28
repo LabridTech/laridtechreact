@@ -1,72 +1,85 @@
-.App {
-  text-align: start;
-  background-color: #14111e;
-  width: '100%';
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.nav{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  padding-inline:  10%;
-  background-color: '#14111e';
-}
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
 
-.main-service{
-  width: 100%;
-  background-color: #14111e;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
+  @property --numm {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @property --nummm {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @property --nummmm {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+  }
 
-.choose-section{
-  background-color: #14111e;
-    width: 100%;
-    flex-wrap: nowrap;
-    display: flex;
-    align-items: center;
-}
+  @property --title {
+    syntax: "<string>";
+    initial-value: 0;
+    inherits: false;
+  }
+  
+  @keyframes counterr {
+    from {
+      --title : Transforming Ideas into Innovative Solutions Where Vision Meets Technology
+    }
 
-.ourwork-section{
-  background-color: #14111e;
-  width: 100%;
-  flex-wrap: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    to {
+      --title : World-class design for Saas & Tech companies
+    }
 
-.testmonial-section{
-  background-color: #14111e;
-  width: 100%;
-  flex-wrap: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  }
+  
+  
+  
+  @keyframes counter {
+    from {
+      --num : 0;
+      --numm :0;
+      --nummm :0;
+      --nummmm :0;
+      --title : Transforming Ideas into Innovative Solutions Where Vision Meets Technology
+    }
+    to {
+      --num : 550;
+      --numm :45;
+      --nummm :47;
+      --nummmm :98;
+      --title : World-class design for Saas & Tech companies
+    }
 
-.footer{
-  background-color:  #14111e;
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  align-content: space-around;
-}
+    
+  }
+
+  .image-scale {
+    transition: ease-out transform  ;
+   transition-duration: 1s;
+   transform: scale(125);
+  }
+
+  .image-hover {
+    transition: ease-out transform  ;
+   transition-duration: 1s;
+  }
+  
+  .image-hover:hover {
+    transform: translateY(-10px);  /* Move the image up 10px */
+  }
 
 
-.image-hover {
-  transition: ease-out transform  ;
- transition-duration: 1s;
-}
+  
 
-.image-hover:hover {
-  transform: translateY(-10px);  /* Move the image up 10px */
-}
+  

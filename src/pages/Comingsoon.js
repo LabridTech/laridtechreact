@@ -1,6 +1,6 @@
 import '../style/App.css';
-import { Footer } from '../section/footer';
-import { Navbar } from '../section/nav';
+import  Footer from '../section/footer';
+import  Navbar from '../section/nav';
 import Typography from '@mui/material/Typography';
 
 

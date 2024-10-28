@@ -1,122 +1,97 @@
-import { Grid2 } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import user from "../img/ic-glass-users.svg";
 import buy from "../img/ic-glass-buy.svg";
 import time from "../img/time.png";
-import back from '../img/background.png'
-import backver from '../img/backgroundv.png'
-import { isMobile } from '../windowsize';
+import Divider from "@mui/material/Divider";
+import report from "../img/report.png";
+import { useInView } from "react-intersection-observer";
+import { useState, useEffect } from "react";
 
-export function Stats() {
+export default function Stats() {
+  const [entered, setEntered] = useState(false);
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView === true) {
+      setEntered(true);
+    }
+  }, [inView]);
+
   return (
-    <Grid2
-      container
-      spacing={3}
-      component="div"
-      sx={{
-        alignItems: "center",
-        justifyContent: "space-evenly",
-        height: isMobile() ? 600 : 400,
-        marginBlock: 10,
-        imageRendering : '-webkit-optimize-contrast',
-        width : '100%' ,
-        backgroundImage : isMobile() ? `url(${backver})` : `url(${back})`,
-        backgroundSize :  isMobile() ?  'fill' :  'cover' ,
-        backgroundRepeat : 'no-repeat',
-        backgroundAttachment :  'fixed'
-      }}
-    >
-      <Grid2
-        xs={12}
-        sm={6}
-        md={3}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-          borderRadius: 10,
-          backgroundColor: "#221b39",
-          padding: 5,
-        }}
-      >
-        <img
-          alt="icon"
-          src={buy}
-          style={{
-            borderRadius: 30,
-            backgroundColor: "#4e3e83",
-            padding: 15,
-            
-          }}
-        />
-        <Typography variant="h5" style={{ color: "#676668", padding: 1 }}>
-          47
-        </Typography>
-        <Typography variant="subtitle1" color="white" sx>
-          Completed <br/> Projects
-        </Typography>
-      </Grid2>
-
-      <Grid2
-        xs={12}
-        sm={6}
-        md={3}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-          borderRadius: 10,
-          backgroundColor: "#221b39",
-          padding: 5,
-        }}
-      >
-        <img
-          alt="icon"
-          src={user}
-          style={{
-            borderRadius: 30,
-            backgroundColor: "#4e3e83",
-            padding: 15,
-          }}
-        />
-        <Typography variant="h5" style={{ color: "#676668", padding: 1 }}>
-          43
-        </Typography>
-        <Typography variant="subtitle1" color="white">
-          Happy <br/> client
-        </Typography>
-      </Grid2>
-
-      <Grid2
-        xs={12}
-        sm={6}
-        md={3}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-          borderRadius: 10,
-          backgroundColor: "#221b39",
-          padding: 5,
-        }}
-      >
-        <img
-          alt="icon"
-          src={time}
-          style={{
-            borderRadius: 30,
-            backgroundColor: "#4e3e83",
-            padding: 15,
-            
-          }}
-        />
-        <Typography variant="h5" style={{ color: "#676668", padding: 1 }}>
-          550
-        </Typography>
-        <Typography variant="subtitle1" color="white">
-          Hour of <br/> Work
-        </Typography>
-      </Grid2>
-    </Grid2>
+    <Container ref={ref} className="flex flex-col md:flex-row bg-white !w-4/5  justify-evenly !rounded-lg py-5">
+      {entered && (
+        <>
+          <Box className="flex flex-col items-center">
+            <img alt="icon" src={buy} className="hover:!rotate-45 " />
+            <Typography
+              variant="h5"
+              sx={{ color: "#676668", padding: 1, textAlign: "center" }}
+            >
+              <span className="animate-[counter_3s_ease-out_forwards] [counter-set:_nummm_var(--nummm)] before:content-[counter(nummm)]">
+                <span className="sr-only">47</span>
+              </span>
+            </Typography>
+            <Typography
+              className="!text-slate-900 !font-semibold !font-sans"
+              variant="subtitle1"
+              sx
+            >
+              Completed <br /> Projects
+            </Typography>
+          </Box>
+          <Divider variant="middle" orientation="vertical" flexItem />
+          <Box className="flex flex-col items-center">
+            <img alt="icon" src={user} className="hover:!rotate-45" />
+            <Typography variant="h5" sx={{ color: "#676668", padding: 1 }}>
+              <span className="animate-[counter_3s_ease-out_forwards] [counter-set:_numm_var(--numm)] before:content-[counter(numm)]">
+                <span className="sr-only">45</span>
+              </span>
+            </Typography>
+            <Typography
+              className="!text-slate-900 !font-semibold !font-sans"
+              variant="subtitle1"
+            >
+              Happy <br /> client
+            </Typography>
+          </Box>
+          <Divider variant="middle" orientation="vertical" flexItem />
+          <Box className="flex flex-col items-center">
+            <img alt="icon" src={time} className="hover:!rotate-45" />
+            <Typography
+              variant="h5"
+              className="flex justify-center"
+              sx={{ color: "#676668", padding: 1 }}
+            >
+              <span className="animate-[counter_3s_ease-out_forwards] [counter-set:_num_var(--num)] before:content-[counter(num)]">
+                <span className="sr-only">550</span>
+              </span>
+            </Typography>
+            <Typography
+              className="!text-slate-900 !font-semibold !font-sans"
+              variant="subtitle1"
+            >
+              Hour of <br /> Work
+            </Typography>
+          </Box>
+          <Divider variant="middle" orientation="vertical" flexItem />
+          <Box className="flex flex-col items-center">
+            <img alt="icon" src={report} className="hover:!rotate-45" />
+            <Typography variant="h5" sx={{ color: "#676668", padding: 1 }}>
+              <span className="animate-[counter_3s_ease-out_forwards] [counter-set:_nummmm_var(--nummmm)] before:content-[counter(nummmm)]">
+                <span className="sr-only">550</span>%
+              </span>
+            </Typography>
+            <Typography
+              className="!text-slate-900 !font-semibold !font-sans"
+              variant="subtitle1"
+            >
+              Clients Business
+              <br /> Increased
+            </Typography>
+          </Box>
+        </>
+      )}
+    </Container>
   );
 }

@@ -1,59 +1,102 @@
-import {   IconButton,} from "@mui/material";
-import '../style/App.css';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Grid from '@mui/material/Grid2';
-import { isMobile } from '../windowsize';
-import { TestmonialCard } from "../component/testimonial-card";
+import { Box } from "@mui/material";
+import "../style/App.css";
+import Grid from "@mui/material/Grid2";
+import { isMobile } from "../windowsize";
+import TestmonialCard from "../component/testimonial-card";
 import { testmonialinfo } from "../info/testimonial-info";
-import * as React from 'react';
+import * as React from "react";
+import { useSwipeable } from "react-swipeable";
 
-
-
-export function Testmonial(){
+export default function Testmonial() {
   const [showindex, setshowindex] = React.useState(1);
-  const handleplusshow = ()=>{
-    if(isMobile()){
-      if(showindex  < testmonialinfo.length){
-        setshowindex(showindex + 1);
-      }
+  const handleplusshow = () => {
+    if (showindex < testmonialinfo.length) {
+      setshowindex(showindex + 1);
     }
-    else{
-      if(showindex + 2 < testmonialinfo.length){
-        setshowindex(showindex + 1);
-      }
-    }
-    
-    console.log(showindex)
-  }
-  const handleminusshow = ()=>{
-    if(showindex  > 1){
+  };
+  const setindex = (index) => {
+    // eslint-disable-next-line no-restricted-globals
+    event.preventDefault();
+
+    setshowindex(index);
+  };
+  const handleminusshow = () => {
+    if (showindex > 1) {
       setshowindex(showindex - 1);
     }
-    console.log(showindex)
-  }
- 
-    return(
-        <div className="testmonial-section"  style={{ height :  '450px' , flexDirection :'column' }} >
-          
-            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{
-                justifyContent : 'center',
-                
-              }}>
-                
-               {
-                isMobile() ?   
-                testmonialinfo.filter((value) => value.index === showindex  ? value : null).map( (value) => <TestmonialCard item={value} ></TestmonialCard> )  :
-                testmonialinfo.filter((value) => value.index === showindex || value.index === showindex +1 || value.index === showindex + 2 ? value : null).map( (value) => <TestmonialCard item={value} ></TestmonialCard> )
-               }
-                
-                
-            </Grid>
+    console.log(showindex);
+  };
 
-            <div style={{
+  const handlers = useSwipeable({
+    onSwipedLeft: handleminusshow,
+    onSwipedRight: handleplusshow,
+  });
+
+  return (
+    <Box
+      {...handlers}
+      className="flex flex-col !h-full md:items-center space-y-16"
+    >
+      <Grid
+        container
+        spacing={{ xs: 2, md: 3 }}
+        columns={{ xs: 4, sm: 8, md: 12 }}
+        className="justify-center"
+      >
+        {isMobile()
+          ? testmonialinfo
+              .filter((value) => (value.index === showindex ? value : null))
+              .map((value) => <TestmonialCard item={value}></TestmonialCard>)
+          : testmonialinfo
+              .filter((value) => (value.index === showindex ? value : null))
+              .map((value) => {
+                return (
+                  <>
+                    <TestmonialCard
+                      key={value.index}
+                      flag={1}
+                      item={value}
+                    ></TestmonialCard>
+                    <TestmonialCard
+                      key={value.index}
+                      item={testmonialinfo[showindex % 4]}
+                    ></TestmonialCard>
+                    <TestmonialCard
+                      key={value.index}
+                      flag={2}
+                      item={testmonialinfo[(showindex + 1) % 4]}
+                    ></TestmonialCard>
+                  </>
+                );
+              })}
+      </Grid>
+
+      <Box className="flex justify-center !bg-slate-200 rounded-full space-x-1 p-2">
+        {testmonialinfo.map((item, index) => {
+          return (
+            <span
+              onClick={() => {
+                setindex(index + 1);
+              }}
+              class="relative flex h-3 w-3"
+            >
+              <span class=" absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              {item.index === showindex ? (
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+              ) : null}
+            </span>
+          );
+        })}
+      </Box>
+    </Box>
+  );
+}
+
+{
+  /* <div style={{
                 justifyContent : 'center' ,
                 display : 'flex' ,
-                width : '90%' ,
+                width : '100%' ,
                 
             }}>
                 <IconButton 
@@ -78,7 +121,5 @@ export function Testmonial(){
                 borderColor : '#FFA800'}}>
                     <ArrowForwardIosIcon ></ArrowForwardIosIcon>
                 </IconButton>
-            </div>
-        </div>
-    )
+            </div> */
 }

@@ -1,162 +1,195 @@
 import "../style/App.css";
-import Vector from "../img/Vector1.png";
+import back from "../img/backgroundv.png";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { isMobile } from "../windowsize";
-import useWindowDimensions from "../windowsize";
 import { useNavigate } from "react-router-dom";
-import { Container , Box } from "@mui/material";
+import { Container, Box, ThemeProvider } from "@mui/material";
+import EastIcon from '@mui/icons-material/East';
+import { theme } from "../constant/color";
 
-export function SectionChoosing() {
+export default function SectionChoosing() {
   const navigate = useNavigate();
-  let {  width } = useWindowDimensions();
-  let k = 2;
-  if (width < 1600) {
-    k = 3;
-  }
-  if (width < 1100) {
-    k = 6;
-  }
-  if (isMobile()) {
-    k = 16;
-  }
   return (
-    <div
-      className="choose-section"
-      style={{
-        flexDirection: isMobile() ? "column" : "row",
-        height: 150 + (width * k) / 7,
-        justifyContent: isMobile() ? "center" : "space-between",
-      }}
+    <Box
+      component="div"
+      className="flex flex-col md:flex-row items-center justify-evenly my-5"
     >
-      <Box style={{
-            width: isMobile() ? "100%" : "45%",
-            height: "400px",
-            display : 'flex',
-            flexDirection : 'column',
-            alignItems : 'center'
-          }} >
-        <img
-          alt="vector"
-          src={Vector}
-          width= '100%'
-        />
+      <img
+        alt="vector"
+        src={back}
+        style={{ borderRadius: 50 }}
+        className="flex w-11/12 md:w-1/3 p-2 animate-pulse "
+      />
+
+      <Box component="div" className="flex flex-col w-11/12 md:!w-2/5 space-y-4 "> 
+        <Container
+          style={{ padding: 10 }}
+          className="flex items-center space-x-2"
+        >
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+          </span>
+          <Typography
+            variant="body2"
+            className="!text-stone-950 !font-semibold !font-sans "
+          >
+            what set us apart
+          </Typography>
+        </Container>
         <Typography
-          gutterBottom
-          variant="h5"
-          component="div"
-          sx={{ color: "#fff" }}
+          variant="h4"
+          className="!text-slate-900 !font-semibold !font-sans  "
         >
-          Why choose us ?
+          Why choose Labridtech?
         </Typography>
-      </Box>
-
-      <div
-        style={{
-          paddingInline: isMobile() ? "10%" : '5%',
-          display: "flex",
-          flexDirection: "column",
-          alignItems: isMobile() ? "center"  : "flex-start" ,
-          flexWrap: "wrap",
-          width: isMobile() ? "80%" : "45%",
-        }}
-      >
-        <Container style={{ padding: 0, paddingBlock: 5 }}>
-          <Typography
-            variant="h5"
-            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
-          >
-            Affordable Excellence
-          </Typography>
-
-          <Typography
-            variant="body2"
-            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
-          >
-            Top-tier digital solutions without breaking the bank. We offer
-            transparent, budget-friendly pricing to fit any business size.
-          </Typography>
-        </Container>
-        <Container style={{ padding: 0, paddingBlock: 5 }}>
-          <Typography
-            variant="h5"
-            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
-          >
-            Startup Specialists
-          </Typography>
-
-          <Typography
-            variant="body2"
-            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
-          >
-            From web development to branding, we help startups and small
-            businesses grow, engage customers, and build a lasting online
-            presence.
-          </Typography>
-        </Container>
-        <Container style={{ padding: 0, paddingBlock: 5 }}>
-          <Typography
-            variant="h5"
-            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
-          >
-            End-to-End Services
-          </Typography>
-
-          <Typography
-            variant="body2"
-            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
-          >
-            Need a website, marketing, or a brand revamp? We've got you covered
-            with expert solutions that bring your vision to life.
-          </Typography>
-        </Container>
-        <Container style={{ padding: 0, paddingBlock: 5 }}>
-          <Typography
-            variant="h5"
-            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
-          >
-            Digital Transformation Experts
-          </Typography>
-
-          <Typography
-            variant="body2"
-            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
-          >
-            Stay ahead with scalable, tech-driven strategies that streamline
-            your operations and fuel growth.
-          </Typography>
-        </Container>
-        <Container style={{ padding: 0, paddingBlock: 5 }}>
-          <Typography
-            variant="h5"
-            sx={{ color: "#fff", margin: 0, textAlign: "start" }}
-          >
-            Customer-First Focus
-          </Typography>
-
-          <Typography
-            variant="body2"
-            sx={{ color: "#ffffff82", margin: 0, textAlign: "start" }}
-          >
-            Your success is our mission. We craft tailored solutions to exceed
-            your goals and keep you ahead of the gam
-          </Typography>
-        </Container>
-        <Button
-          sx={{
-            color: "#FFA800",
-            borderRadius: "20px",
-            borderColor: "#FFA800",
-            border: 1,
-            marginBlock: 2,
-            paddingBlock : 1,
-            paddingInline : 2
-          }}
-          onClick={() => navigate("/quote")}
+        <Container
+          className="flex items-start space-x-2"
+          style={{ padding: 0 }}
         >
-          Let’s connect
-        </Button>
-      </div>
-    </div>
+          <ThemeProvider theme={theme}>
+            <EastIcon
+              color="primary"
+              className="!h-8 !w-8 rounded-full !bg-blue-100 p-1 hover:!fill-cyan-200 "
+            ></EastIcon>
+          </ThemeProvider>
+
+          <Container style={{ padding: 0 }}>
+            <Typography
+              variant="h5"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Affordable Excellence
+            </Typography>
+
+            <Typography
+              variant="body2"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Top-tier digital solutions without breaking the bank. We offer
+              transparent, budget-friendly pricing to fit any business size.
+            </Typography>
+          </Container>
+        </Container>
+        <Container
+          className="flex items-start space-x-2"
+          style={{ padding: 0 }}
+        >
+          <ThemeProvider theme={theme}>
+            <EastIcon
+              color="primary"
+              className="!h-8 !w-8 rounded-full !bg-blue-100 p-1 hover:!fill-cyan-200"
+            ></EastIcon>
+          </ThemeProvider>
+          <Container style={{ padding: 0 }}>
+            <Typography
+              variant="h5"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Startup Specialists
+            </Typography>
+
+            <Typography
+              variant="body2"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              From web development to branding, we help startups and small
+              businesses grow, engage customers, and build a lasting online
+              presence.
+            </Typography>
+          </Container>
+        </Container>
+        <Container
+          className="flex items-start space-x-2"
+          style={{ padding: 0 }}
+        >
+          <ThemeProvider theme={theme}>
+            <EastIcon
+              color="primary"
+              className="!h-8 !w-8 rounded-full !bg-blue-100 p-1 hover:!fill-cyan-200"
+            ></EastIcon>
+          </ThemeProvider>
+          <Container style={{ padding: 0 }}>
+            <Typography
+              variant="h5"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              End-to-End Services
+            </Typography>
+
+            <Typography
+              variant="body2"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Need a website, marketing, or a brand revamp? We've got you
+              covered with expert solutions that bring your vision to life.
+            </Typography>
+          </Container>
+        </Container>
+        <Container
+          className="flex items-start space-x-2"
+          style={{ padding: 0 }}
+        >
+          <ThemeProvider theme={theme}>
+            <EastIcon
+              color="primary"
+              className="!h-8 !w-8 rounded-full !bg-blue-100 p-1 hover:!fill-cyan-200"
+            ></EastIcon>
+          </ThemeProvider>
+          <Container style={{ padding: 0 }}>
+            <Typography
+              variant="h5"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Digital Transformation Experts
+            </Typography>
+
+            <Typography
+              variant="body2"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Stay ahead with scalable, tech-driven strategies that streamline
+              your operations and fuel growth.
+            </Typography>
+          </Container>
+        </Container>
+        <Container
+          className="flex items-start space-x-2"
+          style={{ padding: 0 }}
+        >
+          <ThemeProvider theme={theme}>
+            <EastIcon
+              color="primary"
+              className="!h-8 !w-8 rounded-full !bg-blue-100 p-1 hover:!fill-cyan-200"
+            ></EastIcon>
+          </ThemeProvider>
+          <Container style={{ padding: 0 }}>
+            <Typography
+              variant="h5"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Customer-First Focus
+            </Typography>
+
+            <Typography
+              variant="body2"
+              className="!text-slate-900 !font-semibold !font-sans "
+            >
+              Your success is our mission. We craft tailored solutions to exceed
+              your goals and keep you ahead of the gam
+            </Typography>
+          </Container>
+        </Container>
+        <Box className="flex justify-center sm:justify-start">
+          <Button
+            variant="contained"
+            className="w-1/2 !rounded-3xl bg-gradient-to-r from-blue-700 hover:to-blue-700 to-blue-300"
+            onClick={() => navigate("/quote/0")}
+          >
+            Leave A Message
+          </Button>
+        </Box>
+      </Box>
+    </Box>
   );
 }

@@ -1,34 +1,17 @@
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import useWindowDimensions from "../windowsize";
 import { isMobile } from "../windowsize";
+import { Box } from "@mui/material";
 
-export function DiscussSection() {
-  let { height, width } = useWindowDimensions();
-  let k = 5;
-
-  if (isMobile()) {
-    k = 35;
-  }
+export default function DiscussSection() {
+ 
   return (
-    <div style={{ paddingInline: "10%", backgroundColor: "#14111e" }}>
-      <div
-        style={{
-          width: "100%",
-          backgroundColor: "#FFA800",
-          height: isMobile() ? "500px" : "400px",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          display: "grid",
-          backgroundSize: "cover",
-          placeItems: "center",
-          borderColor: "#A1AEBF",
-          border: 1,
-          borderRadius: "10px",
-        }}
+  
+      <Box
+       className='flex flex-col drop-shadow-2xl !backdrop-blur-md !bg-black/10 back py-10 rounded-lg mx-4 md:mx-20'
       >
-        <div>
+        <Box>
           <Typography
             variant="h3"
             sx={{ color: "#000", textAlign: "center" }}
@@ -37,7 +20,7 @@ export function DiscussSection() {
             Let’s discuss the idea
           </Typography>
 
-          <div
+          <Box
             style={{
               alignItems: "center",
               alignContent: "center",
@@ -89,22 +72,9 @@ export function DiscussSection() {
             >
               Send
             </Button>
-          </div>
-        </div>
-      </div>
-      <div style={{ justifyContent: "flex-end", display: "flex" }}>
-        <Button
-          sx={{
-            color: "#FFA800",
-            borderRadius: "20px",
-            borderColor: "#FFA800",
-            border: 1,
-            margin: 2,
-          }}
-        >
-          Go to top
-        </Button>
-      </div>
-    </div>
+          </Box>
+        </Box>
+      </Box>
+      
   );
 }

@@ -1,224 +1,149 @@
 import "../style/App.css";
-import { Footer } from "../section/footer";
-import { Navbar } from "../section/nav";
-import { Subbanner } from "../section/subbanner";
+import  Footer  from "../section/footer";
+import  Navbar  from "../section/nav";
+import  Subbanner  from "../section/subbanner";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Productcard } from "../component/product-card";
-import { Servicecard } from "../component/service-card";
-import { serviceinfo } from "../info/service-info";
-import { Box, Grid2 } from "@mui/material";
-import { productinfo } from "../info/product-info";
-import { isMobile } from "../windowsize";
+import  Productcard  from "../component/product-card";
+import  Servicecard  from "../component/service-card";
+import  {serviceinfo}  from "../info/service-info";
+import  {Box, Container, Grid2 } from "@mui/material";
+import  {productinfo}  from "../info/product-info";
 import { useParams } from "react-router-dom";
 
 function Niche() {
   const { title } = useParams();
   let count = 0;
-  let k =
-    productinfo.filter((item) => {
-      return item.catogery === title ? item : null;
-    }).length / 5;
-  if (isMobile()) {
-    k = productinfo.filter((item) => {
-      return item.catogery === title ? item : null;
-    }).length;
-  }
 
-  if (
-    productinfo.filter((item) => {
-      return item.catogery === title ? item : null;
-    }).length === 0
-  ) {
-    return (
-      <div>
 
-      
-      <Navbar navItems={['About us' , 'Service' , 'Case Study' , 'Contact us']}></Navbar>
-      <Subbanner item={{pagetitle : 'Branding' , title : 'Find your niche' , text : 'Discover your perfect market fit with tailored insights to help you define and thrive in your niche. ' , button : 'Build My Solution'}} ></Subbanner>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center", 
-          flexDirection : 'column',
-          marginTop : 20,
-          marginBottom : 5
-        }}
-      >
-        <Typography
-          variant="h5"
-          style={{
-            color: "#fff",
-          }}
-        >
-          Website under maintainance
-        </Typography>
-        <Typography
-          variant="h5"
-          style={{
-            color: "#ffffff82",
-          }}
-        >
-          contents coming soon
-        </Typography>
-      </Box>
-       <Footer></Footer>
-       </div>
-    );
-  }
   return (
-    <div className="App">
+    <Box className="flex flex-col ">
       <Navbar
         navItems={["About us", "Service", "Case Study", "Contact us"]}
       ></Navbar>
       <Subbanner
         item={{
-          pagetitle: "Branding",
+          pagetitle: title,
           title: "Find your niche",
           text: "Discover your perfect market fit with tailored insights to help you define and thrive in your niche. ",
           button: "Build My Solution",
         }}
       ></Subbanner>
-      <div
-        style={{
-          width: "80%",
-          height: isMobile() ? 500 : 100,
-          backgroundColor: "#14111e",
-          paddingInline: "10%",
-          paddingTop: "100px",
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{ color: "#FFFFFF", marginBottom: 2 }}
-          gutterBottom
-        >
-          Process
-        </Typography>
+      {productinfo.filter((item) => {
+        return item.catogery === title ? item : null;
+      }).length === 0 ? (
+        <Box>
+          <Typography
+            variant="h5"
+            style={{
+              color: "#fff",
+            }}
+          >
+            Website under maintainance
+          </Typography>
+          <Typography
+            variant="h5"
+            style={{
+              color: "#ffffff82",
+            }}
+          >
+            contents coming soon
+          </Typography>
+        </Box>
+      ) : (
+        <Box className='flex flex-col space-y-10 px-6 my-6'>
+          <Box className="flex flex-col items-center space-y-2">
+            <Container
+              style={{ padding: 10 }}
+              className="flex items-center justify-center space-x-2"
+            >
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+              </span>
+              <Typography
+                variant="body2"
+                className="!text-stone-950 !font-semibold !font-sans "
+              >
+                Our Process
+              </Typography>
+            </Container>
+            <Typography
+              variant="h4"
+              className="!text-slate-900 !font-semibold !font-sans  "
+            >
+              {title + " RoadMap"}
+            </Typography>
 
-        <Typography
-          variant="subtitle1"
-          sx={{ color: "#ffffff82", textAlign: "start", marginBottom: 2 }}
-          gutterBottom
-        >
-          {serviceinfo
-            .filter((item) => {
-              return item.title === title ? item : null;
-            })
-            .map((item) => item.process)}
-        </Typography>
-      </div>
+            <Typography variant="subtitle1" className="w-1/2" gutterBottom>
+              {serviceinfo
+                .filter((item) => {
+                  return item.title === title ? item : null;
+                })
+                .map((item) => item.process)}
+            </Typography>
+          </Box>
 
-      <div
-        style={{
-          width: "80%",
-          height: isMobile() ? 100 + k * 600 : 550 + k * 800,
-          backgroundColor: "#14111e",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "start",
-          paddingInline: "10%",
-          paddingTop: "100px",
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{ color: "#FFFFFF", marginBottom: 2 }}
-          gutterBottom
-        >
-          Similar Works
-        </Typography>
-        <Grid2
-          container
-          spacing={{ xs: 1, md: 3 }}
-          columns={{ xs: 2, sm: 4, md: 5 }}
-        >
-          {productinfo
-            .filter((item) => {
-              return item.catogery === title ? item : null;
-            })
-            .map((item) => (
-              <Productcard
-                item={{
-                  pic: item.pic1,
-                  catogery: item.catogery,
-                  title: item.title,
-                }}
-              ></Productcard>
-            ))}
-        </Grid2>
-      </div>
+          <Box>
+            <Typography variant="h4" gutterBottom>
+              Similar Works
+            </Typography>
+            <Grid2
+              container
+              spacing={{ xs: 1, md: 3 }}
+              columns={{ xs: 2, sm: 4, md: 5 }}
+            >
+              {productinfo
+                .filter((item) => {
+                  return item.catogery === title ? item : null;
+                })
+                .map((item) => (
+                  <Productcard
+                    item={{
+                      pic: item.pic1,
+                      catogery: item.catogery,
+                      title: item.title,
+                    }}
+                  ></Productcard>
+                ))}
+            </Grid2>
+          </Box>
 
-      <div
-        style={{
-          width: "80%",
-          height: isMobile() ? 900 : 500,
-          backgroundColor: "#14111e",
-          paddingInline: "10%",
-          paddingTop: "100px",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "start",
-          marginBlock: isMobile() ? 10 : 30,
-        }}
-      >
-        <Typography
-          variant="h4"
-          sx={{ color: "#FFFFFF", marginBottom: 2 }}
-          gutterBottom
-        >
-          Some other services
-        </Typography>
-        <Grid2
-          container
-          columnSpacing={{ xs: 1, sm: 1, md: 2 }}
-          spacing={{ xs: 1, sm: 2, md: 5 }}
-          columns={{ xs: 3, sm: 4, md: 5 }}
-        >
-          {serviceinfo
-            .filter((item) => (item.title !== title ? item : null))
-            .filter((item) => {
-              count++;
-              return count < 4 ? item : null;
-            })
-            .map((item) => (
-              <Servicecard
-                item={{
-                  logo: item.logo,
-                  title: item.title,
-                  text: item.description,
-                }}
-              ></Servicecard>
-            ))}
-        </Grid2>
-      </div>
+          <Box>
+            <Typography variant="h4" gutterBottom>
+              Some other services
+            </Typography>
+            <Grid2
+              container
+              columnSpacing={{ xs: 1, sm: 1, md: 2 }}
+              spacing={{ xs: 1, sm: 2, md: 5 }}
+              columns={{ xs: 3, sm: 4, md: 5 }}
+            >
+              {serviceinfo
+                .filter((item) => (item.title !== title ? item : null))
+                .filter((item) => {
+                  count++;
+                  return count < 4 ? item : null;
+                })
+                .map((item) => (
+                  <Servicecard
+                    item={{
+                      logo: item.logo,
+                      title: item.title,
+                      text: item.description,
+                    }}
+                  ></Servicecard>
+                ))}
+            </Grid2>
+          </Box>
 
-      <div
-        style={{
-          width: "80%",
-          height: "200px",
-          backgroundColor: "#14111e",
-          paddingInline: "10%",
-        }}
-      >
-        <Button
-          sx={{
-            color: "#FFA800",
-            borderRadius: "20px",
-            borderColor: "#FFA800",
-            border: 1,
-            margin: 0,
-          }}
-        >
-          Go to Home
-        </Button>
-      </div>
-
+          <Box>
+            <Button variant="outlined" >Go to Home</Button>
+          </Box>
+        </Box>
+      )}
       <Footer></Footer>
-    </div>
+    </Box>
   );
 }
 

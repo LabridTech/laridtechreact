@@ -5,21 +5,20 @@ import Vector from '../img/background.png'
 import Card from '@mui/joy/Card';
 import CardCover from '@mui/joy/CardCover';
 import CardContent from '@mui/joy/CardContent';
-import back from '../img/back3cut.mp4'
-import back2 from '../img/back4cut.mp4'
-import useWindowDimensions from '../windowsize';
 import { useNavigate } from "react-router-dom";
 import webposter from '../img/webposter.png';
-import mobileposter from '../img/mobileposter.png';
 
-export function Subbanner({item}){
-  let {  windowwidth } = useWindowDimensions();
+
+export default function Subbanner({item}){
   const navigate = useNavigate();
 
   return(
-    <Card component="div" sx={{ width: windowwidth , flexGrow: 1  , height : 600 , border : 0 , marginBottom : 10}}>
-    <CardCover sx={{ height : 700 , border : 0  , width : windowwidth}}> 
-      <video
+    <Card component="div" className="flex h-lvh !rounded-none">
+    <CardCover >
+    <img className="!rounded-none    "  alt='Banner'  src={webposter}>
+        
+        </img> 
+      {/* <video
         autoPlay
         loop
         muted
@@ -39,7 +38,7 @@ export function Subbanner({item}){
           width={windowwidth}
         /> }
        
-      </video>
+      </video> */}
     </CardCover>
     <CardContent sx={{ border : 0 , justifyContent : 'center' , alignContent : 'center' , alignItems : 'start' , marginLeft : '5%'}}>
       

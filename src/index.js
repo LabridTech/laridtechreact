@@ -19,7 +19,7 @@ root.render(
     <Routes>
         <Route path="/" element={<App />}></Route>
         <Route path="/about" element={<Aboutus />}></Route>
-        <Route path="/quote" element={<Quote/>}></Route>
+        <Route path="/quote/:tab" element={<Quote/>}></Route>
         <Route path="/niche/:title" element={<Niche/>}></Route>
         <Route path="/project" element={<Project/>}></Route>
         <Route path="/prjdetail/:title" element={<ProjectDetail/>}></Route>

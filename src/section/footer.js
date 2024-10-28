@@ -2,11 +2,11 @@ import "../style/App.css";
 import { Grid2, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import { isMobile } from "../windowsize";
+
 import { catogery } from "../info/catogery-info";
 import { useNavigate } from "react-router-dom";
 
-export function Footer() {
+export default function Footer() {
   const navigate = useNavigate();
 
   return (
@@ -14,35 +14,26 @@ export function Footer() {
       container
       spacing={{ xs: 1, md: 3 }}
       columns={{ xs: 2, sm: 4, md: 5 }}
-      className="footer"
-      sx={{ height: isMobile() ? "650px" : "450px" }}
+      className="md:justify-evenly space-x-10 bg-black/40 rounded-t-3xl py-12 px-5 md:px-20"
     >
       <Stack sx={{ marginLeft: 1, alignItems: "flex-start" }}>
         <Typography
           gutterBottom
           variant="body1"
-          sx={{ color: "#fff", marginBottom: 2 }}
+          className="!text-slate-900 !font-semibold !font-sans"
         >
           Company
         </Typography>
         <a
           href="/about"
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+          className="!text-slate-900 !font-light !font-sans"
         >
           
           About us
         </a>
         <a
           href="/quote "
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+         className="!text-slate-900 !font-light !font-sans"
         >
           
           Schedule Meeting
@@ -53,18 +44,14 @@ export function Footer() {
         <Typography
           gutterBottom
           variant="body1"
-          sx={{ color: "#fff", marginBottom: 2 }}
+          className="!text-slate-900 !font-semibold !font-sans"
         >
           Service
         </Typography>
         {catogery.map((value) => (
           <a
             href={`/niche/${value}`}
-            style={{
-              color: "#ffffff82",
-              textDecoration: "none",
-              marginBottom: 10,
-            }}
+            className="!text-slate-900 !font-light !font-sans"
           >
             
             {value}
@@ -76,39 +63,27 @@ export function Footer() {
         <Typography
           gutterBottom
           variant="body1"
-          sx={{ color: "#fff", marginBottom: 2 }}
+          className="!text-slate-900 !font-semibold !font-sans"
         >
           Resourse
         </Typography>
         <a
           href="/comingsoon"
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+         className="!text-slate-900 !font-light !font-sans"
         >
           
           Blogs
         </a>
         <a
           href="/project"
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+         className="!text-slate-900 !font-light !font-sans"
         >
           
           Case Study
         </a>
         <a
           href="/comingsoon"
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+         className="!text-slate-900 !font-light !font-sans"
         >
           
           Testimonials
@@ -119,39 +94,27 @@ export function Footer() {
         <Typography
           gutterBottom
           variant="body1"
-          sx={{ color: "#fff", marginBottom: 2 }}
+          className="!text-slate-900 !font-semibold !font-sans"
         >
           Follow us
         </Typography>
         <a
           href="https://www.instagram.com/labridtech?igsh=MWJybXZ4YTFuaW02ag%3D%3D&utm_source=qr"
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+         className="!text-slate-900 !font-light !font-sans"
         >
           
           Instagram
         </a>
         <a
           href="https://www.linkedin.com/company/100905377/admin/dashboard/"
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+         className="!text-slate-900 !font-light !font-sans"
         >
           
           Linkdin
         </a>
         <a
           href="https://www.facebook.com/profile.php?id=61552150005718"
-          style={{
-            color: "#ffffff82",
-            textDecoration: "none",
-            marginBottom: 10,
-          }}
+         className="!text-slate-900 !font-light !font-sans"
         >
           
           Facebook
@@ -172,7 +135,7 @@ export function Footer() {
         <Typography
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1, color: "white" }}
+          className="!text-slate-900 !font-semibold !font-sans"
         >
           LABRIDTECH
         </Typography>
