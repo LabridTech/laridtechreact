@@ -15,7 +15,7 @@ export default function Faq() {
   return (
     <Box
       component="div"
-      className="flex flex-col md:flex-row items-start justify-evenly my-5"
+      className="flex flex-col md:flex-row items-center md:items-start justify-evenly my-5"
     >
       <Box
         component="div"

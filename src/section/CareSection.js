@@ -11,7 +11,7 @@ export default function SectionCare() {
   return (
     <Box
       component="div"
-      className="flex flex-col md:flex-row items-center !bg-black/50 justify-evenly py-10 my-5"
+      className="flex flex-col md:flex-row items-center !bg-black/50 justify-evenly space-y-4 md:space-y-1 py-10 my-5"
     >
       <Box
         component="div"
