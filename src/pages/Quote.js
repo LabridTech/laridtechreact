@@ -8,6 +8,7 @@ import TextField from "@mui/material/TextField";
 import { useParams } from "react-router-dom";
 import * as React from "react";
 
+
 function Quote() {
   const { tab } = useParams();
   const [Tabcheck, setTabcheck] = React.useState(Number(tab));
@@ -82,62 +83,83 @@ function Quote() {
               className="p-4 !backdrop-opacity-100 !rounded-3xl !bg-black/30 !shadow-2xl !ring-4 !backdrop-blur-3xl !ring-white/10 flex flex-col space-y-4 items-center  my-4 w-11/12 md:w-1/2 "
             >
               <TextField
-                id="filled-basic"
+                id="FullName"
                 required
                 label="Full Name"
+                name="FullName"
                 variant="filled"
                 fullWidth
                 style={{ color: "#fff" }}
               />
               <TextField
-                id="filled-basic"
+                id="Email"
                 required
                 label="Email"
+                name="Email"
                 variant="filled"
                 fullWidth
                 style={{ color: "#fff" }}
               />
               <TextField
-                id="filled-basic"
+                id="Phone Number"
                 required
                 label="Phone Number"
+                name="PhoneNumber"
                 variant="filled"
                 fullWidth
                 style={{ color: "#fff" }}
               />
               <TextField
-                id="filled-basic"
+                id="Country"
                 required
                 label="Country"
+                name="Country"
                 variant="filled"
                 fullWidth
                 style={{ color: "#fff" }}
               />
               <TextField
-                id="filled-basic"
+                id="Project"
                 required
                 label="Project"
+                name="Project"
                 variant="filled"
                 fullWidth
                 style={{ color: "#fff" }}
               />
               {Tabcheck === 1 && (
-                <TextField
-                  id="filled-basic"
-                  required
-                  InputLabelProps={{ shrink: true }}
-                  label="Date"
-                  type="date"
-                  variant="filled"
-                  fullWidth
-                  style={{ color: "#fff" }}
-                />
+                <>
+                  <TextField
+                    id="Date"
+                    required
+                    InputLabelProps={{ shrink: true }}
+                    label="Date"
+                    name="Date"
+                    type="date"
+                    variant="filled"
+                    fullWidth
+                    style={{ color: "#fff" }}
+                  />
+
+                  <TextField
+                    id="Time"
+                    required
+                    InputLabelProps={{ shrink: true }}
+                    label="Time"
+                    name="Time"
+                    type="time"
+                    variant="filled"
+                    fullWidth
+                    style={{ color: "#fff" }}
+                  />
+                </>
               )}
               {Tabcheck === 0 && (
                 <TextField
-                  id="filled-basic"
+                  id="LeaveMeesage"
                   required
                   label="Leave Meesage"
+                  name="LeaveMeesage"
                   variant="filled"
                   fullWidth
                   multiline
