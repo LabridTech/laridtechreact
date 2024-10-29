@@ -14,8 +14,9 @@ export default function Faq() {
   const [tabexpand, setTabexpand] = useState(0);
   return (
     <Box
+      id="Faq"
       component="div"
-      className="flex flex-col md:flex-row items-center md:items-start justify-evenly my-5"
+      className="flex flex-col md:flex-row items-center md:items-start space-y-6 lg:space-y-2 justify-evenly my-5"
     >
       <Box
         component="div"

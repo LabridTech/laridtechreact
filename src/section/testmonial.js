@@ -92,6 +92,7 @@ export default function Testmonial() {
   );
 }
 
+// eslint-disable-next-line
 {
   /* <div style={{
                 justifyContent : 'center' ,

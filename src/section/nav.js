@@ -10,6 +10,7 @@ import { isMobile } from "../windowsize";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { catogery } from "../info/catogery-info";
+import { HashLink } from "react-router-hash-link";
 
 function Menuitem({ item, open, anchorEl, handleClose }) {
   const navigate = useNavigate();
@@ -64,6 +65,9 @@ function Menuitemconst({
           item={catogery}
         />
       }
+      <MenuItem>
+        <HashLink to="/#Faq">FAQ</HashLink>
+      </MenuItem>
       <MenuItem onClick={() => navigate("/project")}>Case Study</MenuItem>
       <MenuItem onClick={() => navigate("/quote/1")}>Contact us</MenuItem>
     </Menu>
@@ -110,7 +114,7 @@ export default function Navbar() {
           className="w-14 mr-2 sm:w-20 fill-black "
         />
 
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
           LABRIDTECH
         </Typography>
       </IconButton>
@@ -132,43 +136,53 @@ export default function Navbar() {
           />{" "}
         </>
       ) : (
-        <Box sx={{ display: { xs: "none", sm: "block" } }}>
-          <Button
-            className="!text-slate-900 !font-semibold !font-sans !text-base"
-            onClick={() => navigate("/about")}
-          >
-            About us
-          </Button>
+        <>
+          <Box className="flex items-center">
+            <Button
+              className="!text-slate-900 !font-semibold !font-sans !text-lg"
+              onClick={() => navigate("/about")}
+            >
+              About us
+            </Button>
 
-          <Button
-            className="!text-slate-900 !font-semibold !font-sans !text-base"
-            onClick={handleClick1}
-          >
-            Service
-          </Button>
-          {
-            <Menuitem
-              open={open1}
-              anchorEl={catEl}
-              handleClose={handleClose1}
-              item={catogery}
-            />
-          }
+            <Button
+              className="!text-slate-900 !font-semibold !font-sans !text-lg"
+              onClick={handleClick1}
+            >
+              Service
+            </Button>
+            {
+              <Menuitem
+                open={open1}
+                anchorEl={catEl}
+                handleClose={handleClose1}
+                item={catogery}
+              />
+            }
 
-          <Button
-            className="!text-slate-900 !font-semibold !font-sans !text-base"
-            onClick={() => navigate("/project")}
-          >
-            Case Study
-          </Button>
-          <Button
-            variant="contained"
-            className="!rounded-3xl  bg-gradient-to-r from-blue-700 hover:to-blue-700 to-blue-300 "
-            onClick={() => navigate("/quote/1")}
-          >
-            Contact us
-          </Button>
-        </Box>
+            <Button
+              className="!text-slate-900 !font-semibold !font-sans !text-lg"
+              onClick={() => navigate("/project")}
+            >
+              Case Study
+            </Button>
+            <HashLink
+              className="!text-slate-900 !font-semibold !font-sans px-2  !text-lg"
+              to="/#Faq"
+            >
+              FAQ
+            </HashLink>
+          </Box>
+          <Box>
+            <Button
+              variant="contained"
+              className="!rounded-3xl  bg-gradient-to-r from-blue-700 hover:to-blue-700 to-blue-300 "
+              onClick={() => navigate("/quote/1")}
+            >
+              Contact us
+            </Button>
+          </Box>
+        </>
       )}
     </Box>
   );

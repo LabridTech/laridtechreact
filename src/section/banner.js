@@ -1,17 +1,12 @@
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import useWindowDimensions from "../windowsize";
-import { isMobile } from "../windowsize";
-import back from "../img/back3cut.mp4";
 import * as React from "react";
 import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
-import back2 from "../img/back4cut.mp4";
 import { useNavigate } from "react-router-dom";
 import webposter from "../img/webposter.png";
-import mobileposter from "../img/mobileposter.png";
 import { Avatar, Box } from "@mui/material";
 
 export default function Banner2() {
@@ -81,28 +76,11 @@ export default function Banner2() {
 }
 
 export function Banner() {
-  let { width } = useWindowDimensions();
-  let k = 3;
-  if (isMobile()) {
-    k = 20;
-  }
+ 
 
   return (
     <div
-      style={{
-        textAlign: "center",
-        paddingInline: isMobile() && "0.5%",
-        background: `url(${back})`,
-        width: "100%",
-        backgroundColor: "#110F0F",
-        height: 100 + (width * k) / 10,
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        display: "grid",
-        backgroundSize: isMobile() ? "fill" : "cover",
-        placeItems: "center",
-      }}
+      
     >
       <div>
         <Typography variant="h3" sx={{ color: "#FFFFFF" }} gutterBottom>

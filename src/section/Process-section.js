@@ -8,7 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { Container, Box, ThemeProvider } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
 import { theme } from "../constant/color";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import Loader2 from "../component/Loader2";
+
 
 export default function SectionProcess() {
   const navigate = useNavigate();
@@ -166,12 +168,15 @@ export default function SectionProcess() {
           component="div"
           className="flex flex-col md:flex-row !items-center !space-x-4 !justify-center my-5"
         >
+          <Suspense fallback={<Loader2/>}>
           <img
             alt="vector"
             src={saas2}
             style={{ borderRadius: 50 }}
             className="flex !w-11/12 md:!w-1/3 p-2 animate-pulse "
           />
+          </Suspense>
+         
 
           <Container
             className="flex flex-col !w-11/12 md:!w-1/2 items-start !space-y-4"

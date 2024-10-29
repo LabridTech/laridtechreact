@@ -2,7 +2,7 @@ import "../style/App.css";
 import { Box } from "@mui/material";
 import { lazy, Suspense } from "react";
 import Loader from "../component/Loader";
-const time = 1500;
+const time = 200;
 const Banner2 = lazy(() => {
   return new Promise((resolve) => {
     setTimeout(() => resolve(import("../section/banner")), time);

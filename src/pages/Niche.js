@@ -1,7 +1,4 @@
 import "../style/App.css";
-import  Footer  from "../section/footer";
-import  Navbar  from "../section/nav";
-import  Subbanner  from "../section/subbanner";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import  Productcard  from "../component/product-card";
@@ -10,6 +7,24 @@ import  {serviceinfo}  from "../info/service-info";
 import  {Box, Container, Grid2 } from "@mui/material";
 import  {productinfo}  from "../info/product-info";
 import { useParams } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import Loader from "../component/Loader";
+const time = 200;
+const Subbanner = lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("../section/subbanner")), time);
+  });
+});
+const Navbar = lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("../section/nav")), time);
+  });
+});
+const Footer = lazy(() => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(import("../section/footer")), time);
+  });
+});
 
 function Niche() {
   const { title } = useParams();
@@ -17,6 +32,7 @@ function Niche() {
 
 
   return (
+    <Suspense fallback={<Loader/>}>
     <Box className="flex flex-col ">
       <Navbar
         navItems={["About us", "Service", "Case Study", "Contact us"]}
@@ -144,6 +160,7 @@ function Niche() {
       )}
       <Footer></Footer>
     </Box>
+    </Suspense>
   );
 }
 

@@ -12,7 +12,7 @@ export default function OurWork() {
 
   return (
     <Box
-      className="flex flex-col items-center space-y-5"
+      className="hidden lg:flex flex-col items-center space-y-5"
       component='div'
     >
      
