@@ -150,6 +150,51 @@ function Project() {
                 variant="h4"
                 className="!text-slate-900 !font-semibold !font-sans  "
               >
+                Graphic Designing
+              </Typography>
+            </Box>
+
+            <Grid2
+              container
+              spacing={{ xs: 1, md: 3 }}
+              columns={{ xs: 2, sm: 4, md: 5 }}
+            >
+              {productinfo
+                .filter((value) =>
+                  value.catogery === "Graphic Designing" ? value : null
+                )
+                .map((item) => (
+                  <Productcard
+                    item={{
+                      pic: item.pic1,
+                      catogery: item.catogery,
+                      title: item.title,
+                    }}
+                    style={{ display: "none" }}
+                  ></Productcard>
+                ))}
+            </Grid2>
+
+            <Box className="flex flex-col items-center">
+              <Container
+                style={{ padding: 10 }}
+                className="flex items-center justify-center space-x-2"
+              >
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+                </span>
+                <Typography
+                  variant="body2"
+                  className="!text-stone-950 !font-semibold !font-sans "
+                >
+                  Our Project
+                </Typography>
+              </Container>
+              <Typography
+                variant="h4"
+                className="!text-slate-900 !font-semibold !font-sans  "
+              >
                 Branding
               </Typography>
             </Box>
