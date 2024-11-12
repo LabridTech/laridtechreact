@@ -12,7 +12,7 @@ export default function Subbanner({ item }) {
   const navigate = useNavigate();
 
   return (
-    <Card component="div" className="flex h-lvh !rounded-none">
+    <Card component="div"  style={{border : '0px'}} className="flex h-lvh !rounded-none">
       <CardCover>
         <img className="!rounded-none    " alt="Banner" src={webposter}></img>
         {/* <video

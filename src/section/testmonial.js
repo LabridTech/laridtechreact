@@ -53,16 +53,16 @@ export default function Testmonial() {
                 return (
                   <>
                     <TestmonialCard
-                      key={value.index}
+                      
                       flag={1}
                       item={value}
                     ></TestmonialCard>
                     <TestmonialCard
-                      key={value.index}
+                      
                       item={testmonialinfo[showindex % 4]}
                     ></TestmonialCard>
                     <TestmonialCard
-                      key={value.index}
+                      
                       flag={2}
                       item={testmonialinfo[(showindex + 1) % 4]}
                     ></TestmonialCard>

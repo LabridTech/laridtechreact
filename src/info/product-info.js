@@ -1,7 +1,7 @@
 import { catogery } from "./catogery-info";
 import metrzon1 from "../img/project img/mertzon1.png";
 import metrzon2 from "../img/project img/mertzon2.png";
-import metrzon3 from "../img/project img/metrzon3.png"
+import metrzon3 from "../img/project img/metrzon3.png";
 import fitflex from "../img/project img/fitmobile.png";
 import fitflex1 from "../img/project img/fitmobile1.png";
 import fitflex2 from "../img/project img/fitmobile2.png";
@@ -43,27 +43,34 @@ import wheel3 from "../img/project img/wheel3.png";
 import webnode from "../img/project img/webnode.png";
 import webnode1 from "../img/project img/webnode1.png";
 import webnode2 from "../img/project img/webnode2.png";
-import animal from '../img/project img/animal.png'
-import zerosix from '../img/project img/zerosix.png'
-import animal1 from "../img/project img/animal2.png"
-import animal2 from "../img/project img/animal3.png"
-import animal3 from "../img/project img/animal4.png"
-import zerosix1 from "../img/project img/zerosix1.png"
-import zerosix2 from "../img/project img/zerosix2.png"
-import zerosix3 from "../img/project img/zerosix3.png"
-import toak1 from "../img/project img/toak1.png"
-import toak from "../img/project img/Toakvisual.png"
-import toak2 from "../img/project img/toak2.png"
-import toak3 from "../img/project img/toak3.png"
-import alpha from '../img/project img/alpha.jpeg'
-import alpha1 from '../img/project img/alpha1.png'
-import alpha2 from '../img/project img/alpha2.png'
-import alpha3 from '../img/project img/alpha3.png'
-import metrzon from '../img/project img/mertzon.jpeg'
-import rickydry from '../img/project img/rickeydry.jpeg'
-import rickydry1 from '../img/project img/rickydry1.png'
-import rickydry2 from '../img/project img/rickdry2.png'
-import rickydry3 from '../img/project img/rickdry3.png'
+import animal from "../img/project img/animal.png";
+import zerosix from "../img/project img/zerosix.png";
+import animal1 from "../img/project img/animal2.png";
+import animal2 from "../img/project img/animal3.png";
+import animal3 from "../img/project img/animal4.png";
+import zerosix1 from "../img/project img/zerosix1.png";
+import zerosix2 from "../img/project img/zerosix2.png";
+import zerosix3 from "../img/project img/zerosix3.png";
+import toak1 from "../img/project img/toak1.png";
+import toak from "../img/project img/Toakvisual.png";
+import toak2 from "../img/project img/toak2.png";
+import toak3 from "../img/project img/toak3.png";
+import alpha from "../img/project img/alpha.jpeg";
+import alpha1 from "../img/project img/alpha1.png";
+import alpha2 from "../img/project img/alpha2.png";
+import alpha3 from "../img/project img/alpha3.png";
+import metrzon from "../img/project img/mertzon.jpeg";
+import rickydry from "../img/project img/rickeydry.jpeg";
+import rickydry1 from "../img/project img/rickydry1.png";
+import rickydry2 from "../img/project img/rickdry2.png";
+import rickydry3 from "../img/project img/rickdry3.png";
+import work from "../img/project img/worksupply.jpeg";
+import work1 from "../img/project img/work1.png";
+import work2 from "../img/project img/work2.png";
+import access from "../img/project img/access.jpeg";
+import access1 from "../img/project img/access1.png";
+import access3 from "../img/project img/access3.jpeg";
+import access2 from "../img/project img/access2.png";
 
 export const productinfo = [
   {
@@ -449,14 +456,14 @@ export const productinfo = [
     pic2: mluq4,
     pic3: mluq2,
     pic4: mluq3,
-    main: true,
+    main: false,
     challange: [
       "Difficulty in creating a user-friendly platform for buying and selling attars online.",
       "Integrating secure and reliable payment methods to cater to diverse customer preferences.",
       "Ensuring smooth navigation and mobile responsiveness to enhance user experience.",
     ],
     solution: [
-      "Built the website using Shopify for easy management, scalability, and customization.",
+      "Built the website using Wordpress for easy management, scalability, and customization.",
       "Integrated multiple payment gateways to provide flexibility and security for customers.",
       "Implemented a mobile-responsive design for seamless shopping on all devices.",
     ],
@@ -467,9 +474,58 @@ export const productinfo = [
     ],
   },
   {
+    title: "Work Supplies",
+    catogery: catogery[0],
+    index: 17,
+    pic1: work,
+    pic2: work1,
+    pic3: work2,
+    main: true,
+    challange: [
+      "Creating a user-friendly platform for purchasing a wide range of office supplies online.",
+      "Providing reliable inventory management to prevent stock issues and ensure product availability.",
+      "Ensuring smooth navigation and mobile responsiveness for busy professionals shopping on-the-go.",
+    ],
+    solution: [
+      "Built the website on Wordpress for easy management, scalability, and inventory tracking.",
+      "Integrated a robust inventory management system to automate stock updates and prevent overselling.",
+      "Implemented a mobile-responsive design to enable a seamless shopping experience across all devices.",
+    ],
+    results: [
+      "Increased customer engagement due to the intuitive interface and reliable product availability.",
+      "Improved customer satisfaction by reducing out-of-stock issues with real-time inventory tracking.",
+      "Positive user feedback, particularly for the smooth mobile experience, enhancing convenience for busy professionals.",
+    ],
+  },
+  {
+    title: "Access Ability Assist",
+    catogery: catogery[0],
+    index: 18,
+    pic1: access,
+    pic2: access1,
+    pic3: access2,
+    pic4 : access3 ,
+    main: false,
+    challange: [
+      "Creating an accessible and user-friendly platform for disabled individuals with diverse needs.",
+      "Ensuring compatibility with various assistive technologies such as screen readers, voice commands, and adaptive devices.",
+      "Providing easy navigation and content readability for users with cognitive and motor impairments.",
+    ],
+    solution: [
+      "Built the website with WCAG (Web Content Accessibility Guidelines) standards in mind, ensuring it is inclusive and accessible to all users.",
+      "Integrated support for assistive technologies, including screen readers, keyboard navigation, and voice command options.",
+      "Simplified the layout with clear labels, adjustable font sizes, and high-contrast modes to cater to users with visual and cognitive disabilities.",
+    ],
+    results: [
+      "Enhanced user satisfaction and engagement as more users found the platform easy to navigate and access.",
+      "Increased compatibility with various assistive technologies, allowing a wider audience to benefit from the platform's services.",
+      "Positive feedback from users, especially regarding the easy navigation, readability, and tailored accessibility options.",
+    ],
+  },
+  {
     title: "Bookfiy app",
     catogery: catogery[2],
-    index: 17,
+    index: 19,
     pic1: bookf,
     pic2: bookf1,
     pic3: bookf2,
@@ -494,7 +550,7 @@ export const productinfo = [
   {
     title: "Wheels & Deals",
     catogery: catogery[2],
-    index: 18,
+    index: 20,
     pic1: wheel,
     pic2: wheel1,
     pic3: wheel2,
@@ -519,7 +575,7 @@ export const productinfo = [
   {
     title: "KrayanaNearme",
     catogery: catogery[2],
-    index: 19,
+    index: 21,
     pic1: webnode,
     pic2: webnode1,
     pic3: webnode2,

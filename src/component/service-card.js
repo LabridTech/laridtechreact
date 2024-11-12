@@ -12,7 +12,7 @@ export default function Servicecard({ item }) {
       to={`/niche/${item.title} `}
       style={{ textDecoration: "none" }}
     >
-      <Card className="!bg-black/5 w-80 p-5 !shadow-2xl !ring-2 !backdrop-blur-md !ring-white/5 !rounded-3xl hover:border-indigo-950 hover:border-x-2 hover:border-t-2 hover:border-b-4">
+      <Card className="!bg-black/5 w-80 p-5 !shadow-xl !ring-2 !backdrop-blur-md !ring-white/5 !rounded-3xl hover:border-indigo-950 hover:border-x-2 hover:border-t-2 hover:border-b-4">
         <CardMedia
           className="w-10 h-10 !fill-blue-100 "
           image={item.logo}

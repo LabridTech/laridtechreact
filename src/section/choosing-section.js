@@ -18,7 +18,7 @@ export default function SectionChoosing() {
         alt="vector"
         src={back}
         style={{ borderRadius: 50 }}
-        className="flex w-11/12 md:w-1/3 p-2 animate-pulse "
+        className="flex w-11/12 md:w-1/3 p-2  "
       />
 
       <Box component="div" className="flex flex-col w-11/12 md:!w-2/5 space-y-4 "> 

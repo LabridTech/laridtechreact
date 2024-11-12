@@ -13,7 +13,7 @@ export default function Banner2() {
   const navigate = useNavigate();
 
   return (
-    <Card component="div" className="flex h-lvh !rounded-none">
+    <Card component="div" style={{border : '0px'}} className="flex  h-lvh !rounded-none">
       <CardCover className="!rounded-none">
         <img className="!rounded-none " alt="Banner" src={webposter}></img>
         {/* <video

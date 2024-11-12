@@ -97,7 +97,7 @@ export default function Navbar() {
   return (
     <Box
       component="nav"
-      className="flex justify-around items-center bg-black/70  h-24"
+      className="flex justify-around items-center   h-24"
       minheight="64"
     >
       <IconButton
@@ -137,7 +137,7 @@ export default function Navbar() {
         </>
       ) : (
         <>
-          <Box className="flex items-center">
+          <Box className="flex space-x-8 items-center">
             <Button
               className="!text-slate-900 !font-semibold !font-sans !text-lg"
               onClick={() => navigate("/about")}

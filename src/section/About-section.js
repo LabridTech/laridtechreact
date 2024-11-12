@@ -17,7 +17,7 @@ export default function SectionAbout() {
         alt="vector"
         src={back}
         style={{ borderRadius: 50 }}
-        className="flex w-11/12 md:w-1/3 p-2 animate-pulse "
+        className="flex w-11/12 md:w-1/3 p-2  "
       />
 
       <Box

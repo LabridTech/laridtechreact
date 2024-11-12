@@ -374,7 +374,7 @@ export default function Faq() {
         alt="vector"
         src={saas}
         style={{ borderRadius: 50 }}
-        className="flex w-11/12 md:w-1/2  p-2 animate-pulse "
+        className="flex w-11/12 md:w-1/2  p-2  "
       />
     </Box>
   );

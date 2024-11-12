@@ -19,13 +19,13 @@ export default function Stats() {
   }, [inView]);
 
   return (
-    <Container ref={ref} className="flex flex-col md:flex-row bg-white !w-4/5  justify-evenly !rounded-lg py-5">
+    <Container style={{ width : '100%'}} ref={ref} className="flex flex-col md:flex-row bg-white p-5 !drop-shadow-lg justify-evenly !rounded-lg py-5">
       {entered && (
         <>
-          <Box className="flex flex-col items-center">
+          <Box className="flex flex-col items-center  justify-evenly">
             <img alt="icon" src={buy} className="hover:!rotate-45 " />
             <Typography
-              variant="h5"
+              variant="h3"
               sx={{ color: "#676668", padding: 1, textAlign: "center" }}
             >
               <span className="animate-[counter_3s_ease-out_forwards] [counter-set:_nummm_var(--nummm)] before:content-[counter(nummm)]">
@@ -34,32 +34,32 @@ export default function Stats() {
             </Typography>
             <Typography
               className="!text-slate-900 !font-semibold !font-sans"
-              variant="subtitle1"
+              variant="h6"
               sx
             >
-              Completed <br /> Projects
+              Completed  Projects
             </Typography>
           </Box>
           <Divider variant="middle" orientation="vertical" flexItem />
-          <Box className="flex flex-col items-center">
+          <Box className="flex flex-col items-center  justify-evenly">
             <img alt="icon" src={user} className="hover:!rotate-45" />
-            <Typography variant="h5" sx={{ color: "#676668", padding: 1 }}>
+            <Typography variant="h3" sx={{ color: "#676668", padding: 1 }}>
               <span className="animate-[counter_3s_ease-out_forwards] [counter-set:_numm_var(--numm)] before:content-[counter(numm)]">
                 <span className="sr-only">45</span>
               </span>
             </Typography>
             <Typography
               className="!text-slate-900 !font-semibold !font-sans"
-              variant="subtitle1"
+              variant="h6"
             >
-              Happy <br /> client
+              Happy  client
             </Typography>
           </Box>
           <Divider variant="middle" orientation="vertical" flexItem />
-          <Box className="flex flex-col items-center">
+          <Box className="flex flex-col items-center  justify-evenly">
             <img alt="icon" src={time} className="hover:!rotate-45" />
             <Typography
-              variant="h5"
+              variant="h3"
               className="flex justify-center"
               sx={{ color: "#676668", padding: 1 }}
             >
@@ -69,25 +69,25 @@ export default function Stats() {
             </Typography>
             <Typography
               className="!text-slate-900 !font-semibold !font-sans"
-              variant="subtitle1"
+              variant="h6"
             >
-              Hour of <br /> Work
+              Hour of  Work
             </Typography>
           </Box>
           <Divider variant="middle" orientation="vertical" flexItem />
-          <Box className="flex flex-col items-center">
+          <Box className="flex flex-col items-center  justify-evenly">
             <img alt="icon" src={report} className="hover:!rotate-45" />
-            <Typography variant="h5" sx={{ color: "#676668", padding: 1 }}>
+            <Typography variant="h3" sx={{ color: "#676668", padding: 1 }}>
               <span className="animate-[counter_3s_ease-out_forwards] [counter-set:_nummmm_var(--nummmm)] before:content-[counter(nummmm)]">
                 <span className="sr-only">550</span>%
               </span>
             </Typography>
             <Typography
               className="!text-slate-900 !font-semibold !font-sans"
-              variant="subtitle1"
+              variant="h6"
             >
               Clients Business
-              <br /> Increased
+               Increased
             </Typography>
           </Box>
         </>

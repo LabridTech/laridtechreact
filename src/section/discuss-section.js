@@ -5,8 +5,8 @@ import { Box } from "@mui/material";
 
 export default function DiscussSection() {
   return (
-    <Box className="flex flex-col drop-shadow-2xl items-center !backdrop-blur-md !bg-black/10 back py-10 rounded-lg mx-4 md:mx-20">
-      <Typography variant="h3" className="!w-11/12" gutterBottom>
+    <Box className="flex flex-col drop-shadow-2xl items-center  !backdrop-blur-md !bg-black/10 back py-10 rounded-lg mx-4 md:mx-20">
+      <Typography variant="h3" className="!w-11/12 text-center" gutterBottom>
         Let’s discuss the idea
       </Typography>
 

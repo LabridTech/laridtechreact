@@ -9,11 +9,11 @@ import "../style/App.css";
 
 export default function Productcard({ item }) {
   const navigate = useNavigate();
-
+  console.log(item);
   return (
     <Card
       onClick={() => navigate(`/prjdetail/${item.title}`)}
-      className="!bg-black/5 w-80 p-5 !rounded-3xl hover:border-indigo-950 !shadow-2xl !ring-2 !backdrop-blur-md !ring-white/5  hover:border-x-2 hover:border-t-2 hover:border-b-4"
+      className="!bg-black/5 w-80 p-5 !rounded-3xl hover:border-indigo-950 !shadow-xl !ring-2 !backdrop-blur-md !ring-white/5   hover:border-x-2 hover:border-t-2 hover:border-b-4"
     >
       <CardMedia
         sx={{

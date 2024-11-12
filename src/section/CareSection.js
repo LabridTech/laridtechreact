@@ -11,11 +11,11 @@ export default function SectionCare() {
   return (
     <Box
       component="div"
-      className="flex flex-col md:flex-row items-center !bg-black/50 justify-evenly space-y-4 md:space-y-1 py-10 my-5"
+      className="flex flex-col md:flex-row items-center justify-evenly space-y-4 md:space-y-1 py-10 my-5"
     >
       <Box
         component="div"
-        className="flex flex-col w-11/12 md:!w-1/3 space-y-4 "
+        className="flex flex-col w-11/12 !p-16 !rounded-3xl !drop-shadow-2xl !bg-white md:!w-2/5 space-y-4 "
       >
         <Container
           style={{ padding: 10 }}
@@ -53,16 +53,16 @@ export default function SectionCare() {
 
       <Box className="flex flex-col   space-y-4 w-11/12 md:w-1/3">
         <Container
-          className="flex flex-col items-start space-x-2 opacity-70  space-y-2 "
+          className="flex flex-col items-start space-x-2 opacity-70  space-y-2 !drop-shadow-lg "
           style={{ padding: 0 }}
         >
           <Container
             style={{ padding: 0 }}
-            className="flex justify-between rounded-3xl !p-3 !bg-black/10"
+            className="flex justify-between rounded-3xl !p-3 !bg-gray-700"
           >
             <Typography
               variant="body1"
-              className="!text-slate-900 !font-semibold !font-sans "
+              className="!text-white !font-semibold !font-sans "
             >
               Understanding Your Vision
             </Typography>
@@ -75,7 +75,7 @@ export default function SectionCare() {
                     setTabexpand(0);
                   }}
                   color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 rounded-full !fill-cyan-300 hover:!fill-cyan-100 "
                 ></SouthIcon>
               ) : (
                 <ArrowRightAltIcon
@@ -85,7 +85,7 @@ export default function SectionCare() {
                     setTabexpand(1);
                   }}
                   color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 rounded-full !fill-cyan-300 hover:!fill-cyan-100 "
                 ></ArrowRightAltIcon>
               )}
             </ThemeProvider>
@@ -94,7 +94,7 @@ export default function SectionCare() {
           {tabexpand === 1 ? (
             <Typography
               variant="body2"
-              className="!text-slate-900 !font-semibold !font-sans   rounded-3xl !p-4 !bg-black/10"
+              className="!text-slate-900 !font-semibold !font-sans !drop-shadow-lg   rounded-3xl !p-4 !bg-white"
             >
               We take the time to listen to your ideas and challenges, ensuring
               our solutions align perfectly with your long-term goals.
@@ -108,11 +108,11 @@ export default function SectionCare() {
         >
           <Container
             style={{ padding: 0 }}
-            className="flex justify-between rounded-3xl !p-3  !bg-black/10"
+            className="flex justify-between rounded-3xl !p-3 !bg-gray-700"
           >
             <Typography
               variant=""
-              className="!text-slate-900 !font-semibold !font-sans "
+              className="!text-white !font-semibold !font-sans "
             >
               Building Trustworthy Partnerships
             </Typography>
@@ -124,8 +124,7 @@ export default function SectionCare() {
                     event.preventDefault();
                     setTabexpand(0);
                   }}
-                  color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 !fill-cyan-300 rounded-full hover:!fill-cyan-100 "
                 ></SouthIcon>
               ) : (
                 <ArrowRightAltIcon
@@ -134,8 +133,7 @@ export default function SectionCare() {
                     event.preventDefault();
                     setTabexpand(2);
                   }}
-                  color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 !fill-cyan-300 rounded-full hover:!fill-cyan-100 "
                 ></ArrowRightAltIcon>
               )}
             </ThemeProvider>
@@ -144,7 +142,7 @@ export default function SectionCare() {
           {tabexpand === 2 ? (
             <Typography
               variant="body2"
-              className="!text-slate-900 !font-semibold !font-sans  rounded-3xl !p-4  !bg-black/10 "
+              className="!text-slate-900 !font-semibold !font-sans !drop-shadow-lg  rounded-3xl !p-4  !bg-white "
             >
               We believe in open communication and collaboration, fostering a
               transparent and reliable partnership that empowers informed
@@ -159,11 +157,11 @@ export default function SectionCare() {
         >
           <Container
             style={{ padding: 0 }}
-            className="flex justify-between rounded-3xl !p-3  !bg-black/10"
+            className="flex justify-between rounded-3xl !p-3  !bg-gray-700"
           >
             <Typography
               variant=""
-              className="!text-slate-900 !font-semibold !font-sans "
+              className="!text-white !font-semibold !font-sans "
             >
               Delivering Measurable Results
             </Typography>
@@ -176,7 +174,7 @@ export default function SectionCare() {
                     setTabexpand(0);
                   }}
                   color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 rounded-full !fill-cyan-300 hover:!fill-cyan-100 "
                 ></SouthIcon>
               ) : (
                 <ArrowRightAltIcon
@@ -186,7 +184,7 @@ export default function SectionCare() {
                     setTabexpand(3);
                   }}
                   color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 rounded-full !fill-cyan-300 hover:!fill-cyan-100 "
                 ></ArrowRightAltIcon>
               )}
             </ThemeProvider>
@@ -195,7 +193,7 @@ export default function SectionCare() {
           {tabexpand === 3 ? (
             <Typography
               variant="body2"
-              className="!text-slate-900 !font-semibold !font-sans  rounded-3xl !p-4  !bg-black/10 "
+              className="!text-slate-900 !font-semibold !font-sans  !drop-shadow-lg rounded-3xl !p-4  !bg-white "
             >
               Our success is measured by yours. We focus on providing tangible
               results that drive growth and make a real difference to your
@@ -210,11 +208,11 @@ export default function SectionCare() {
         >
           <Container
             style={{ padding: 0 }}
-            className="flex justify-between rounded-3xl !p-3  !bg-black/10"
+            className="flex justify-between rounded-3xl !p-3  !bg-gray-700"
           >
             <Typography
               variant=""
-              className="!text-slate-900 !font-semibold !font-sans "
+              className="!text-white !font-semibold !font-sans "
             >
               Empowering Your Team
             </Typography>
@@ -227,7 +225,7 @@ export default function SectionCare() {
                     setTabexpand(0);
                   }}
                   color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 !fill-cyan-300 rounded-full hover:!fill-cyan-100 "
                 ></SouthIcon>
               ) : (
                 <ArrowRightAltIcon
@@ -237,7 +235,7 @@ export default function SectionCare() {
                     setTabexpand(4);
                   }}
                   color="primary"
-                  className="!h-8 !w-8 rounded-full hover:!fill-cyan-200 "
+                  className="!h-8 !w-8 !fill-cyan-300 rounded-full hover:!fill-cyan-100 "
                 ></ArrowRightAltIcon>
               )}
             </ThemeProvider>
@@ -246,7 +244,7 @@ export default function SectionCare() {
           {tabexpand === 4 ? (
             <Typography
               variant="body2"
-              className="!text-slate-900 !font-semibold !font-sans  rounded-3xl !p-4  !bg-black/10 "
+              className="!text-slate-900 !font-semibold !font-sans !drop-shadow-lg rounded-3xl !p-4  !bg-white"
             >
               We don’t just implement solutions; we equip your team with the
               knowledge and skills to leverage technology effectively for

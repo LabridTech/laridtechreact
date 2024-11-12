@@ -172,7 +172,7 @@ export default function SectionVision() {
         alt="vector"
         src={saas3}
         style={{ borderRadius: 50 }}
-        className="flex w-11/12 md:w-1/3 h-96 p-2 animate-pulse "
+        className="flex w-11/12 md:w-1/3 h-96 p-2  "
       />
     </Box>
   );
