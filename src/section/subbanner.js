@@ -6,15 +6,16 @@ import Card from "@mui/joy/Card";
 import CardCover from "@mui/joy/CardCover";
 import CardContent from "@mui/joy/CardContent";
 import { useNavigate } from "react-router-dom";
-import webposter from "../img/webposter.png";
+import ban3 from '../img/ban3.jpeg'
+
 
 export default function Subbanner({ item }) {
   const navigate = useNavigate();
 
   return (
-    <Card component="div"  style={{border : '0px'}} className="flex h-lvh !rounded-none">
+    <Card component="div"  style={{border : '0px',clipPath: 'inset(0)'}} className="flex h-lvh !rounded-none">
       <CardCover>
-        <img className="!rounded-none    " alt="Banner" src={webposter}></img>
+        <img className="!rounded-none brightness-75  animate-ping2 hue-rotate-30 "  alt="Banner" src={ban3}></img>
         {/* <video
         autoPlay
         loop

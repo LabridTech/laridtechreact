@@ -123,7 +123,7 @@ export default function Navbar() {
         <>
           <IconButton onClick={handleClick}>
             {" "}
-            <MenuIcon sx={{ color: "#fff", height: 50, width: 50 }} />{" "}
+            <MenuIcon sx={{ color: "#0000080", height: 50, width: 50 }} />{" "}
           </IconButton>{" "}
           <Menuitemconst
             open={open}
